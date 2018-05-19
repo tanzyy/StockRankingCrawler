@@ -29,6 +29,11 @@ import java.util.List;
 /**
  * Todo
  * 1. Write Unit Tests
+ * 2. Recognize name of file by input
+ * 3. Use loggers rather sout
+ * 4. One click for all crawlers
+ * 5. Thread based
+ * 6. Color if there was change in previous ranking
  */
 public class ZacksData {
 
@@ -306,9 +311,9 @@ public class ZacksData {
 
 //        String execute = "TANZY_WATCH";
 //        String execute = "TANZY_INVESTED";
-        String execute = "TANZY_TO_INVEST";
+//       String execute = "TANZY_TO_INVEST";
 //        String execute = "TANZY_PENNY";
-//        String execute = "TANZY_GROWTH";
+        String execute = "TANZY_GROWTH";
 
         switch(execute) {
 

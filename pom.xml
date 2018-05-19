@@ -31,11 +31,21 @@
       <artifactId>jsoup</artifactId>
       <version>1.8.3</version>
     </dependency>
-    <!--<dependency>-->
-      <!--<groupId>commons-io</groupId>-->
-      <!--<artifactId>commons-io</artifactId>-->
-      <!--<version>2.6</version>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.6</version>
+    </dependency>
+<!--    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>3.2-FINAL</version>
+    </dependency>-->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>3.15</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
