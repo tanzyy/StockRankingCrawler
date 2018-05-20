@@ -4,6 +4,7 @@ import Utils.CommonUtils;
 import Utils.Constants;
 import Utils.ExcelOpener;
 import VO.RankInfo;
+import org.apache.log4j.Logger;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
@@ -25,9 +26,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -37,12 +35,10 @@ import java.util.List;
 
 /**
  * Todo
- * 1. Write Unit Tests
- * 2. Recognize name of file by input
- * 3. Use loggers rather sout
- * 4. One click for all crawlers
- * 5. Thread based
- * 6. Color if there was change in previous ranking
+ *
+ * 1. Use loggers rather sout
+ * 2. Thread based
+ * 3. Read test file from resources
  */
 public class ZacksDataInExcel {
 
@@ -51,10 +47,11 @@ public class ZacksDataInExcel {
     private static final String SEPARATOR_ZACKS_PRICE   = " ";
     private static final String ZACKS_MAIN_URL          = "https://www.zacks.com/stock/quote/";
     private static final String ZACKS_RANK_UNAVAILABLE  = "UN";
-    private static final String OUT_FILE_LOC            = "/Users/i852841/Desktop/Personal/Finance_Learn_Reports/ZacksRank/";
-    private static final String BACK_FILE_LOC           = "/Users/i852841/Desktop/Personal/Finance_Learn_Reports/ZacksRank/Backup/";
+    //private static final String OUT_FILE_LOC            = "/Users/i852841/Desktop/Personal/Finance_Learn_Reports/ZacksRank/";
+    //private static final String BACK_FILE_LOC           = "/Users/i852841/Desktop/Personal/Finance_Learn_Reports/ZacksRank/Backup/";
     //private static final String OUT_FILE_LOC     = "/Users/i852841/Downloads/";
     //private static final String BACK_FILE_LOC    = "/Users/i852841/Downloads/";
+    private static final Logger LOG = Logger.getLogger(ZacksDataInExcel.class);
 
     private String rankDate;
 
@@ -72,7 +69,7 @@ public class ZacksDataInExcel {
 
         try {
             String targetURL = ZACKS_MAIN_URL + symbol.toUpperCase() + "?q=" + symbol;
-            System.out.println(targetURL);
+            LOG.info(targetURL);
 
             document         = Jsoup.connect(targetURL).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
             Element rank     = document.select("div.zr_rankbox").first().select("p.rank_view").first();
@@ -84,19 +81,17 @@ public class ZacksDataInExcel {
                 rankInfo.setRank(rankData);
                 rankInfo.setPrice(priceData);
             }
-                //result = symbol + SEPARATOR_SYMBOL_RANK + rankData + SEPARATOR_RANK_PRICE + priceData;
 
         } catch(Exception e) {
-            System.out.println(String.format("Error occurred for [%s] with error %s ", symbol,  e));
+            LOG.error(String.format("Error occurred for [%s] with error %s ", symbol,  e));
         }
 
         if(rankInfo.getRank() == null) {
-            //result = symbol + SEPARATOR_SYMBOL_RANK + 0;
             rankInfo.setRank("0");
             rankInfo.setPrice("0");
         }
 
-        System.out.println(rankInfo);
+        LOG.info(rankInfo);
         return rankInfo;
     }
 
@@ -107,14 +102,14 @@ public class ZacksDataInExcel {
 
         try {
             String targetURL = ZACKS_MAIN_URL + symbol.toUpperCase() + "?q=" + symbol;
-            System.out.println(targetURL);
+            LOG.info(targetURL);
 
             document = Jsoup.connect(targetURL).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
             Element rank = document.select("div.ribbon_value").first().select("p.last_price").first();
-            System.out.println(rank.text());
+            LOG.info(rank.text());
 
         } catch(Exception e) {
-            System.out.println(String.format("Error occurred for [%s] with error %s ", symbol,  e));
+            LOG.error(String.format("Error occurred for [%s] with error %s ", symbol,  e));
         }
 
         return result;
@@ -127,15 +122,15 @@ public class ZacksDataInExcel {
      * 4. Delete temp file
      * @param fileName
      */
-    public void writeToXL(String fileName, List<RankInfo> allFetchedData) {
+    public void writeToXL(String fileName, List<RankInfo> allFetchedData, String outLOC, String backLOC) {
 
-        String fileWithLOC       = OUT_FILE_LOC + fileName;
+        String fileWithLOC       = outLOC + fileName;
         File targetFile          = new File(fileWithLOC);
 
-        String backupfileWithLOC = BACK_FILE_LOC + CommonUtils.getCurrentTime() + Constants.SEPARATOR_UNDERSCORE + fileName;
-        File backupFileHandler   = new File(backupfileWithLOC);
+        String backupFileWithLOC = backLOC + CommonUtils.getCurrentTime() + Constants.SEPARATOR_UNDERSCORE + fileName;
+        File backupFileHandler   = new File(backupFileWithLOC);
 
-        File tempFileHandler = new File(OUT_FILE_LOC + Constants.TEMP_PREFIX + fileName);
+        File tempFileHandler = new File(outLOC + Constants.TEMP_PREFIX + fileName);
 
         //Do backup
         //Rename actual file to temp file
@@ -144,14 +139,14 @@ public class ZacksDataInExcel {
                 Files.copy(targetFile.toPath(), backupFileHandler.toPath());
                 targetFile.renameTo(tempFileHandler);
             } catch (IOException e) {
-                e.printStackTrace();
+                LOG.error("IOException while BackingUp File  " + targetFile, e);
             }
         }
 
         if(tempFileHandler.exists()) {
-            System.out.println(fileName + " exists.");
+            LOG.info(fileName + " exists.");
             //Shift columns
-            shiftColumns(OUT_FILE_LOC + Constants.TEMP_PREFIX + fileName, OUT_FILE_LOC + fileName);
+            shiftColumns(outLOC + Constants.TEMP_PREFIX + fileName, outLOC + fileName);
 
             //Insert New Rank data
             insertNewRankColumn(fileWithLOC, allFetchedData);
@@ -160,7 +155,7 @@ public class ZacksDataInExcel {
             tempFileHandler.delete();
 
         } else {
-            System.out.println(fileName + " does not exist, creating new one.");
+            LOG.info(fileName + " does not exist, creating new one.");
             createNewRankColumn(fileWithLOC, allFetchedData);
         }
     }
@@ -175,9 +170,9 @@ public class ZacksDataInExcel {
         try {
             op.open();
         } catch (InvalidFormatException e) {
-            e.printStackTrace();
+            LOG.error("InvalidFormatException while Shifting Column ", e);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.error("IOException while Shifting Column ", e);
         }
 
         op.insertNewColumnBefore(sheetIndex, columnIndex);
@@ -195,7 +190,7 @@ public class ZacksDataInExcel {
             Sheet sheet = workbook.getSheetAt(0);
 
             int rowCount = sheet.getLastRowNum();
-            System.out.println("Row count is [" + rowCount + "]");
+            LOG.info("Row count is [" + rowCount + "]");
 
             //START: Update date
             Row firstRow   = sheet.getRow(0);
@@ -214,7 +209,7 @@ public class ZacksDataInExcel {
                 Cell previousCell        = currentRow.getCell(2);
                 Integer previousCellVal  = Integer.valueOf(getRankNumByStr(previousCell.toString()));
 
-                System.out.println(String.format(
+                LOG.info(String.format(
                        "For Symbol [%s] ,  PreviousCellStr [%s] ,  PreviousCellVal [%s] , CurrentCellStr [%s] ,  CurrentCellVal [%s]",
                         currentRow.getCell(0), previousCell, previousCellVal, currentCellStr, currentCellVal));
 
@@ -260,7 +255,7 @@ public class ZacksDataInExcel {
             outputStream.close();
 
         } catch (IOException | EncryptedDocumentException | InvalidFormatException ex) {
-            ex.printStackTrace();
+            LOG.error("Error Inserting New Column  " + targetFile, ex);
         }
     }
 
@@ -277,7 +272,7 @@ public class ZacksDataInExcel {
             Cell firstRowSecondCell = firstRow.createCell(1);
             firstRowSecondCell.setCellValue(getRankDate());
 
-            System.out.println("firstRowSecondCell " + firstRowSecondCell);
+            LOG.info("firstRowSecondCell " + firstRowSecondCell);
 
             for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++){
 
@@ -288,7 +283,7 @@ public class ZacksDataInExcel {
                 RankInfo currentRankInfo = allFetchedData.get(rowIndex - 1);
 
                 symbolCell.setCellValue(currentRankInfo.getSymbol());
-                System.out.println("Symbol : " + currentRankInfo.getSymbol());
+                LOG.info("Symbol : " + currentRankInfo.getSymbol());
 
                 rankCell.setCellValue(getRankStrByRankInfo(currentRankInfo));
             }
@@ -299,7 +294,7 @@ public class ZacksDataInExcel {
             outputStream.close();
 
         } catch (IOException | EncryptedDocumentException ex) {
-            ex.printStackTrace();
+            LOG.error("Error while Creating New Sheet  " + targetFile, ex);
         }
     }
 

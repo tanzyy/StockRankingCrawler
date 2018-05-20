@@ -50,6 +50,6 @@ public class ZacksClient {
             currentRankingData.add(zacksDataInExcel.getData(symbol));
         }
 
-        zacksDataInExcel.writeToXL(outFile, currentRankingData);
+        zacksDataInExcel.writeToXL(outFile, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC);
     }
 }

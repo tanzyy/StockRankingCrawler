@@ -2,9 +2,9 @@ package Utils;
 
 import Financial.ZacksDataInExcel;
 import VO.RankInfo;
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -13,12 +13,25 @@ import java.util.List;
 /**
  * Unit test for simple App.
  */
-public class AppTest extends TestCase {
+public class AppTest {
 
-    private static final String SYMBOLS_TEST  = "mu,baba";
-    private static final String OUT_FILE_TEST = "ZacksTest.xlsx";
+    private static String OUT_LOC       = "ZacksTest.xlsx";
+    private static String BACK_LOC      = "ZacksTest.xlsx";
 
+    @BeforeClass
+    public static void init() {
+        String currentUserDownloadDir = System.getProperty("user.home") + File.separator + "Downloads";
+        System.out.println(currentUserDownloadDir);
+        OUT_LOC = currentUserDownloadDir + File.separator + OUT_LOC;
+        BACK_LOC = currentUserDownloadDir + File.separator + BACK_LOC;
 
+//        String resourcePath  = Thread.currentThread().getContextClassLoader().getResource("").getPath();
+//        String targetFile    = resourcePath + "ZacksTest_FileExistWithChange.xlsx";
+//        System.out.println(targetFile);
+//        System.out.println((new File(targetFile)).exists());
+    }
+
+    @Test
     public void testWriteToXLFileDoesNotExist() {
 
         String OUT_FILE_TEST = "ZacksTest_FileNotExist.xlsx";
@@ -37,19 +50,13 @@ public class AppTest extends TestCase {
         fetchedData.add(rankInfo3);
         fetchedData.add(rankInfo4);
 
-        zacksDataInExcel.writeToXL(OUT_FILE_TEST, fetchedData);
+        zacksDataInExcel.writeToXL(OUT_FILE_TEST, fetchedData, OUT_LOC, BACK_LOC);
 
-        assertTrue( true );
+        //assertTrue( true );
     }
 
+    @Test
     public void testWriteToXLFileExistWithChange() {
-
-//        String resourcePath  = Thread.currentThread().getContextClassLoader().getResource("").getPath();
-//        String targetFile    = resourcePath + "ZacksTest_FileExistWithChange.xlsx";
-//
-//        System.out.println(targetFile);
-//
-//        System.out.println((new File(targetFile)).exists());
 
         String OUT_FILE_TEST = "ZacksTest_FileExistWithChange.xlsx";
 
@@ -69,11 +76,12 @@ public class AppTest extends TestCase {
         fetchedData.add(rankInfo4);
         fetchedData.add(rankInfo5);
 
-        zacksDataInExcel.writeToXL(OUT_FILE_TEST, fetchedData);
+        zacksDataInExcel.writeToXL(OUT_FILE_TEST, fetchedData, OUT_LOC, BACK_LOC);
 
-        assertTrue( true );
+        Assert.assertTrue(true );
     }
 
+    @Test
     public void testWriteToXLFileExistWOChange() {
 
         String OUT_FILE_TEST = "ZacksTest_FileExistWOChange.xlsx";
@@ -92,50 +100,54 @@ public class AppTest extends TestCase {
         fetchedData.add(rankInfo3);
         fetchedData.add(rankInfo4);
 
-        zacksDataInExcel.writeToXL(OUT_FILE_TEST, fetchedData);
+        zacksDataInExcel.writeToXL(OUT_FILE_TEST, fetchedData, OUT_LOC, BACK_LOC);
 
-        assertTrue( true );
+        Assert.assertTrue( true );
     }
 
     /**
      * With valid symbol
      */
+    @Test
     public void testGetRankInfo() {
 
         ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
 
         zacksDataInExcel.init();
         zacksDataInExcel.getData("mu");
-        assertTrue( true );
+        Assert.assertTrue( true );
     }
 
     /**
      * With invalid symbol
      */
+    @Test
     public void testGetRankInfoWithInvalid() {
 
         ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
 
         zacksDataInExcel.init();
         zacksDataInExcel.getData("muu");
-        assertTrue( true );
+        Assert.assertTrue( true );
     }
 
     /**
      * With valid symbol, but data unavailable.
      */
+    @Test
     public void testGetRankInfoDataUn() {
 
         ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
 
         zacksDataInExcel.init();
         zacksDataInExcel.getData("goog");
-        assertTrue( true );
+        Assert.assertTrue( true );
     }
 
     /**
      * Verifies getRankStrByRankInfo().
      */
+    @Test
     public void testGetRankStrByRankInfo() {
 
         ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
@@ -144,41 +156,45 @@ public class AppTest extends TestCase {
         rankInfo.setRank("2");
         rankInfo.setPrice("$100");
 
-        assertEquals("Buy        ($100)", zacksDataInExcel.getRankStrByRankInfo(rankInfo));
+        Assert.assertEquals("Buy        ($100)", zacksDataInExcel.getRankStrByRankInfo(rankInfo));
 
         rankInfo.resetRankInfo("", "0", "0");
-        assertEquals("UN         (0)", zacksDataInExcel.getRankStrByRankInfo(rankInfo));
+        Assert.assertEquals("UN         (0)", zacksDataInExcel.getRankStrByRankInfo(rankInfo));
     }
 
 
     /**
      * Verifies getRankByStr().
      */
+    @Test
     public void testGetRankByStr() {
 
         ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
 
-        assertEquals("2", zacksDataInExcel.getRankNumByStr("Buy        ($100)"));
-        assertEquals("1", zacksDataInExcel.getRankNumByStr("StrongBuy (0)"));
-        assertEquals("0", zacksDataInExcel.getRankNumByStr("UN (0)"));
+        Assert.assertEquals("2", zacksDataInExcel.getRankNumByStr("Buy        ($100)"));
+        Assert.assertEquals("1", zacksDataInExcel.getRankNumByStr("StrongBuy (0)"));
+        Assert.assertEquals("0", zacksDataInExcel.getRankNumByStr("UN (0)"));
     }
 
-
+    @Test
     public void testGetPrice() {
 
         ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
 
         zacksDataInExcel.init();
         zacksDataInExcel.getPrice("mu");
-        assertTrue( true );
+        Assert.assertTrue( true );
     }
 
+    @Test
     public void testRandom() {
 
         String str = "$53.39 USD";
-
         String result = str.split(" ")[0];
+        Assert.assertEquals("$53.39", result);
 
-        assertEquals("$53.39", result);
+//        String currentUsersHomeDir = System.getProperty("user.home");
+//        System.out.println(currentUsersHomeDir + File.separator + "Downloads");
+
     }
 }
