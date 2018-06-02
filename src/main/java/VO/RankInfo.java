@@ -20,6 +20,12 @@ public class RankInfo {
     //Needham: Raises Target, Initiates, Lowers Target, Set Price Target, Downgrades, Reiterates
     private String action;
 
+    //For ETF: NAV, Expense Ratio, Risk
+    private String nav;
+    private String expenseRatio;
+    private String risk;
+
+
     public RankInfo(String symbol, String rank, String price) {
 
         setSymbol(symbol);
@@ -80,6 +86,31 @@ public class RankInfo {
         this.action = action;
     }
 
+    public String getNav() {
+        return nav;
+    }
+
+    public void setNav(String nav) {
+        this.nav = nav;
+    }
+
+    public String getExpenseRatio() {
+        return expenseRatio;
+    }
+
+    public void setExpenseRatio(String expenseRatio) {
+        this.expenseRatio = expenseRatio;
+    }
+
+    public String getRisk() {
+        return risk;
+    }
+
+    public void setRisk(String risk) {
+        this.risk = risk;
+    }
+
+
     /**
      * Mainly for test case purpose which will avoid recreating rankInfo object.
      * @param symbol
@@ -117,6 +148,38 @@ public class RankInfo {
             sbr.append(speculatedPrice);
             sbr.append("] Action [");
             sbr.append(action);
+            sbr.append("]");
+        }
+
+        if(nav !=  null && nav.length() != 0) {
+            sbr.append(" NAV [");
+            sbr.append(nav);
+            sbr.append("] Expense Ratio [");
+            sbr.append(expenseRatio);
+            sbr.append("] Risk [");
+            sbr.append(risk);
+            sbr.append("]");
+        }
+
+        return sbr.toString();
+    }
+
+    public String getETFInfo() {
+
+        StringBuilder sbr = new StringBuilder();
+        sbr.append("Rank [");
+        sbr.append(rank);
+        sbr.append("]  Price [");
+        sbr.append(price);
+        sbr.append("]");
+
+        if(nav !=  null && nav.length() != 0) {
+            sbr.append(" NAV [");
+            sbr.append(nav);
+            sbr.append("] Expense Ratio [");
+            sbr.append(expenseRatio);
+            sbr.append("] Risk [");
+            sbr.append(risk);
             sbr.append("]");
         }
 

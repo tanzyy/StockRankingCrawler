@@ -1,6 +1,7 @@
 package Utils;
 
 import Financial.ZacksDataInExcel;
+import VO.ExcelProp;
 import VO.RankInfo;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -18,6 +19,10 @@ public class AppTest {
     private static String OUT_LOC       = "ZacksTest.xlsx";
     private static String BACK_LOC      = "ZacksTest.xlsx";
 
+    private static final String OUT_FILE_LOC     = "/Users/i852841/Downloads";
+    private static final String BACK_FILE_LOC    = "/Users/i852841/Downloads/Backup";
+
+
     @BeforeClass
     public static void init() {
 
@@ -34,9 +39,71 @@ public class AppTest {
         String targetFile2    = resourcePath + "ZacksTest_FileExistWOChange.xlsx";
         System.out.println(targetFile2);
 
+        String targetFile3    = resourcePath + "ZacksTest_ETF_FileExist.xlsx";
+        System.out.println(targetFile2);
+
         FileUtils.copyFile(targetFile1, currentUserDownloadDir);
         FileUtils.copyFile(targetFile2, currentUserDownloadDir);
+        FileUtils.copyFile(targetFile3, currentUserDownloadDir);
     }
+
+    @Test
+    public void testETFFileNotExist() {
+
+        String symbols = "PXSG,FYC,SLYG";
+        String outFile = "ZacksTest_ETF_NotExist.xlsx";
+
+        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
+        zacksDataInExcel.init();
+
+        List<RankInfo> currentRankingData = new ArrayList<>();
+        for(String symbol : symbols.split(Constants.SEPARATOR_COMMA)) {
+            currentRankingData.add(zacksDataInExcel.getETFData(symbol));
+        }
+
+        ExcelProp excelProp = new ExcelProp();
+        excelProp.setSheetName("Small CAP");
+        excelProp.setWorkBookName(outFile);
+        excelProp.setSheetIndex(1);
+
+        zacksDataInExcel.writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC);
+
+        Assert.assertTrue( true );
+    }
+
+    @Test
+    public void testETFFileExist() {
+
+        String symbols = "PXSG,FYC,SLYG";
+        String outFile = "ZacksTest_ETF_FileExist.xlsx";
+
+        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
+        zacksDataInExcel.init();
+
+        List<RankInfo> currentRankingData = new ArrayList<>();
+        for(String symbol : symbols.split(Constants.SEPARATOR_COMMA)) {
+            currentRankingData.add(zacksDataInExcel.getETFData(symbol));
+        }
+
+        ExcelProp excelProp = new ExcelProp();
+        excelProp.setSheetName("Small CAP");
+        excelProp.setWorkBookName(outFile);
+        excelProp.setSheetIndex(1);
+
+        zacksDataInExcel.writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC);
+
+        Assert.assertTrue( true );
+    }
+
+    @Test
+    public void testGetETFData() {
+
+        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
+        zacksDataInExcel.getETFData("FYC");
+
+        Assert.assertTrue( true );
+    }
+
 
     @Test
     public void testWriteToXLFileDoesNotExist() {

@@ -16,6 +16,7 @@ public class Constants {
     public static final String SEPARATOR_UNDERSCORE    = "_";
     public static final String EXTENSION_CSV           = ".csv";
     public static final String ZERO_VALUE              = "0";
+    public static final String UNAVAILABLE             = "UN";
 
     public static final SimpleDateFormat sdf   = new SimpleDateFormat("MMM_dd");
     public static final SimpleDateFormat tsdf  = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
