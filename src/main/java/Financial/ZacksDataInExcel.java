@@ -47,17 +47,15 @@ public class ZacksDataInExcel {
     private static final String SEPARATOR_ZACKS_PRICE   = " ";
     private static final String ZACKS_MAIN_URL          = "https://www.zacks.com/stock/quote/";
     private static final String ZACKS_RANK_UNAVAILABLE  = "UN";
-    //private static final String OUT_FILE_LOC            = "/Users/i852841/Desktop/Personal/Finance_Learn_Reports/ZacksRank/";
-    //private static final String BACK_FILE_LOC           = "/Users/i852841/Desktop/Personal/Finance_Learn_Reports/ZacksRank/Backup/";
-    //private static final String OUT_FILE_LOC     = "/Users/i852841/Downloads/";
-    //private static final String BACK_FILE_LOC    = "/Users/i852841/Downloads/";
     private static final Logger LOG = Logger.getLogger(ZacksDataInExcel.class);
 
     private String rankDate;
+    private String rankYear;
 
     public void init() {
 
         setRankDate(CommonUtils.getMonthDay());
+        setRankYear(CommonUtils.getYear());
     }
 
     // Return object
@@ -67,6 +65,8 @@ public class ZacksDataInExcel {
         RankInfo rankInfo = new RankInfo();
         rankInfo.setSymbol(symbol);
 
+        String rankData  = "";
+        String priceData = "";
         try {
             String targetURL = ZACKS_MAIN_URL + symbol.toUpperCase() + "?q=" + symbol;
             LOG.info(targetURL);
@@ -74,22 +74,22 @@ public class ZacksDataInExcel {
             document         = Jsoup.connect(targetURL).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
             Element rank     = document.select("div.zr_rankbox").first().select("p.rank_view").first();
             Element price    = document.select("div.ribbon_value").first().select("p.last_price").first();
-            String rankData  = filterRank(rank.text());
-            String priceData = filterPrice(price.text());
-
-            if(rankData != null && rankData.length() != 0 && priceData != null && priceData.length() != 0) {
-                rankInfo.setRank(rankData);
-                rankInfo.setPrice(priceData);
-            }
+            rankData         = filterRank(rank.text());
+            priceData        = filterPrice(price.text());
 
         } catch(Exception e) {
             LOG.error(String.format("Error occurred for [%s] with error %s ", symbol,  e));
         }
 
-        if(rankInfo.getRank() == null) {
-            rankInfo.setRank("0");
-            rankInfo.setPrice("0");
-        }
+        if(rankData != null && rankData.length() != 0)
+            rankInfo.setRank(rankData);
+        else
+            rankInfo.setRank(Constants.ZERO_VALUE);
+
+        if(priceData != null && priceData.length() != 0)
+            rankInfo.setPrice(priceData);
+        else
+            rankInfo.setPrice(Constants.ZERO_VALUE);
 
         LOG.info(rankInfo);
         return rankInfo;
@@ -105,7 +105,8 @@ public class ZacksDataInExcel {
             LOG.info(targetURL);
 
             document = Jsoup.connect(targetURL).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
-            Element rank = document.select("div.ribbon_value").first().select("p.last_price").first();
+            //Element rank = document.select("div.last_price").first();
+            Element rank = document.select("div.zr_rankbox").first().select("p").first();
             LOG.info(rank.text());
 
         } catch(Exception e) {
@@ -124,13 +125,13 @@ public class ZacksDataInExcel {
      */
     public void writeToXL(String fileName, List<RankInfo> allFetchedData, String outLOC, String backLOC) {
 
-        String fileWithLOC       = outLOC + fileName;
+        String fileWithLOC       = outLOC + File.separator + fileName;
         File targetFile          = new File(fileWithLOC);
 
-        String backupFileWithLOC = backLOC + CommonUtils.getCurrentTime() + Constants.SEPARATOR_UNDERSCORE + fileName;
+        String backupFileWithLOC = backLOC + File.separator + CommonUtils.getCurrentTime() + Constants.SEPARATOR_UNDERSCORE + fileName;
         File backupFileHandler   = new File(backupFileWithLOC);
 
-        File tempFileHandler = new File(outLOC + Constants.TEMP_PREFIX + fileName);
+        File tempFileHandler = new File(outLOC + File.separator + Constants.TEMP_PREFIX + fileName);
 
         //Do backup
         //Rename actual file to temp file
@@ -146,7 +147,7 @@ public class ZacksDataInExcel {
         if(tempFileHandler.exists()) {
             LOG.info(fileName + " exists.");
             //Shift columns
-            shiftColumns(outLOC + Constants.TEMP_PREFIX + fileName, outLOC + fileName);
+            shiftColumns(outLOC+ File.separator + Constants.TEMP_PREFIX + fileName, outLOC + File.separator + fileName);
 
             //Insert New Rank data
             insertNewRankColumn(fileWithLOC, allFetchedData);
@@ -266,7 +267,7 @@ public class ZacksDataInExcel {
 
             XSSFWorkbook workbook = new XSSFWorkbook();
 
-            XSSFSheet sheet = workbook.createSheet("data");
+            XSSFSheet sheet = workbook.createSheet(getRankYear());
 
             Row firstRow = sheet.createRow(0);
             Cell firstRowSecondCell = firstRow.createCell(1);
@@ -380,7 +381,7 @@ public class ZacksDataInExcel {
             case "Hold" : return "3";
             case "Sell" : return "4";
             case "StrongSell" : return "5";
-            default  : return "0";
+            default  : return Constants.ZERO_VALUE;
         }
     }
 
@@ -390,6 +391,14 @@ public class ZacksDataInExcel {
 
     public void setRankDate(String rankDate) {
         this.rankDate = rankDate;
+    }
+
+    public String getRankYear() {
+        return rankYear;
+    }
+
+    public void setRankYear(String rankYear) {
+        this.rankYear = rankYear;
     }
 }
 

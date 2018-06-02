@@ -7,7 +7,18 @@ public class RankInfo {
 
     private String symbol;
     private String rank;
+
+    //Last closed price
     private String price;
+
+    private String researchFirm;
+    private String speculatedPrice;
+
+    //Zacks: Downgrades or Upgrades
+    //MS: Set Price Target, Raises Target, Reiterates
+    //CS: Downgrades, Set Price Target, Lowers Target, Raises Target, Reiterates, Upgrades
+    //Needham: Raises Target, Initiates, Lowers Target, Set Price Target, Downgrades, Reiterates
+    private String action;
 
     public RankInfo(String symbol, String rank, String price) {
 
@@ -45,6 +56,30 @@ public class RankInfo {
         this.price = price;
     }
 
+    public String getResearchFirm() {
+        return researchFirm;
+    }
+
+    public void setResearchFirm(String researchFirm) {
+        this.researchFirm = researchFirm;
+    }
+
+    public String getSpeculatedPrice() {
+        return speculatedPrice;
+    }
+
+    public void setSpeculatedPrice(String speculatedPrice) {
+        this.speculatedPrice = speculatedPrice;
+    }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
+
     /**
      * Mainly for test case purpose which will avoid recreating rankInfo object.
      * @param symbol
@@ -74,6 +109,16 @@ public class RankInfo {
         sbr.append("]  Price [");
         sbr.append(price);
         sbr.append("]");
+
+        if(researchFirm !=  null && researchFirm.length() != 0) {
+            sbr.append(" ResearchFirm [");
+            sbr.append(researchFirm);
+            sbr.append("] Speculated Price [");
+            sbr.append(speculatedPrice);
+            sbr.append("] Action [");
+            sbr.append(action);
+            sbr.append("]");
+        }
 
         return sbr.toString();
     }

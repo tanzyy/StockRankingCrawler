@@ -4,6 +4,9 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,18 +14,6 @@ import java.util.Date;
 import java.util.List;
 
 public class FileUtils {
-
-    public static final SimpleDateFormat sdf  = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
-
-    public static String getCurrentTimeInString() {
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        return sdf.format(timestamp);
-    }
-
-    public static Date getDateObj(String str) throws ParseException {
-        SimpleDateFormat formatter = new SimpleDateFormat("E MMM dd HH:mm:ss Z yyyy");
-        return (Date)formatter.parse(str);
-    }
 
     public static void writeStrToFile(String outFilePath, String content) {
 
@@ -79,5 +70,33 @@ public class FileUtils {
                 System.out.println("Error occurred when closing bufferedwriter/filewriter " + ex.toString());
             }
         }
+    }
+
+    public static boolean copyFile(String sourceFileWithLocation, String dir) {
+
+        boolean isSuccess = true;
+
+        Path sourceFile = Paths.get(sourceFileWithLocation);
+        Path targetDir  = Paths.get(dir);
+        Path targetFile = targetDir.resolve(sourceFile.getFileName());
+
+        File file = new File(targetFile.toString());
+        if(file.exists())
+            file.delete();
+
+        try {
+            Files.copy(sourceFile, targetFile);
+        } catch (IOException e) {
+            isSuccess = false;
+            e.printStackTrace();
+        }
+
+        return isSuccess;
+    }
+
+    public static void main(String[] args) {
+        copyFile(
+                "/Users/i852841/OneDriveSAPSE/Code_Personal_On_Git/StockRankingCrawler/target/test-classes/ZacksTest_FileExistWithChange.xlsx",
+                "/Users/i852841/Downloads");
     }
 }

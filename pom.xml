@@ -2,9 +2,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>MyExps</groupId>
-  <artifactId>myexps</artifactId>
-  <version>Dec2017</version>
+  <groupId>StockrankCrawler</groupId>
+  <artifactId>StockrankCrawler</artifactId>
+  <version>May2018</version>
   <packaging>jar</packaging>
 
   <name>myexps</name>

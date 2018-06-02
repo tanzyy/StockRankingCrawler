@@ -20,15 +20,22 @@ public class AppTest {
 
     @BeforeClass
     public static void init() {
+
         String currentUserDownloadDir = System.getProperty("user.home") + File.separator + "Downloads";
         System.out.println(currentUserDownloadDir);
-        OUT_LOC = currentUserDownloadDir + File.separator + OUT_LOC;
-        BACK_LOC = currentUserDownloadDir + File.separator + BACK_LOC;
+        OUT_LOC = currentUserDownloadDir;
+        BACK_LOC = currentUserDownloadDir;
 
-//        String resourcePath  = Thread.currentThread().getContextClassLoader().getResource("").getPath();
-//        String targetFile    = resourcePath + "ZacksTest_FileExistWithChange.xlsx";
-//        System.out.println(targetFile);
-//        System.out.println((new File(targetFile)).exists());
+        String resourcePath  = Thread.currentThread().getContextClassLoader().getResource("").getPath();
+
+        String targetFile1    = resourcePath + "ZacksTest_FileExistWithChange.xlsx";
+        System.out.println(targetFile1);
+
+        String targetFile2    = resourcePath + "ZacksTest_FileExistWOChange.xlsx";
+        System.out.println(targetFile2);
+
+        FileUtils.copyFile(targetFile1, currentUserDownloadDir);
+        FileUtils.copyFile(targetFile2, currentUserDownloadDir);
     }
 
     @Test
@@ -182,7 +189,14 @@ public class AppTest {
         ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
 
         zacksDataInExcel.init();
-        zacksDataInExcel.getPrice("mu");
+        zacksDataInExcel.getPrice("qqq");
+        Assert.assertTrue( true );
+    }
+
+    @Test
+    public void testGetYear() {
+
+        System.out.println(CommonUtils.getYear());
         Assert.assertTrue( true );
     }
 
