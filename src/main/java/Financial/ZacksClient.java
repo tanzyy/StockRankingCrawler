@@ -12,30 +12,36 @@ import java.util.List;
  */
 public class ZacksClient {
 
-    private static final String SYMBOLS_TANZY_WATCH      = "amzn,goog,googl,nflx,aapl,nvda,shop,tsla,adbe,anet,ba,mu,ter,wmt,tgt,edit,exas,t,tmus,cmcsa,ebay,baba,amat,crus";
+    private static final String SYMBOLS_TANZY_WATCH      = "amzn,goog,googl,nflx,aapl,nvda,fb,shop,tsla,adbe,anet,ba,mu,wmt,tgt,exas,ebay,baba,amat,crus,twtr,spot,docu,ibm,vmw,gsk";
+    private static final String SYMBOLS_TANZY_WATCH2     = "Dcph,nvax,ftr,nly,mnk,cy,ddd,qd,mat,ctrl,ctl,trvg,tzoo,trip,yelp,mtch,pypl,avgo,vrtx,algn,txn,low,gme,big,rost,blk,vslr,abbv,fate,lmt,bl,fdx,cmcsa,hznp,dbx,cat,fdc,phm,alna,tol,symc,tmus";
     private static final String OUT_FILE_TANZY_WATCH     = "TanzyWatch.xlsx";
+    private static final String OUT_FILE_TANZY_WATCH2    = "TanzyWatch2.xlsx";
 
-    private static final String SYMBOLS_TANZY_INVESTED   = "sq,roku,irbt,wb,hibb,ibn,cost,amd,intc,f,gm,abb,rrc,kmi,teva,alb,sap,wm,bac,botz,jd,mpw,msft,pfe,rds.a,wfc";
+    private static final String SYMBOLS_TANZY_INVESTED   = "sq,roku,irbt,ntnx,abcd,curo,lb,m,gluu,ge,t,gern,wb,ibn,cost,amd,intc,f,gm,abb,rrc,kmi,teva,alb,sap,wm,bac,botz,jd,mpw,msft,pfe,rds.a,wfc";
     private static final String OUT_FILE_TANZY_INVESTED  = "TanzyInvested.xlsx";
 
-    private static final String SYMBOLS_TANZY_TO_INVEST  = "m,etsy,ntnx,curo,brk.b,qqq,lb,t,ba,pvtl,irt,rng,ge,tndm,tzoo,snap";
+    private static final String SYMBOLS_TANZY_TO_INVEST  = "etsy,pvtl,irt,rng,tndm,snap,conn,amma,edit,psec";
     private static final String OUT_FILE_TANZY_TO_INVEST = "TanzyToInvest.xlsx";
 
-    private static final String SYMBOLS_TANZY_PENNY      = "gern,rad,jagx,aprn,opgn,zsan,cris,nete,sgyp,agen,avxl,ohrp,snes,insy,chk,ftr,mobl,nvax,nihd";
+    private static final String SYMBOLS_TANZY_PENNY      = "rad,jagx,aprn,opgn,zsan,cris,nete,sgyp,agen,avxl,ohrp,snes,insy,chk,ftr,mobl,nvax,nihd,jcp,smrt,grpn,xene";
     private static final String OUT_FILE_TANZY_PENNY     = "TanzyPenny.xlsx";
 
-    private static final String SYMBOLS_TANZY_GROWTH     = "abcd,gluu,llnw,crox,tbbk,spar,usat,cdxs,tndm";
+    private static final String SYMBOLS_TANZY_GROWTH     = "llnw,crox,tbbk,spar,usat,cdxs,tndm";
     private static final String OUT_FILE_TANZY_GROWTH    = "TanzyGrowth.xlsx";
 
     private static final String SYMBOLS_TANZY_REPORT     = "abcd,gluu,gern,sq,ntnx,roku,irbt,jd,m,etsy,curo,brk.b";
     private static final String OUT_FILE_TANZY_REPORT    = "TanzyReport.xlsx";
 
+    private static final String SYMBOLS_TANZY_REIT     = "IRT,HCP,KIM,MORT,PLD";
+    private static final String OUT_FILE_TANZY_REIT    = "TanzyREIT.xlsx";
+
     private static final String SYMBOLS_TANZY_ETF_SMALL    = "PXSG,FYC,SLYG";
-    private static final String SYMBOLS_TANZY_ETF_THEMATIC = "BOTZ,ARKG,QQQ,SPY";
+    private static final String SYMBOLS_TANZY_ETF_THEMATIC = "BOTZ,ARKG";
+    private static final String SYMBOLS_TANZY_ETF_WATCH    = "MORT,QQQ,SPY,VYM,VTI,VTV,ITA,DIA,IWM";
     private static final String OUT_FILE_TANZY_ETF         = "Tanzy_ETF.xlsx";
 
-    private static final String OUT_FILE_LOC     = "/Users/i852841/Desktop/Personal/Finance_Learn_Reports/ZacksRank";
-    private static final String BACK_FILE_LOC    = "/Users/i852841/Desktop/Personal/Finance_Learn_Reports/ZacksRank/Backup";
+    private static  String OUT_FILE_LOC     = "/Desktop/Personal/Finance_Learn_Reports/ZacksRank";
+    private static  String BACK_FILE_LOC    = "/Desktop/Personal/Finance_Learn_Reports/ZacksRank/Backup";
 
 
     static boolean forReport = false;
@@ -43,12 +49,18 @@ public class ZacksClient {
 
     public static void main(String[] args) {
 
+        OUT_FILE_LOC  = System.getProperty("user.home") + OUT_FILE_LOC;
+        BACK_FILE_LOC = System.getProperty("user.home") + BACK_FILE_LOC;
+
         if(isETF) {
             new ZacksClient().processETFData(SYMBOLS_TANZY_ETF_SMALL, OUT_FILE_TANZY_ETF, "SmallCap", 0);
             new ZacksClient().processETFData(SYMBOLS_TANZY_ETF_THEMATIC, OUT_FILE_TANZY_ETF, "Thematic", 1);
+            new ZacksClient().processETFData(SYMBOLS_TANZY_ETF_WATCH, OUT_FILE_TANZY_ETF, "Watch", 2);
         } else {
-            if(forReport)
-                new ZacksClient().processData(SYMBOLS_TANZY_TO_INVEST, OUT_FILE_TANZY_TO_INVEST);
+            if(forReport) {
+                new ZacksClient().processData(SYMBOLS_TANZY_REIT, OUT_FILE_TANZY_REIT);
+                new ZacksClient().processData(SYMBOLS_TANZY_WATCH2, OUT_FILE_TANZY_WATCH2);
+            }
             else {
                 new ZacksClient().processData(SYMBOLS_TANZY_INVESTED, OUT_FILE_TANZY_INVESTED);
                 new ZacksClient().processData(SYMBOLS_TANZY_WATCH, OUT_FILE_TANZY_WATCH);
@@ -56,6 +68,9 @@ public class ZacksClient {
                 new ZacksClient().processData(SYMBOLS_TANZY_PENNY, OUT_FILE_TANZY_PENNY);
                 new ZacksClient().processData(SYMBOLS_TANZY_GROWTH, OUT_FILE_TANZY_GROWTH);
                 new ZacksClient().processData(SYMBOLS_TANZY_REPORT, OUT_FILE_TANZY_REPORT);
+
+                new ZacksClient().processData(SYMBOLS_TANZY_REIT, OUT_FILE_TANZY_REIT);
+                new ZacksClient().processData(SYMBOLS_TANZY_WATCH2, OUT_FILE_TANZY_WATCH2);
             }
         }
     }

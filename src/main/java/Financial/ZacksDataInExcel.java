@@ -496,7 +496,7 @@ public class ZacksDataInExcel {
     public void writeToOneXL(ExcelProp excelProp, List<RankInfo> allFetchedData, String outLOC, String backLOC) {
 
         String fileWithLOC       = outLOC + File.separator + excelProp.getWorkBookName();
-        File targetFileHandler          = new File(fileWithLOC);
+        File targetFileHandler   = new File(fileWithLOC);
 
         String backupFileWithLOC = backLOC + File.separator + CommonUtils.getCurrentTime() + Constants.SEPARATOR_UNDERSCORE + excelProp.getWorkBookName();
         File backupFileHandler   = new File(backupFileWithLOC);

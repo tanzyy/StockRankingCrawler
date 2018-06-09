@@ -41,10 +41,10 @@ import java.util.Set;
 public class MarketBeatRatings {
 
     private static final Logger LOG = Logger.getLogger(MarketBeatRatings.class);
-    private static final int    DATA_SIZE_IN_MB         = 100;
+    private static final int    DATA_SIZE_IN_MB   = 100;
     private static final String MB_RESEARCHER_URI = "https://www.marketbeat.com/ratings/by-issuer/";
-    private static final String MB_TICKER_NA = "NA";
-    private static final int MB_DATE_RANGE = 10;
+    private static final String MB_TICKER_NA      = "NA";
+    private static final int    MB_DATE_RANGE     = 200;
 
     private String rankDate;
     private String rankYear;
@@ -54,18 +54,46 @@ public class MarketBeatRatings {
         setRankDate(CommonUtils.getMonthDay());
         setRankYear(CommonUtils.getYear());
 
-        researchFirmOrderList.add("Needham & Company LLC");
-        researchFirmOrderList.add("Credit Suisse Group");
-        researchFirmOrderList.add("Morningstar");
-        researchFirmOrderList.add("Zacks Investment Research");
+        researchFirmOrderList.add(ResearcherID.NEEDHAM.getId());
+        researchFirmOrderList.add(ResearcherID.CS.getId());
+        researchFirmOrderList.add(ResearcherID.MORNING.getId());
+        researchFirmOrderList.add(ResearcherID.Z.getId());
+        researchFirmOrderList.add(ResearcherID.GS.getId());
+        researchFirmOrderList.add(ResearcherID.MORGAN.getId());
+        researchFirmOrderList.add(ResearcherID.KC.getId());
+        researchFirmOrderList.add(ResearcherID.ARGUS.getId());
+        researchFirmOrderList.add(ResearcherID.PIPER.getId());
+        researchFirmOrderList.add(ResearcherID.VE.getId());
+        researchFirmOrderList.add(ResearcherID.SIDOTI.getId());
+        researchFirmOrderList.add(ResearcherID.JEFFERIES.getId());
+        researchFirmOrderList.add(ResearcherID.STIFEL.getId());
+        researchFirmOrderList.add(ResearcherID.VETR.getId());
+        researchFirmOrderList.add(ResearcherID.FUNDAMENTAL.getId());
+        researchFirmOrderList.add(ResearcherID.JPMORGAN.getId());
+        researchFirmOrderList.add(ResearcherID.RBC.getId());
+        researchFirmOrderList.add(ResearcherID.CITI.getId());
+        researchFirmOrderList.add(ResearcherID.BOFA.getId());
+        researchFirmOrderList.add(ResearcherID.WFC.getId());
+        researchFirmOrderList.add(ResearcherID.BIDASK.getId());
+        researchFirmOrderList.add(ResearcherID.ROTH.getId());
     }
 
-    private List<String> researchFirmOrderList = new ArrayList<>();
+    public List<String> researchFirmOrderList = new ArrayList<>();
 
+    /**
+     *
+     * @param issuer
+     * @param isAll
+     * @param tickers
+     * @return Map of RanK Data with key as Ticker
+     */
     public Map<String, RankInfo> getDataByResearchFirm(String issuer, boolean isAll, List<String> tickers) {
 
         Document document;
         Map<String, RankInfo> result = new HashMap<>();
+
+        //Set UN as part of
+        result = createBaseTickerData(result, tickers, issuer);
 
         try {
             String targetURL = MB_RESEARCHER_URI + issuer;
@@ -77,7 +105,7 @@ public class MarketBeatRatings {
             for(Element row : rows) {
 
                 Elements columns = row.select("td");
-                System.out.println("Current columns are - " + columns.toString());
+                //LOG.debug("Current columns are - " + columns.toString());
 
                 String dateStr = columns.get(0).text();
                 if(dateStr != null && dateStr.trim().length() == 0)
@@ -89,9 +117,9 @@ public class MarketBeatRatings {
 
                     String ticker = getTicker(columns.get(3).text());
                     if((!isAll && tickers.contains(ticker)) || isAll) {
+                        System.out.println("Got value for " + ticker + "::: " + columns.text());
                         setValues(columns, ticker, result);
                     }
-                    System.out.println("$$$$$$$$$$$$$$$$$$$$$$$");
                 } else if(rangeVal == -1)
                     break;
                 else
@@ -107,52 +135,25 @@ public class MarketBeatRatings {
     }
 
 
-    public List<Map<String, RankInfo>> getDataByResearchFirmV1(String issuer, boolean isAll, List<String> tickers) {
+    /**
+     *
+     * @param result
+     * @param tickers
+     * @param issuer
+     * @return Returns Mpa of Ticker and having RankInfo with all values as UN except researcher as researcher name.
+     */
+    private Map<String, RankInfo> createBaseTickerData(Map<String, RankInfo> result, List<String> tickers, String issuer) {
 
-        Document document;
-        List<Map<String, RankInfo>> result = new ArrayList<>();
-
-        try {
-            String targetURL = MB_RESEARCHER_URI + issuer;
-            LOG.info(targetURL);
-
-            document      = Jsoup.connect(targetURL).userAgent("Mozilla").maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
-            Elements rows = document.select("tbody").select("tr");
-
-            for(Element row : rows) {
-
-                Elements columns = row.select("td");
-                System.out.println("Current columns are - " + columns.toString());
-
-                String dateStr = columns.get(0).text();
-                if(dateStr != null && dateStr.trim().length() == 0)
-                    continue;
-
-                int rangeVal = CommonUtils.isDateInRange(dateStr.trim(), MB_DATE_RANGE);
-
-                if(rangeVal == 1) {
-
-                    String ticker = getTicker(columns.get(3).text());
-                    if((!isAll && tickers.contains(ticker)) || isAll) {
-                        setValuesV1(columns, ticker, result);
-                    }
-                    System.out.println("$$$$$$$$$$$$$$$$$$$$$$$");
-                } else if(rangeVal == -1)
-                    break;
-                else
-                    continue;
-            }
-
-        } catch(Exception e) {
-            LOG.error(String.format("Error occurred for [%s] with error %s ", issuer,  e));
+        for(String ticker : tickers) {
+            result.put(ticker, new RankInfo(ResearcherID.getNameByID(issuer)));
         }
 
-        result.forEach(s -> LOG.info(s));
         return result;
     }
 
     public String getTicker(String mbTickerData) {
 
+        //LOG.debug("Ticker Data is: " + mbTickerData);
         String result = MB_TICKER_NA;
 
         try {
@@ -162,30 +163,23 @@ public class MarketBeatRatings {
             LOG.error("Error occurred while parsing ticker string " + mbTickerData, e);
         }
 
-        return result;
+        return result.toLowerCase();
     }
 
     private void setValues(Elements columns, String ticker, Map<String, RankInfo> resultMap) {
 
         RankInfo rankInfo = new RankInfo();
 
+        rankInfo.setDateReported(columns.get(0).text());
         rankInfo.setResearchFirm(columns.get(1).text());
+
         rankInfo.setAction(columns.get(2).text());
+        rankInfo.setRatingVal(columns.get(2).text());
+
         rankInfo.setRank(columns.get(4).text());
         rankInfo.setSpeculatedPrice(columns.get(5).text());
-        resultMap.put(ticker, resultMap.get(ticker) == null ? rankInfo : resultMap.get(ticker));
 
-    }
-
-    private void setValuesV1(Elements columns, String ticker, List<Map<String, RankInfo>> result) {
-        Map<String, RankInfo> resultMap = new HashMap<>();
-        RankInfo rankInfo               = new RankInfo();
-
-        rankInfo.setResearchFirm(columns.get(1).text());
-        rankInfo.setRank(columns.get(4).text());
-        rankInfo.setSpeculatedPrice(columns.get(5).text());
-        resultMap.put(ticker, resultMap.get(ticker) == null ? rankInfo : resultMap.get(ticker));
-        result.add(resultMap);
+        resultMap.put(ticker, Constants.UNAVAILABLE.equalsIgnoreCase(resultMap.get(ticker).getRank()) ? rankInfo : resultMap.get(ticker));
     }
 
     public String getRankDate() {
@@ -204,32 +198,39 @@ public class MarketBeatRatings {
         this.rankYear = rankYear;
     }
 
+    /**
+     *
+     * @param listOfTickerRankMap
+     * @return Map of Tickers and respective rank data. If rank data does not found, sets to UN.
+     */
+    public Map<String, List<RankInfo>> mergeMapData(List<Map<String, RankInfo>> listOfTickerRankMap) {
 
-    public Map<String, List<RankInfo>> mergeMapData(List<Map<String, RankInfo>> listOfMaps) {
+        //Get all Tickers
+        Set<String> tickers = getAllKeys(listOfTickerRankMap);
 
-        //Get all keys
-        Set<String> keys = getAllKeys(listOfMaps);
-
+        //Result for Ticker and List of Rank Data.
         Map<String, List<RankInfo>> resultMap = new HashMap<>();
 
-        for(Map<String, RankInfo> currMap : listOfMaps) {
+        for(Map<String, RankInfo> tickerRankMap : listOfTickerRankMap) {
 
-            for(String key : keys) {
+            for(String ticker : tickers) {
 
-                if(currMap.get(key) == null) {
+                //Handles null data scenario
+                if(tickerRankMap.get(ticker) == null) {
                     continue;
                 }else {
                     List<RankInfo> rankInfoList = new ArrayList<>();
 
-                    if(resultMap.get(key) == null) {
-                        rankInfoList.add(currMap.get(key));
+                    //Set only latest data
+                    if(resultMap.get(ticker) == null) {
+                        rankInfoList.add(tickerRankMap.get(ticker));
 
                     } else {
-                        rankInfoList = resultMap.get(key);
-                        rankInfoList.add(currMap.get(key));
+                        rankInfoList = resultMap.get(ticker);
+                        rankInfoList.add(tickerRankMap.get(ticker));
                     }
 
-                    resultMap.put(key, rankInfoList);
+                    resultMap.put(ticker, rankInfoList);
                 }
             }
         }
@@ -238,6 +239,11 @@ public class MarketBeatRatings {
         return resultMap;
     }
 
+    /**
+     *
+     * @param maps
+     * @return Ticker's set - Only got available from a particular researcher
+     */
     public Set<String> getAllKeys(List<Map<String, RankInfo>> maps) {
 
         Set<String> resultSet = new HashSet<>();
@@ -265,6 +271,12 @@ public class MarketBeatRatings {
      */
     public void writeToXL(String ticker, String fileName, List<RankInfo> allFetchedData, String outLOC, String backLOC) {
 
+        //No need to write if no data found for the given ticker
+        if(allFetchedData == null || (allFetchedData != null && allFetchedData.size() == 0)) {
+            LOG.warn(String.format("For [%s] , no data found.", ticker));
+            return;
+        }
+
         String fileWithLOC       = outLOC + File.separator + fileName;
         File targetFile          = new File(fileWithLOC);
 
@@ -285,7 +297,7 @@ public class MarketBeatRatings {
         }
 
         try {
-            LOG.info("List data before sorting");
+            LOG.info("List data before sorting for ticker " + ticker);
             allFetchedData.forEach(s -> LOG.info(s));
 
             //Sort the data
@@ -300,7 +312,7 @@ public class MarketBeatRatings {
             allFetchedData.forEach(t -> LOG.info(t));
 
         } catch (Exception e) {
-            LOG.error("Error occured while sorting the data " + e);
+            LOG.error("Error occurred while sorting the data " + e);
         }
 
 
@@ -351,7 +363,7 @@ public class MarketBeatRatings {
             Sheet sheet = workbook.getSheetAt(0);
 
             int rowCount = sheet.getLastRowNum();
-            LOG.info("Row count is [" + rowCount + "]");
+            LOG.info(String.format("In File [%s], Row count is [%s]", targetFile, rowCount));
 
             //START: Update date
             Row firstRow   = sheet.getRow(0);
@@ -359,53 +371,34 @@ public class MarketBeatRatings {
             firstRowSecondCell.setCellValue(getRankDate());
             //END: Update date
 
-            for(int rowIndex=1; rowIndex<=rowCount; rowIndex++){
+            for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++){
 
                 Row currentRow           = sheet.getRow(rowIndex);
                 Cell currentCell         = currentRow.createCell(1);
                 RankInfo currentRankInfo = allFetchedData.get(rowIndex - 1);
                 String currentCellStr    = getRankStrByRankInfo(currentRankInfo);
-               //Integer currentCellVal   = Integer.valueOf(getRankNumByStr(currentCellStr));
-               Integer currentCellVal   = null;
 
-                Cell previousCell        = currentRow.getCell(2);
-                //Integer previousCellVal  = Integer.valueOf(getRankNumByStr(previousCell.toString()));
-                Integer previousCellVal  = null;
-
-                LOG.info(String.format(
-                        "For Symbol [%s] ,  PreviousCellStr [%s] ,  PreviousCellVal [%s] , CurrentCellStr [%s] ,  CurrentCellVal [%s]",
-                        currentRow.getCell(0), previousCell, previousCellVal, currentCellStr, currentCellVal));
-
-                if(currentCellVal != 0 && previousCellVal != 0) {
-
-                    if(previousCellVal > currentCellVal) {
-
-                        CellStyle style = workbook.createCellStyle();
-                        style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
-                        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-                        currentCell.setCellStyle(style);
-
-                    } else if(previousCellVal < currentCellVal) {
-
-                        CellStyle style = workbook.createCellStyle();
-                        style.setFillForegroundColor(IndexedColors.ROSE.getIndex());
-                        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-                        currentCell.setCellStyle(style);
-                    }
-
-                } else if(currentCellVal != 0 && previousCellVal == 0) { //New Coverage
-
+                if(currentRankInfo.getRatingVal() == RankInfo.RatingState.RED.getState()) {
                     CellStyle style = workbook.createCellStyle();
-                    style.setFillForegroundColor(IndexedColors.AQUA.getIndex());
+                    style.setFillForegroundColor(IndexedColors.ROSE.getIndex());
                     style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
                     currentCell.setCellStyle(style);
 
-                } else if(currentCellVal == 0 && previousCellVal != 0) { //No More Coverage
+                } else if(currentRankInfo.getRatingVal() == RankInfo.RatingState.GREEN.getState()) {
                     CellStyle style = workbook.createCellStyle();
-                    style.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
+                    style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
                     style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
                     currentCell.setCellStyle(style);
+
                 }
+//                else {
+//                    CellStyle style = workbook.createCellStyle();
+//                    style.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
+//                    style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+//                    currentCell.setCellStyle(style);
+//                }
+
+                LOG.info(String.format("For Symbol [%s] , CurrentCellStr [%s] ", currentRow.getCell(0), currentCellStr));
 
                 currentCell.setCellValue(currentCellStr);
             }
@@ -443,12 +436,12 @@ public class MarketBeatRatings {
                 Cell researchFirmCell = currentRow.createCell(0);
                 Cell rankCell         = currentRow.createCell(1);
 
-                String firm = researchFirmOrderList.get(rowIndex - 1);
+                String firm = ResearcherID.getNameByID(researchFirmOrderList.get(rowIndex - 1));
                 researchFirmCell.setCellValue(firm);
                 RankInfo currentRankInfo = getFirmFromRankInfo(firm, allFetchedData);
                 //In case no data for current ticker by current firm in given date range
                 if(currentRankInfo == null)
-                    rankCell.setCellValue(Constants.ZERO_VALUE);
+                    rankCell.setCellValue(Constants.UNAVAILABLE);
                 else
                     rankCell.setCellValue(getRankStrByRankInfo(currentRankInfo));
             }
@@ -468,8 +461,13 @@ public class MarketBeatRatings {
 
         StringBuilder result = new StringBuilder();
 
-        //Check for Null Values
-        result.append(rankInfo.getAction())
+        if(Constants.UNAVAILABLE.equalsIgnoreCase(rankInfo.getRank()))
+            result.append(Constants.UNAVAILABLE);
+
+        else
+            result.append(rankInfo.getDateReported())
+                .append(Constants.SEPARATOR_COMMA)
+                .append(rankInfo.getAction())
                 .append(Constants.SEPARATOR_COMMA)
                 .append(rankInfo.getRank())
                 .append(Constants.SEPARATOR_COMMA)
@@ -487,5 +485,66 @@ public class MarketBeatRatings {
         }
 
         return null;
+    }
+
+    public enum ResearcherID {
+
+        NEEDHAM("Needham & Company LLC", "15587"),
+        CS("Credit Suisse Group", "12026"),
+        MORNING("Morningstar", "3308"),
+        Z("Zacks Investment Research", "572"),
+        GS("Goldman Sachs Group", "8"),
+        MORGAN("Morgan Stanley", "71"),
+        KC("KeyCorp", "5573"),
+        ARGUS("Argus", "273"),
+        PIPER("Piper Jaffray Companies", "56"),
+        VE("ValuEngine", "28687"),
+        SIDOTI("Sidoti", "166"),
+        JEFFERIES("Jefferies Group", "149"),
+        STIFEL("Stifel Nicolaus", "51"),
+        VETR("Vetr", "18847"),
+        FUNDAMENTAL("Fundamental Research", "7001"),
+        JPMORGAN("JPMorgan Chase & Co.", "43"),
+        RBC("Royal Bank of Canada", "86"),
+        CITI("Citigroup", "1"),
+        BOFA("Bank of America", "17831"),
+        WFC("Wells Fargo & Co", "21"),
+        BIDASK("BidaskClub", "29019"),
+        ROTH("Roth Capital", "275");
+
+        private String id;
+        private String name;
+
+        public String getId() {
+            return id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getIDByName(String name) {
+            return id;
+        }
+
+        ResearcherID(String name, String id) {
+            this.id = id;
+            this.name = name;
+        }
+
+        private static final Map<String, String> NAME_ID_MAP = new HashMap<>();
+        private static final Map<String, String> ID_NAME_MAP = new HashMap<>();
+
+        static {
+
+            for(ResearcherID researcherID : ResearcherID.values()) {
+                NAME_ID_MAP.put(researcherID.getId(), researcherID.getName());
+                ID_NAME_MAP.put(researcherID.getId(), researcherID.getName());
+            }
+        }
+
+        public static String getNameByID(String ID) {
+            return NAME_ID_MAP.get(ID);
+        }
     }
 }

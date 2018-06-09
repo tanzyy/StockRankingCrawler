@@ -77,7 +77,7 @@ public class CommonUtils {
             Date rangeDateObj    = Constants.dsdf.parse(rangeDateStr);
 
             if(inDateObj.compareTo(rangeDateObj) >= 0) {
-                System.out.println(String.format("Input DateStr [%s] is within range from [%s] to [%s]", dateStr, rangeDateStr, curDateStr));
+                //System.out.println(String.format("Input DateStr [%s] is within range from [%s] to [%s]", dateStr, rangeDateStr, curDateStr));
                 status = 1;
             } else {
                 System.out.println(String.format("Input DateStr [%s] is out of range from [%s] to [%s]", dateStr, rangeDateStr, curDateStr));

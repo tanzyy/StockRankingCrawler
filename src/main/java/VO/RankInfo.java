@@ -1,5 +1,7 @@
 package VO;
 
+import Utils.Constants;
+
 /**
  * Created by i852841 on 5/19/18.
  */
@@ -13,6 +15,9 @@ public class RankInfo {
 
     private String researchFirm;
     private String speculatedPrice;
+    private int ratingVal;
+    private String dateReported;
+
 
     //Zacks: Downgrades or Upgrades
     //MS: Set Price Target, Raises Target, Reiterates
@@ -26,11 +31,51 @@ public class RankInfo {
     private String risk;
 
 
+    public enum RatingState {
+
+        RED(-1),
+        GREEN(1),
+        GRAY(0);
+
+        public int getState() {
+            return state;
+        }
+
+        private final int state;
+
+        RatingState(int s) {
+            state = s;
+        }
+    }
+
+    public int getRatingVal() {
+        return ratingVal;
+    }
+
+    public void setRatingVal(String ratingAction) {
+
+        if(Constants.RATING_DOWNGRADES.equalsIgnoreCase(ratingAction) || Constants.RATING_LOWERS_TARGET.equalsIgnoreCase(ratingAction))
+            this.ratingVal = RatingState.RED.getState();
+
+        else if(Constants.RATING_RAISES_TARGET.equalsIgnoreCase(ratingAction)
+                || Constants.RATING_SET_PRICE_TARGET.equalsIgnoreCase(ratingAction)
+                || Constants.RATING_UPGRADES.equalsIgnoreCase(ratingAction))
+            this.ratingVal = RatingState.GREEN.getState();
+        else
+            this.ratingVal = RatingState.GRAY.getState();
+    }
+
     public RankInfo(String symbol, String rank, String price) {
 
         setSymbol(symbol);
         setRank(rank);
         setPrice(price);
+    }
+
+    public RankInfo(String researchFirm) {
+
+        setResearchFirm(researchFirm);
+        setRank(Constants.UNAVAILABLE);
     }
 
     public RankInfo() {
@@ -108,6 +153,14 @@ public class RankInfo {
 
     public void setRisk(String risk) {
         this.risk = risk;
+    }
+
+    public String getDateReported() {
+        return dateReported;
+    }
+
+    public void setDateReported(String dateReported) {
+        this.dateReported = dateReported;
     }
 
 

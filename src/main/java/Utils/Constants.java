@@ -22,4 +22,12 @@ public class Constants {
     public static final SimpleDateFormat tsdf  = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
     public static final SimpleDateFormat ysdf  = new SimpleDateFormat("yyyy");
     public static final SimpleDateFormat dsdf  = new SimpleDateFormat("M/dd/yyyy");
+
+    public static final String RATING_RAISES_TARGET    = "Raises Target";
+    public static final String RATING_SET_PRICE_TARGET = "Set Price Target";
+    public static final String RATING_UPGRADES         = "Upgrades";
+    public static final String RATING_LOWERS_TARGET    = "Lowers Target";
+    public static final String RATING_DOWNGRADES       = "Downgrades";
+    public static final String RATING_REITERIATES      = "Reiterates";
+    public static final String RATING_INITIATES        = "Initiates";
 }

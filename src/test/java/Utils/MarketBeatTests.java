@@ -5,22 +5,18 @@ import VO.RankInfo;
 import org.apache.poi.ss.formula.functions.Rank;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by i852841 on 5/26/18.
  */
 public class MarketBeatTests {
 
-    String[] arrTicker1   = {"MU", "NTNX", "SNES", "COST"};
+    //String[] arrTicker1   = {"MU", "NTNX", "LB", "T"};
+    String[] arrTicker1   = {"MU","NTNX","WFC"};
     List<String> tickers1 = Arrays.asList(arrTicker1);
-    private static final String OUT_FILE_LOC     = "/Users/i852841/Downloads";
-    private static final String BACK_FILE_LOC    = "/Users/i852841/Downloads/Backup";
+    private static final String OUT_FILE_LOC     = System.getProperty("user.home") + "/Downloads";
+    private static final String BACK_FILE_LOC    = System.getProperty("user.home") + "//Downloads/Backup";
 
     @Test
     public void testMBE2ENewFile() {
@@ -31,29 +27,47 @@ public class MarketBeatTests {
         marketBeatRatings.init();
 
         //2. Get rank data by firms
-        Map<String, RankInfo> result15587 =  marketBeatRatings.getDataByResearchFirm("15587", false, tickers1);
-        Map<String, RankInfo> result12026 =  marketBeatRatings.getDataByResearchFirm("12026", false, tickers1);
-        Map<String, RankInfo> result3308  =  marketBeatRatings.getDataByResearchFirm("3308", false, tickers1);
-        Map<String, RankInfo> result572   =  marketBeatRatings.getDataByResearchFirm("572", false, tickers1);
+        Map<String, RankInfo> result1   =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.NEEDHAM.getId(), false, tickers1);
+        Map<String, RankInfo> result2   =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.CS.getId(), false, tickers1);
+        Map<String, RankInfo> result3   =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.MORNING.getId(), false, tickers1);
+        Map<String, RankInfo> result4   =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.Z.getId(), false, tickers1);
+        Map<String, RankInfo> result5   =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.GS.getId(), false, tickers1);
+        Map<String, RankInfo> result6   =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.MORGAN.getId(), false, tickers1);
+        Map<String, RankInfo> result7   =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.KC.getId(), false, tickers1);
+        Map<String, RankInfo> result8   =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.ARGUS.getId(), false, tickers1);
+        Map<String, RankInfo> result9   =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.PIPER.getId(), false, tickers1);
+        Map<String, RankInfo> result10  =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.VE.getId(), false, tickers1);
+        Map<String, RankInfo> result11  =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.SIDOTI.getId(), false, tickers1);
+        Map<String, RankInfo> result12  =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.JEFFERIES.getId(), false, tickers1);
+        Map<String, RankInfo> result13  =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.STIFEL.getId(), false, tickers1);
+        Map<String, RankInfo> result14  =  marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.VETR.getId(), false, tickers1);
 
         //3. Merge the maps
         List<Map<String, RankInfo>> result = new ArrayList<>();
-        result.add(result15587);
-        result.add(result12026);
-        result.add(result3308);
-        result.add(result572);
+        result.add(result1);
+        result.add(result2);
+        result.add(result3);
+        result.add(result4);
+        result.add(result5);
+        result.add(result6);
+        result.add(result7);
+        result.add(result8);
+        result.add(result9);
+        result.add(result10);
+        result.add(result11);
+        result.add(result12);
+        result.add(result13);
+        result.add(result14);
+
         Map<String, List<RankInfo>> mergedData = marketBeatRatings.mergeMapData(result);
 
         //4. Write to file
         //Check if ticker ratings are available, if not skip write to file.
 
-
-        //marketBeatRatings.writeToXL("MU", "MU.xlsx", mergedData.get("MU"), OUT_FILE_LOC, BACK_FILE_LOC);
-
         marketBeatRatings.writeToXL(arrTicker1[0], arrTicker1[0] + ".xlsx", mergedData.get(arrTicker1[0]), OUT_FILE_LOC, BACK_FILE_LOC);
-        marketBeatRatings.writeToXL(arrTicker1[1], arrTicker1[1] + ".xlsx", mergedData.get(arrTicker1[1]), OUT_FILE_LOC, BACK_FILE_LOC);
-        marketBeatRatings.writeToXL(arrTicker1[2], arrTicker1[2] + ".xlsx", mergedData.get(arrTicker1[2]), OUT_FILE_LOC, BACK_FILE_LOC);
-        marketBeatRatings.writeToXL(arrTicker1[3], arrTicker1[3] + ".xlsx", mergedData.get(arrTicker1[3]), OUT_FILE_LOC, BACK_FILE_LOC);
+        //marketBeatRatings.writeToXL(arrTicker1[1], arrTicker1[1] + ".xlsx", mergedData.get(arrTicker1[1]), OUT_FILE_LOC, BACK_FILE_LOC);
+        //marketBeatRatings.writeToXL(arrTicker1[2], arrTicker1[2] + ".xlsx", mergedData.get(arrTicker1[2]), OUT_FILE_LOC, BACK_FILE_LOC);
+        //marketBeatRatings.writeToXL(arrTicker1[3], arrTicker1[3] + ".xlsx", mergedData.get(arrTicker1[3]), OUT_FILE_LOC, BACK_FILE_LOC);
     }
 
     @Test
@@ -71,11 +85,21 @@ public class MarketBeatTests {
     }
 
     @Test
+    public void testDataByOneResearchFirmForSelected2() {
+
+        String[] arrTicker1   = {"rds.a"};
+        List<String> tickers1 = Arrays.asList(arrTicker1);
+        MarketBeatRatings marketBeatRatings = new MarketBeatRatings();
+        marketBeatRatings.getDataByResearchFirm(MarketBeatRatings.ResearcherID.PIPER.getId(), false, tickers1);
+    }
+
+    @Test
     public void testGetTicker() {
         MarketBeatRatings marketBeatRatings = new MarketBeatRatings();
         System.out.println("[" + marketBeatRatings.getTicker("E. W. Scripps (SSP)") + "]");
         System.out.println("[" + marketBeatRatings.getTicker("RELX Group (RELX)") + "]");
         System.out.println("[" + marketBeatRatings.getTicker("Taro Pharmaceutical Industries (TARO)") + "]");
+        System.out.println("[" + marketBeatRatings.getTicker("Royal Dutch Shell plc ADR Class A (RDS.A)") + "]");
     }
 
     @Test
@@ -136,7 +160,38 @@ public class MarketBeatTests {
     }
 
     @Test
+    public void testResearcherID() {
+
+        //MarketBeatRatings mb = new MarketBeatRatings();
+        //mb.init();
+
+        System.out.println(MarketBeatRatings.ResearcherID.getNameByID("12026"));
+
+    }
+
+    @Test
     public void testRandom() {
+
+        //System.out.println(RankInfo.RatingState.RED.getState());
+        //System.out.println(MarketBeatRatings.ResearcherID.NEEDHAM.getId());
+        //System.out.println(MarketBeatRatings.ResearcherID.NEEDHAM.getName());
+
+        MarketBeatRatings mb = new MarketBeatRatings();
+//        mb.init();
+//
+//        for(String data : mb.researchFirmOrderList) {
+//            System.out.println(data);
+//            System.out.println(MarketBeatRatings.ResearcherID.);
+//        }
+
+        String SYMBOLS_TANZY_INVESTED  =
+                "sq,roku,irbt,ntnx,abcd,curo,lb,m,gluu,ge,t,gern,wb,ibn,cost,amd,intc,f,gm,abb,rrc,kmi,teva,alb,sap,wm,bac,botz,jd,mpw,msft,pfe,rds.a,wfc";
+
+        List<String> tickers = new ArrayList<>();
+        for(String str : SYMBOLS_TANZY_INVESTED.split(Constants.SEPARATOR_COMMA))
+            tickers.add(str);
+
+        System.out.println(tickers.contains("rds.a"));
 
     }
 
