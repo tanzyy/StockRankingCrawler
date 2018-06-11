@@ -41,10 +41,12 @@ import java.util.Set;
 public class MarketBeatRatings {
 
     private static final Logger LOG = Logger.getLogger(MarketBeatRatings.class);
-    private static final int    DATA_SIZE_IN_MB   = 100;
-    private static final String MB_RESEARCHER_URI = "https://www.marketbeat.com/ratings/by-issuer/";
-    private static final String MB_TICKER_NA      = "NA";
-    private static final int    MB_DATE_RANGE     = 200;
+    private static final int    DATA_SIZE_IN_MB     = 100;
+    private static final String MB_RESEARCHER_URI   = "https://www.marketbeat.com/ratings/by-issuer/";
+    private static final String MB_NASDAQ_STOCK_URI = "https://www.marketbeat.com/stocks/NASDAQ/";
+    private static final String MB_NYSE_STOCK_URI    = "https://www.marketbeat.com/stocks/NYSE/";
+    private static final String MB_TICKER_NA        = "NA";
+    private static final int    MB_DATE_RANGE       = 200;
 
     private String rankDate;
     private String rankYear;
@@ -76,6 +78,10 @@ public class MarketBeatRatings {
         researchFirmOrderList.add(ResearcherID.WFC.getId());
         researchFirmOrderList.add(ResearcherID.BIDASK.getId());
         researchFirmOrderList.add(ResearcherID.ROTH.getId());
+        researchFirmOrderList.add(ResearcherID.JANNEYSCOTT.getId());
+        researchFirmOrderList.add(ResearcherID.BLAIR.getId());
+        researchFirmOrderList.add(ResearcherID.STEPHENS.getId());
+        researchFirmOrderList.add(ResearcherID.BARCLAYS.getId());
     }
 
     public List<String> researchFirmOrderList = new ArrayList<>();
@@ -134,6 +140,45 @@ public class MarketBeatRatings {
         return result;
     }
 
+    /**
+     *
+     * @param ticker
+     * @return Map of RanK Data with key as Ticker
+     */
+    public Map<String, RankInfo>  getDataByTicker(String ticker) {
+
+        Document document;
+        Map<String, RankInfo> result = new HashMap<>();
+
+        try {
+            String targetNasdaqURL = MB_NASDAQ_STOCK_URI + ticker;
+            String targetNYSEURL   = MB_NYSE_STOCK_URI + ticker;
+            LOG.info(String.format("Ticker [%s], NASDAQ URL [%s] and NYSE URL [%s] ", ticker, targetNasdaqURL, targetNYSEURL));
+
+            document = Jsoup.connect(targetNYSEURL).userAgent("Mozilla").maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
+            if(document == null) {
+                LOG.debug("NYSE data is null, hitting NASDAQ");
+                document = Jsoup.connect(targetNasdaqURL).userAgent("Mozilla").maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
+            }
+
+            Elements rows = document.getElementsByClass("ratingstable").first().select("tbody").select("tr");
+            //LOG.debug("Current rows are - " + rows.toString());
+
+            for(Element row : rows) {
+
+                Elements columns = row.select("td");
+                //LOG.debug("Current columns are - " + columns.toString());
+                setTickerValues(columns, result);
+            }
+
+        } catch(Exception e) {
+            LOG.error(String.format("Error occurred for [%s] with error %s ", ticker,  e));
+        }
+
+        result.forEach((k, v) -> System.out.println(String.format("For [%s], the research firm [%s] and Data is [%s]", ticker, k, v)));
+        return result;
+    }
+
 
     /**
      *
@@ -180,6 +225,22 @@ public class MarketBeatRatings {
         rankInfo.setSpeculatedPrice(columns.get(5).text());
 
         resultMap.put(ticker, Constants.UNAVAILABLE.equalsIgnoreCase(resultMap.get(ticker).getRank()) ? rankInfo : resultMap.get(ticker));
+    }
+
+    private void setTickerValues(Elements columns, Map<String, RankInfo> resultMap) {
+
+        RankInfo rankInfo = new RankInfo();
+
+        rankInfo.setDateReported(columns.get(0).text());
+        rankInfo.setResearchFirm(columns.get(1).text());
+
+        rankInfo.setAction(columns.get(2).text());
+        rankInfo.setRatingVal(columns.get(2).text());
+
+        rankInfo.setRank(columns.get(3).text());
+        rankInfo.setSpeculatedPrice(columns.get(4).text());
+
+        resultMap.put(columns.get(1).text(), resultMap.get(columns.get(1).text()) == null ? rankInfo : resultMap.get(columns.get(1).text()));
     }
 
     public String getRankDate() {
@@ -500,7 +561,7 @@ public class MarketBeatRatings {
         PIPER("Piper Jaffray Companies", "56"),
         VE("ValuEngine", "28687"),
         SIDOTI("Sidoti", "166"),
-        JEFFERIES("Jefferies Group", "149"),
+        JEFFERIES("Jefferies Financial Group", "149"),
         STIFEL("Stifel Nicolaus", "51"),
         VETR("Vetr", "18847"),
         FUNDAMENTAL("Fundamental Research", "7001"),
@@ -510,7 +571,11 @@ public class MarketBeatRatings {
         BOFA("Bank of America", "17831"),
         WFC("Wells Fargo & Co", "21"),
         BIDASK("BidaskClub", "29019"),
-        ROTH("Roth Capital", "275");
+        ROTH("Roth Capital", "275"),
+        JANNEYSCOTT("Janney Montgomery Scott", "329"),   //for curo
+        BLAIR("William Blair", "213"),                   //for curo
+        STEPHENS("Stephens", "132"),                     //for curo
+        BARCLAYS("Barclays", "4");
 
         private String id;
         private String name;
@@ -547,4 +612,98 @@ public class MarketBeatRatings {
             return NAME_ID_MAP.get(ID);
         }
     }
+
+    /**
+     * 1. Backup file
+     * 2. Shift columns
+     * 3. Insert Row
+     * 4. Delete temp file
+     * @param
+     */
+    public void updateXL(String ticker, Map<String, RankInfo> allFetchedData, String outLOC, String backLOC) {
+
+        //No need to write if no data found for the given ticker
+        if(allFetchedData == null || (allFetchedData != null && allFetchedData.size() == 0)) {
+            LOG.warn(String.format("For [%s] , no data found.", ticker));
+            return;
+        }
+
+        String fileName = ticker.toUpperCase() + Constants.EXTENSION_XLSX;
+
+        String fileWithLOC       = outLOC + File.separator + fileName;
+        File targetFileHandler   = new File(fileWithLOC);
+
+        String backupFileWithLOC = backLOC + File.separator + CommonUtils.getCurrentTime() + Constants.SEPARATOR_UNDERSCORE + fileName;
+        File backupFileHandler   = new File(backupFileWithLOC);
+
+        //File tempFileHandler = new File(outLOC + File.separator + Constants.TEMP_PREFIX + fileName);
+
+        //Do backup
+        if(targetFileHandler.exists()) {
+            try {
+                Files.copy(targetFileHandler.toPath(), backupFileHandler.toPath());
+                //targetFileHandler.renameTo(tempFileHandler);
+            } catch (IOException e) {
+                LOG.error("IOException while BackingUp File  " + targetFileHandler, e);
+            }
+        }
+
+        updateXLData(fileWithLOC, allFetchedData);
+    }
+
+    private void updateXLData(String targetFile, Map<String, RankInfo> allFetchedData) {
+
+        try {
+
+            FileInputStream inputStream = new FileInputStream(new File(targetFile));
+            Workbook workbook = WorkbookFactory.create(inputStream);
+
+            Sheet sheet = workbook.getSheetAt(0);
+
+            int rowCount = sheet.getLastRowNum();
+            LOG.info(String.format("In File [%s], Row count is [%s]", targetFile, rowCount));
+
+            for(int rowIndex=1; rowIndex<=rowCount; rowIndex++){
+
+                Row currentRow           = sheet.getRow(rowIndex);
+                Cell firm                = currentRow.getCell(0);
+                Cell currentCell         = currentRow.getCell(1);
+                RankInfo currentRankInfo = allFetchedData.get(firm.toString());
+
+                if(currentRankInfo != null && Constants.UNAVAILABLE.equals(currentCell.toString())) {
+
+                    String currentCellStr    = getRankStrByRankInfo(currentRankInfo);
+
+                    if(currentRankInfo.getRatingVal() == RankInfo.RatingState.RED.getState()) {
+                        CellStyle style = workbook.createCellStyle();
+                        style.setFillForegroundColor(IndexedColors.ROSE.getIndex());
+                        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+                        currentCell.setCellStyle(style);
+
+                    } else if(currentRankInfo.getRatingVal() == RankInfo.RatingState.GREEN.getState()) {
+                        CellStyle style = workbook.createCellStyle();
+                        style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
+                        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+                        currentCell.setCellStyle(style);
+                    }
+
+                    LOG.info(String.format("For Symbol [%s] , CurrentCellStr [%s] ", currentRow.getCell(0), currentCellStr));
+
+                    currentCell.setCellValue(currentCellStr);
+                } else {
+                    LOG.debug(String.format("For firm [%s], data is already available [%s] or fetched data [%s] is null", firm, currentCell, currentRankInfo));
+                }
+            }
+
+            inputStream.close();
+            FileOutputStream outputStream = new FileOutputStream(targetFile);
+            workbook.write(outputStream);
+            workbook.close();
+            outputStream.close();
+
+        } catch (IOException | EncryptedDocumentException | InvalidFormatException ex) {
+            LOG.error("Error while Creating New Sheet  " + targetFile, ex);
+        }
+    }
+
 }

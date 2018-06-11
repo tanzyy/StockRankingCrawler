@@ -59,7 +59,8 @@ public class RankInfo {
 
         else if(Constants.RATING_RAISES_TARGET.equalsIgnoreCase(ratingAction)
                 || Constants.RATING_SET_PRICE_TARGET.equalsIgnoreCase(ratingAction)
-                || Constants.RATING_UPGRADES.equalsIgnoreCase(ratingAction))
+                || Constants.RATING_UPGRADES.equalsIgnoreCase(ratingAction)
+                || Constants.RATING_BOOST_PRICE_TARGET.equalsIgnoreCase(ratingAction))
             this.ratingVal = RatingState.GREEN.getState();
         else
             this.ratingVal = RatingState.GRAY.getState();
@@ -201,6 +202,8 @@ public class RankInfo {
             sbr.append(speculatedPrice);
             sbr.append("] Action [");
             sbr.append(action);
+            sbr.append("] Date Reported [");
+            sbr.append(dateReported);
             sbr.append("]");
         }
 

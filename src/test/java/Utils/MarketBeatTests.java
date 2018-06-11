@@ -19,6 +19,29 @@ public class MarketBeatTests {
     private static final String BACK_FILE_LOC    = System.getProperty("user.home") + "//Downloads/Backup";
 
     @Test
+    //Verifies NYSE and NASDAQ both
+    public void testUpdateXL() {
+
+        String OUT_LOC   = System.getProperty("user.home") + "/Desktop/Personal/Finance_Learn_Reports/MarketBeatRank";
+        String BACK_DIR  = "/Backup";
+        String dirName   = "/Temp";
+
+        MarketBeatRatings marketBeatRatings = new MarketBeatRatings();
+        marketBeatRatings.init();
+        Map<String, RankInfo> result = marketBeatRatings.getDataByTicker("curo");
+        marketBeatRatings.updateXL("curo", result,OUT_LOC + dirName ,OUT_LOC + dirName + BACK_DIR);
+    }
+
+    @Test
+    //Verifies NYSE and NASDAQ both
+    public void testGetDataByTicker() {
+
+        MarketBeatRatings marketBeatRatings = new MarketBeatRatings();
+        marketBeatRatings.getDataByTicker("curo");
+        marketBeatRatings.getDataByTicker("nihd");
+    }
+
+    @Test
     public void testMBE2ENewFile() {
 
         MarketBeatRatings marketBeatRatings = new MarketBeatRatings();

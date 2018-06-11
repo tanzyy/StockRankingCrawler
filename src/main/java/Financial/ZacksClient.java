@@ -12,32 +12,32 @@ import java.util.List;
  */
 public class ZacksClient {
 
-    private static final String SYMBOLS_TANZY_WATCH      = "amzn,goog,googl,nflx,aapl,nvda,fb,shop,tsla,adbe,anet,ba,mu,wmt,tgt,exas,ebay,baba,amat,crus,twtr,spot,docu,ibm,vmw,gsk";
-    private static final String SYMBOLS_TANZY_WATCH2     = "Dcph,nvax,ftr,nly,mnk,cy,ddd,qd,mat,ctrl,ctl,trvg,tzoo,trip,yelp,mtch,pypl,avgo,vrtx,algn,txn,low,gme,big,rost,blk,vslr,abbv,fate,lmt,bl,fdx,cmcsa,hznp,dbx,cat,fdc,phm,alna,tol,symc,tmus";
+    public static final String SYMBOLS_TANZY_WATCH      = "amzn,goog,googl,nflx,aapl,nvda,fb,shop,tsla,adbe,anet,ba,mu,wmt,tgt,exas,ebay,baba,amat,crus,twtr,spot,docu,ibm,vmw,gsk";
+    public static final String SYMBOLS_TANZY_WATCH2     = "Dcph,nvax,ftr,nly,mnk,cy,ddd,qd,mat,ctrl,ctl,trvg,tzoo,trip,yelp,mtch,pypl,avgo,vrtx,algn,txn,low,gme,big,rost,blk,vslr,abbv,fate,lmt,bl,fdx,cmcsa,hznp,dbx,cat,fdc,phm,alna,tol,symc,tmus";
     private static final String OUT_FILE_TANZY_WATCH     = "TanzyWatch.xlsx";
     private static final String OUT_FILE_TANZY_WATCH2    = "TanzyWatch2.xlsx";
 
-    private static final String SYMBOLS_TANZY_INVESTED   = "sq,roku,irbt,ntnx,abcd,curo,lb,m,gluu,ge,t,gern,wb,ibn,cost,amd,intc,f,gm,abb,rrc,kmi,teva,alb,sap,wm,bac,botz,jd,mpw,msft,pfe,rds.a,wfc";
+    public static final String SYMBOLS_TANZY_INVESTED   = "sq,roku,irbt,ntnx,abcd,curo,lb,m,gluu,ge,t,gern,wb,ibn,cost,amd,intc,f,gm,abb,rrc,kmi,teva,alb,sap,wm,bac,botz,jd,mpw,msft,pfe,rds.a,wfc";
     private static final String OUT_FILE_TANZY_INVESTED  = "TanzyInvested.xlsx";
 
-    private static final String SYMBOLS_TANZY_TO_INVEST  = "etsy,pvtl,irt,rng,tndm,snap,conn,amma,edit,psec";
+    public static final String SYMBOLS_TANZY_TO_INVEST  = "etsy,pvtl,irt,rng,tndm,snap,conn,amma,edit,psec";
     private static final String OUT_FILE_TANZY_TO_INVEST = "TanzyToInvest.xlsx";
 
-    private static final String SYMBOLS_TANZY_PENNY      = "rad,jagx,aprn,opgn,zsan,cris,nete,sgyp,agen,avxl,ohrp,snes,insy,chk,ftr,mobl,nvax,nihd,jcp,smrt,grpn,xene";
+    public static final String SYMBOLS_TANZY_PENNY      = "rad,jagx,aprn,opgn,zsan,cris,nete,sgyp,agen,avxl,ohrp,snes,insy,chk,ftr,mobl,nvax,nihd,jcp,smrt,grpn,xene";
     private static final String OUT_FILE_TANZY_PENNY     = "TanzyPenny.xlsx";
 
-    private static final String SYMBOLS_TANZY_GROWTH     = "llnw,crox,tbbk,spar,usat,cdxs,tndm";
+    public static final String SYMBOLS_TANZY_GROWTH     = "llnw,crox,tbbk,spar,usat,cdxs,tndm";
     private static final String OUT_FILE_TANZY_GROWTH    = "TanzyGrowth.xlsx";
 
-    private static final String SYMBOLS_TANZY_REPORT     = "abcd,gluu,gern,sq,ntnx,roku,irbt,jd,m,etsy,curo,brk.b";
+    public static final String SYMBOLS_TANZY_REPORT     = "abcd,gluu,gern,sq,ntnx,roku,irbt,jd,m,etsy,curo,brk.b";
     private static final String OUT_FILE_TANZY_REPORT    = "TanzyReport.xlsx";
 
-    private static final String SYMBOLS_TANZY_REIT     = "IRT,HCP,KIM,MORT,PLD";
+    public static final String SYMBOLS_TANZY_REIT     = "IRT,HCP,KIM,MORT,PLD";
     private static final String OUT_FILE_TANZY_REIT    = "TanzyREIT.xlsx";
 
-    private static final String SYMBOLS_TANZY_ETF_SMALL    = "PXSG,FYC,SLYG";
-    private static final String SYMBOLS_TANZY_ETF_THEMATIC = "BOTZ,ARKG";
-    private static final String SYMBOLS_TANZY_ETF_WATCH    = "MORT,QQQ,SPY,VYM,VTI,VTV,ITA,DIA,IWM";
+    public static final String SYMBOLS_TANZY_ETF_SMALL    = "PXSG,FYC,SLYG";
+    public static final String SYMBOLS_TANZY_ETF_THEMATIC = "BOTZ,ARKG";
+    public static final String SYMBOLS_TANZY_ETF_WATCH    = "MORT,QQQ,SPY,VYM,VTI,VTV,ITA,DIA,IWM";
     private static final String OUT_FILE_TANZY_ETF         = "Tanzy_ETF.xlsx";
 
     private static  String OUT_FILE_LOC     = "/Desktop/Personal/Finance_Learn_Reports/ZacksRank";
