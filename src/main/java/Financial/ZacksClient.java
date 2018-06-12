@@ -45,7 +45,7 @@ public class ZacksClient {
 
 
     static boolean forReport = false;
-    static boolean isETF     = true;
+    static boolean isETF     = false;
 
     public static void main(String[] args) {
 
@@ -71,6 +71,10 @@ public class ZacksClient {
 
                 new ZacksClient().processData(SYMBOLS_TANZY_REIT, OUT_FILE_TANZY_REIT);
                 new ZacksClient().processData(SYMBOLS_TANZY_WATCH2, OUT_FILE_TANZY_WATCH2);
+
+                new ZacksClient().processETFData(SYMBOLS_TANZY_ETF_SMALL, OUT_FILE_TANZY_ETF, "SmallCap", 0);
+                new ZacksClient().processETFData(SYMBOLS_TANZY_ETF_THEMATIC, OUT_FILE_TANZY_ETF, "Thematic", 1);
+                new ZacksClient().processETFData(SYMBOLS_TANZY_ETF_WATCH, OUT_FILE_TANZY_ETF, "Watch", 2);
             }
         }
     }
