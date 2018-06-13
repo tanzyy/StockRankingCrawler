@@ -10,34 +10,21 @@ import java.util.Map;
 
 public class MarketBeatClient {
 
-    private static final String OUT_DIR_TANZY_WATCH     = "/TanzyWatch";
-    private static final String OUT_DIR_TANZY_WATCH2    = "/TanzyWatch2";
-    private static final String OUT_DIR_TANZY_INVESTED  = "/TanzyInvested";
-    private static final String OUT_DIR_TANZY_TO_INVEST = "/TanzyToInvest";
-    private static final String OUT_DIR_TANZY_PENNY     = "/TanzyPenny";
-    private static final String OUT_DIR_TANZY_GROWTH    = "/TanzyGrowth";
-    private static final String OUT_DIR_TANZY_REPORT    = "/TanzyReport";
-    private static final String OUT_DIR_TANZY_REIT      = "/TanzyREIT";
-    private static final String OUT_DIR_TANZY_ETF       = "/Tanzy_ETF";
-
-
-    private static final String SYMBOLS     = "mu";
-
-
-    private static  String OUT_FILE_LOC = "/Desktop/Personal/Finance_Learn_Reports/MarketBeatRank";
+    private static  String OUT_FILE_LOC = "/Reports/MarketBeatRank";
     private static  String BACK_DIR     = "/Backup";
 
     public static void main(String[] args) {
-        OUT_FILE_LOC  = System.getProperty("user.home") + OUT_FILE_LOC;
 
-        //new MarketBeatClient().processData(ZacksClient.SYMBOLS_TANZY_INVESTED, OUT_DIR_TANZY_INVESTED, false);
-        new MarketBeatClient().processData(ZacksClient.SYMBOLS_TANZY_WATCH, OUT_DIR_TANZY_WATCH, true);
-        new MarketBeatClient().processData(ZacksClient.SYMBOLS_TANZY_WATCH2, OUT_DIR_TANZY_WATCH2, true);
-        new MarketBeatClient().processData(ZacksClient.SYMBOLS_TANZY_GROWTH, OUT_DIR_TANZY_GROWTH, true);
-        new MarketBeatClient().processData(ZacksClient.SYMBOLS_TANZY_TO_INVEST, OUT_DIR_TANZY_TO_INVEST, true);
-        new MarketBeatClient().processData(ZacksClient.SYMBOLS_TANZY_PENNY, OUT_DIR_TANZY_PENNY, true);
-        new MarketBeatClient().processData(ZacksClient.SYMBOLS_TANZY_REPORT, OUT_DIR_TANZY_REPORT, true);
-        new MarketBeatClient().processData(ZacksClient.SYMBOLS_TANZY_REIT, OUT_DIR_TANZY_REIT, true);
+        OUT_FILE_LOC  = System.getProperty("user.dir") + OUT_FILE_LOC;
+
+        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_INVESTED,  Constants.OUT_DIR_TANZY_INVESTED,   false);
+        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_WATCH,     Constants.OUT_DIR_TANZY_WATCH,      false);
+        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_WATCH2,    Constants.OUT_DIR_TANZY_WATCH2,     false);
+        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_GROWTH,    Constants.OUT_DIR_TANZY_GROWTH,     false);
+        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_TO_INVEST, Constants.OUT_DIR_TANZY_TO_INVEST,  false);
+        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_PENNY,     Constants.OUT_DIR_TANZY_PENNY,      false);
+        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_REPORT,    Constants.OUT_DIR_TANZY_REPORT,     false);
+        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_REIT,      Constants.OUT_DIR_TANZY_REIT,       false);
     }
 
     private void processData(String symbols, String dirName, boolean toUpdate) {
@@ -65,6 +52,7 @@ public class MarketBeatClient {
             marketBeatRatings.writeToXL(ticker, ticker.toUpperCase() + ".xlsx", mergedData.get(ticker),
                     OUT_FILE_LOC + dirName, OUT_FILE_LOC + dirName + BACK_DIR);
 
+        //To get historical ratings for each ticker and update the recent most column
         if(toUpdate) {
             for(String ticker : tickers) {
                 Map<String, RankInfo> resultMap = marketBeatRatings.getDataByTicker(ticker);

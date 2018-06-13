@@ -42,7 +42,7 @@ import java.util.List;
  * 2. Thread based
  * 3. Read test file from resources
  */
-public class ZacksDataInExcel {
+public class ZacksRatings {
 
     private static final int    DATA_SIZE_IN_MB         = 100;
     private static final String ZACKS_SEPARATOR         = "-";
@@ -50,7 +50,7 @@ public class ZacksDataInExcel {
     private static final String ZACKS_MAIN_URL          = "https://www.zacks.com/stock/quote/";
     private static final String ZACKS_ETF_URL           = "https://www.zacks.com/funds/etf/%s/profile?q=%s";
     private static final String ZACKS_RANK_UNAVAILABLE  = "UN";
-    private static final Logger LOG = Logger.getLogger(ZacksDataInExcel.class);
+    private static final Logger LOG = Logger.getLogger(ZacksRatings.class);
 
     private String rankDate;
     private String rankYear;

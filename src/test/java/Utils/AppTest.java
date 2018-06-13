@@ -1,6 +1,6 @@
 package Utils;
 
-import Financial.ZacksDataInExcel;
+import Financial.ZacksRatings;
 import VO.ExcelProp;
 import VO.RankInfo;
 import org.junit.Assert;
@@ -53,12 +53,12 @@ public class AppTest {
         String symbols = "PXSG,FYC,SLYG";
         String outFile = "ZacksTest_ETF_NotExist.xlsx";
 
-        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
-        zacksDataInExcel.init();
+        ZacksRatings zacksRatings = new ZacksRatings();
+        zacksRatings.init();
 
         List<RankInfo> currentRankingData = new ArrayList<>();
         for(String symbol : symbols.split(Constants.SEPARATOR_COMMA)) {
-            currentRankingData.add(zacksDataInExcel.getETFData(symbol));
+            currentRankingData.add(zacksRatings.getETFData(symbol));
         }
 
         ExcelProp excelProp = new ExcelProp();
@@ -66,7 +66,7 @@ public class AppTest {
         excelProp.setWorkBookName(outFile);
         excelProp.setSheetIndex(1);
 
-        zacksDataInExcel.writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC);
+        zacksRatings.writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC);
 
         Assert.assertTrue( true );
     }
@@ -77,12 +77,12 @@ public class AppTest {
         String symbols = "PXSG,FYC,SLYG";
         String outFile = "ZacksTest_ETF_FileExist.xlsx";
 
-        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
-        zacksDataInExcel.init();
+        ZacksRatings zacksRatings = new ZacksRatings();
+        zacksRatings.init();
 
         List<RankInfo> currentRankingData = new ArrayList<>();
         for(String symbol : symbols.split(Constants.SEPARATOR_COMMA)) {
-            currentRankingData.add(zacksDataInExcel.getETFData(symbol));
+            currentRankingData.add(zacksRatings.getETFData(symbol));
         }
 
         ExcelProp excelProp = new ExcelProp();
@@ -90,7 +90,7 @@ public class AppTest {
         excelProp.setWorkBookName(outFile);
         excelProp.setSheetIndex(1);
 
-        zacksDataInExcel.writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC);
+        zacksRatings.writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC);
 
         Assert.assertTrue( true );
     }
@@ -98,8 +98,8 @@ public class AppTest {
     @Test
     public void testGetETFData() {
 
-        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
-        zacksDataInExcel.getETFData("FYC");
+        ZacksRatings zacksRatings = new ZacksRatings();
+        zacksRatings.getETFData("FYC");
 
         Assert.assertTrue( true );
     }
@@ -110,8 +110,8 @@ public class AppTest {
 
         String OUT_FILE_TEST = "ZacksTest_FileNotExist.xlsx";
 
-        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
-        zacksDataInExcel.init();
+        ZacksRatings zacksRatings = new ZacksRatings();
+        zacksRatings.init();
 
         RankInfo rankInfo1 = new RankInfo("mu", "1", "$100");
         RankInfo rankInfo2 = new RankInfo("pu", "3", "$50.49");
@@ -124,7 +124,7 @@ public class AppTest {
         fetchedData.add(rankInfo3);
         fetchedData.add(rankInfo4);
 
-        zacksDataInExcel.writeToXL(OUT_FILE_TEST, fetchedData, OUT_LOC, BACK_LOC);
+        zacksRatings.writeToXL(OUT_FILE_TEST, fetchedData, OUT_LOC, BACK_LOC);
 
         //assertTrue( true );
     }
@@ -134,8 +134,8 @@ public class AppTest {
 
         String OUT_FILE_TEST = "ZacksTest_FileExistWithChange.xlsx";
 
-        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
-        zacksDataInExcel.init();
+        ZacksRatings zacksRatings = new ZacksRatings();
+        zacksRatings.init();
 
         RankInfo rankInfo1 = new RankInfo("mu", "1", "$100");
         RankInfo rankInfo2 = new RankInfo("pu", "3", "$50.49");
@@ -150,7 +150,7 @@ public class AppTest {
         fetchedData.add(rankInfo4);
         fetchedData.add(rankInfo5);
 
-        zacksDataInExcel.writeToXL(OUT_FILE_TEST, fetchedData, OUT_LOC, BACK_LOC);
+        zacksRatings.writeToXL(OUT_FILE_TEST, fetchedData, OUT_LOC, BACK_LOC);
 
         Assert.assertTrue(true );
     }
@@ -160,8 +160,8 @@ public class AppTest {
 
         String OUT_FILE_TEST = "ZacksTest_FileExistWOChange.xlsx";
 
-        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
-        zacksDataInExcel.init();
+        ZacksRatings zacksRatings = new ZacksRatings();
+        zacksRatings.init();
 
         RankInfo rankInfo1 = new RankInfo("mu", "1", "$100");
         RankInfo rankInfo2 = new RankInfo("pu", "3", "$50.49");
@@ -174,7 +174,7 @@ public class AppTest {
         fetchedData.add(rankInfo3);
         fetchedData.add(rankInfo4);
 
-        zacksDataInExcel.writeToXL(OUT_FILE_TEST, fetchedData, OUT_LOC, BACK_LOC);
+        zacksRatings.writeToXL(OUT_FILE_TEST, fetchedData, OUT_LOC, BACK_LOC);
 
         Assert.assertTrue( true );
     }
@@ -185,10 +185,10 @@ public class AppTest {
     @Test
     public void testGetRankInfo() {
 
-        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
+        ZacksRatings zacksRatings = new ZacksRatings();
 
-        zacksDataInExcel.init();
-        zacksDataInExcel.getData("mu");
+        zacksRatings.init();
+        zacksRatings.getData("mu");
         Assert.assertTrue( true );
     }
 
@@ -198,10 +198,10 @@ public class AppTest {
     @Test
     public void testGetRankInfoWithInvalid() {
 
-        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
+        ZacksRatings zacksRatings = new ZacksRatings();
 
-        zacksDataInExcel.init();
-        zacksDataInExcel.getData("muu");
+        zacksRatings.init();
+        zacksRatings.getData("muu");
         Assert.assertTrue( true );
     }
 
@@ -211,10 +211,10 @@ public class AppTest {
     @Test
     public void testGetRankInfoDataUn() {
 
-        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
+        ZacksRatings zacksRatings = new ZacksRatings();
 
-        zacksDataInExcel.init();
-        zacksDataInExcel.getData("goog");
+        zacksRatings.init();
+        zacksRatings.getData("goog");
         Assert.assertTrue( true );
     }
 
@@ -224,16 +224,16 @@ public class AppTest {
     @Test
     public void testGetRankStrByRankInfo() {
 
-        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
+        ZacksRatings zacksRatings = new ZacksRatings();
         RankInfo rankInfo = new RankInfo();
         rankInfo.setSymbol("test_symbol");
         rankInfo.setRank("2");
         rankInfo.setPrice("$100");
 
-        Assert.assertEquals("Buy        ($100)", zacksDataInExcel.getRankStrByRankInfo(rankInfo));
+        Assert.assertEquals("Buy        ($100)", zacksRatings.getRankStrByRankInfo(rankInfo));
 
         rankInfo.resetRankInfo("", "0", "0");
-        Assert.assertEquals("UN         (0)", zacksDataInExcel.getRankStrByRankInfo(rankInfo));
+        Assert.assertEquals("UN         (0)", zacksRatings.getRankStrByRankInfo(rankInfo));
     }
 
 
@@ -243,20 +243,20 @@ public class AppTest {
     @Test
     public void testGetRankByStr() {
 
-        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
+        ZacksRatings zacksRatings = new ZacksRatings();
 
-        Assert.assertEquals("2", zacksDataInExcel.getRankNumByStr("Buy        ($100)"));
-        Assert.assertEquals("1", zacksDataInExcel.getRankNumByStr("StrongBuy (0)"));
-        Assert.assertEquals("0", zacksDataInExcel.getRankNumByStr("UN (0)"));
+        Assert.assertEquals("2", zacksRatings.getRankNumByStr("Buy        ($100)"));
+        Assert.assertEquals("1", zacksRatings.getRankNumByStr("StrongBuy (0)"));
+        Assert.assertEquals("0", zacksRatings.getRankNumByStr("UN (0)"));
     }
 
     @Test
     public void testGetPrice() {
 
-        ZacksDataInExcel zacksDataInExcel = new ZacksDataInExcel();
+        ZacksRatings zacksRatings = new ZacksRatings();
 
-        zacksDataInExcel.init();
-        zacksDataInExcel.getPrice("qqq");
+        zacksRatings.init();
+        zacksRatings.getPrice("qqq");
         Assert.assertTrue( true );
     }
 

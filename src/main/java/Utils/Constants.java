@@ -7,6 +7,43 @@ import java.text.SimpleDateFormat;
  */
 public class Constants {
 
+    //Config constants
+    public static final String OUT_DIR_TANZY_WATCH     = "/TanzyWatch";
+    public static final String OUT_DIR_TANZY_WATCH2    = "/TanzyWatch2";
+    public static final String OUT_DIR_TANZY_INVESTED  = "/TanzyInvested";
+    public static final String OUT_DIR_TANZY_TO_INVEST = "/TanzyToInvest";
+    public static final String OUT_DIR_TANZY_PENNY     = "/TanzyPenny";
+    public static final String OUT_DIR_TANZY_GROWTH    = "/TanzyGrowth";
+    public static final String OUT_DIR_TANZY_REPORT    = "/TanzyReport";
+    public static final String OUT_DIR_TANZY_REIT      = "/TanzyREIT";
+    public static final String OUT_DIR_TANZY_ETF       = "/Tanzy_ETF";
+
+    public static final String SYMBOLS_TANZY_WATCH        = "amzn,goog,googl,nflx,aapl,nvda,fb,shop,tsla,adbe,anet,ba,mu,wmt," +
+            "tgt,exas,ebay,baba,amat,crus,twtr,spot,docu,ibm,vmw,gsk";
+    public static final String SYMBOLS_TANZY_WATCH2       = "Dcph,nvax,ftr,nly,mnk,cy,ddd,qd,mat,ctrl,ctl,trvg,tzoo,trip,yelp,mtch," +
+            "pypl,avgo,vrtx,algn,txn,low,gme,big,rost,blk,vslr,abbv,fate,lmt,bl,fdx,cmcsa,hznp,dbx,cat,fdc,phm,alna,tol,symc,tmus";
+    public static final String SYMBOLS_TANZY_INVESTED     = "sq,roku,irbt,ntnx,abcd,curo,lb,m,gluu,ge,t,gern,wb,ibn,cost,amd,intc,f," +
+            "gm,abb,rrc,kmi,teva,alb,sap,wm,bac,botz,jd,mpw,msft,pfe,rds.a,wfc";
+    public static final String SYMBOLS_TANZY_TO_INVEST    = "etsy,pvtl,irt,rng,tndm,snap,conn,amma,edit,psec,glad,hcp";
+    public static final String SYMBOLS_TANZY_PENNY        = "rad,jagx,aprn,opgn,zsan,cris,nete,sgyp,agen,avxl,ohrp,snes,insy,chk,ftr,mobl,nvax,nihd,jcp,smrt,grpn,xene";
+    public static final String SYMBOLS_TANZY_GROWTH       = "llnw,crox,tbbk,spar,usat,cdxs,tndm";
+    public static final String SYMBOLS_TANZY_REPORT       = "abcd,gluu,gern,sq,ntnx,roku,irbt,jd,m,etsy,curo,brk.b";
+    public static final String SYMBOLS_TANZY_REIT         = "IRT,HCP,KIM,MORT,PLD";
+    public static final String SYMBOLS_TANZY_ETF_SMALL    = "PXSG,FYC,SLYG";
+    public static final String SYMBOLS_TANZY_ETF_THEMATIC = "BOTZ,ARKG";
+    public static final String SYMBOLS_TANZY_ETF_WATCH    = "MORT,QQQ,SPY,VYM,VTI,VTV,ITA,DIA,IWM";
+
+    public static final String OUT_FILE_TANZY_WATCH     = "TanzyWatch.xlsx";
+    public static final String OUT_FILE_TANZY_WATCH2    = "TanzyWatch2.xlsx";
+    public static final String OUT_FILE_TANZY_INVESTED  = "TanzyInvested.xlsx";
+    public static final String OUT_FILE_TANZY_TO_INVEST = "TanzyToInvest.xlsx";
+    public static final String OUT_FILE_TANZY_PENNY     = "TanzyPenny.xlsx";
+    public static final String OUT_FILE_TANZY_GROWTH    = "TanzyGrowth.xlsx";
+    public static final String OUT_FILE_TANZY_REPORT    = "TanzyReport.xlsx";
+    public static final String OUT_FILE_TANZY_REIT      = "TanzyREIT.xlsx";
+    public static final String OUT_FILE_TANZY_ETF         = "Tanzy_ETF.xlsx";
+
+
     public static final String TEMP_PREFIX             = "TEMP_";
     public static final String SEPARATOR_RANK_PRICE    = " -- ";
     public static final String SEPARATOR_OPEN_BRACE    = "(";

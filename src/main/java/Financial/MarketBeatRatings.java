@@ -46,7 +46,7 @@ public class MarketBeatRatings {
     private static final String MB_NASDAQ_STOCK_URI = "https://www.marketbeat.com/stocks/NASDAQ/";
     private static final String MB_NYSE_STOCK_URI    = "https://www.marketbeat.com/stocks/NYSE/";
     private static final String MB_TICKER_NA        = "NA";
-    private static final int    MB_DATE_RANGE       = 200;
+    private static final int    MB_DATE_RANGE       = 3;
 
     private String rankDate;
     private String rankYear;
