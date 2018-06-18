@@ -38,15 +38,15 @@ import java.util.Set;
 /**
  * Created by i852841 on 5/26/18.
  */
-public class MarketBeatRatings {
+public class MarketBeatRatings extends BaseRatings {
 
     private static final Logger LOG = Logger.getLogger(MarketBeatRatings.class);
     private static final int    DATA_SIZE_IN_MB     = 100;
     private static final String MB_RESEARCHER_URI   = "https://www.marketbeat.com/ratings/by-issuer/";
     private static final String MB_NASDAQ_STOCK_URI = "https://www.marketbeat.com/stocks/NASDAQ/";
-    private static final String MB_NYSE_STOCK_URI    = "https://www.marketbeat.com/stocks/NYSE/";
+    private static final String MB_NYSE_STOCK_URI   = "https://www.marketbeat.com/stocks/NYSE/";
     private static final String MB_TICKER_NA        = "NA";
-    private static final int    MB_DATE_RANGE       = 3;
+    private static final int    MB_DATE_RANGE       = 1;
 
     private String rankDate;
     private String rankYear;
@@ -395,24 +395,24 @@ public class MarketBeatRatings {
     }
 
 
-    private void shiftColumns(String inputFile, String outputFile) {
-
-        int sheetIndex = 0;
-        int columnIndex = 1;
-
-        ExcelOpener op = new ExcelOpener(inputFile, outputFile);
-        try {
-            op.open();
-        } catch (InvalidFormatException e) {
-            LOG.error("InvalidFormatException while Shifting Column ", e);
-        } catch (IOException e) {
-            LOG.error("IOException while Shifting Column ", e);
-        }
-
-        op.insertNewColumnBefore(sheetIndex, columnIndex);
-
-        op.close();
-    }
+//    private void shiftColumns(String inputFile, String outputFile) {
+//
+//        int sheetIndex = 0;
+//        int columnIndex = 1;
+//
+//        ExcelOpener op = new ExcelOpener(inputFile, outputFile);
+//        try {
+//            op.open();
+//        } catch (InvalidFormatException e) {
+//            LOG.error("InvalidFormatException while Shifting Column ", e);
+//        } catch (IOException e) {
+//            LOG.error("IOException while Shifting Column ", e);
+//        }
+//
+//        op.insertNewColumnBefore(sheetIndex, columnIndex);
+//
+//        op.close();
+//    }
 
     private void insertNewRankColumn(String targetFile, List<RankInfo> allFetchedData) {
 
@@ -439,25 +439,18 @@ public class MarketBeatRatings {
                 RankInfo currentRankInfo = allFetchedData.get(rowIndex - 1);
                 String currentCellStr    = getRankStrByRankInfo(currentRankInfo);
 
+                CellStyle style = workbook.createCellStyle();
                 if(currentRankInfo.getRatingVal() == RankInfo.RatingState.RED.getState()) {
-                    CellStyle style = workbook.createCellStyle();
+
                     style.setFillForegroundColor(IndexedColors.ROSE.getIndex());
                     style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
                     currentCell.setCellStyle(style);
 
                 } else if(currentRankInfo.getRatingVal() == RankInfo.RatingState.GREEN.getState()) {
-                    CellStyle style = workbook.createCellStyle();
                     style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
                     style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
                     currentCell.setCellStyle(style);
-
                 }
-//                else {
-//                    CellStyle style = workbook.createCellStyle();
-//                    style.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
-//                    style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-//                    currentCell.setCellStyle(style);
-//                }
 
                 LOG.info(String.format("For Symbol [%s] , CurrentCellStr [%s] ", currentRow.getCell(0), currentCellStr));
 

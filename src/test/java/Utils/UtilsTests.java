@@ -14,7 +14,8 @@ public class UtilsTests {
 
     @Test
     public void testIsDateInRange() {
-        System.out.println(CommonUtils.isDateInRange("5/24/2018", 2));
+
+        System.out.println(CommonUtils.isDateInRange("5/24/2018", 1));
     }
 
     @Test
@@ -28,7 +29,7 @@ public class UtilsTests {
         String curDateStr = CommonUtils.getCurrentDate();
         Date currDateObj  = Constants.dsdf.parse(curDateStr);
 
-        String dateStr1  = CommonUtils.calculateDateFrom(curDateStr, "M/dd/yyyy", -2);
+        String dateStr1  = CommonUtils.calculateDateFrom(curDateStr, "M/dd/yyyy", -1);
         Date dateStr1Obj = Constants.dsdf.parse(dateStr1);
 
         if(dateStr1Obj.compareTo(currDateObj) > 0)

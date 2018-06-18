@@ -42,7 +42,7 @@ import java.util.List;
  * 2. Thread based
  * 3. Read test file from resources
  */
-public class ZacksRatings {
+public class ZacksRatings extends BaseRatings {
 
     private static final int    DATA_SIZE_IN_MB         = 100;
     private static final String ZACKS_SEPARATOR         = "-";
@@ -220,14 +220,7 @@ public class ZacksRatings {
 
         //Do backup
         //Rename actual file to temp file
-        if(targetFile.exists()) {
-            try {
-                Files.copy(targetFile.toPath(), backupFileHandler.toPath());
-                targetFile.renameTo(tempFileHandler);
-            } catch (IOException e) {
-                LOG.error("IOException while BackingUp File  " + targetFile, e);
-            }
-        }
+
 
         if(tempFileHandler.exists()) {
             LOG.info(fileName + " exists.");
@@ -247,24 +240,24 @@ public class ZacksRatings {
     }
 
 
-    private void shiftColumns(String inputFile, String outputFile) {
-
-        int sheetIndex = 0;
-        int columnIndex = 1;
-
-        ExcelOpener op = new ExcelOpener(inputFile, outputFile);
-        try {
-            op.open();
-        } catch (InvalidFormatException e) {
-            LOG.error("InvalidFormatException while Shifting Column ", e);
-        } catch (IOException e) {
-            LOG.error("IOException while Shifting Column ", e);
-        }
-
-        op.insertNewColumnBefore(sheetIndex, columnIndex);
-
-        op.close();
-    }
+//    private void shiftColumns(String inputFile, String outputFile) {
+//
+//        int sheetIndex = 0;
+//        int columnIndex = 1;
+//
+//        ExcelOpener op = new ExcelOpener(inputFile, outputFile);
+//        try {
+//            op.open();
+//        } catch (InvalidFormatException e) {
+//            LOG.error("InvalidFormatException while Shifting Column ", e);
+//        } catch (IOException e) {
+//            LOG.error("IOException while Shifting Column ", e);
+//        }
+//
+//        op.insertNewColumnBefore(sheetIndex, columnIndex);
+//
+//        op.close();
+//    }
 
     private void insertNewRankColumn(String targetFile, List<RankInfo> allFetchedData) {
 
@@ -299,37 +292,31 @@ public class ZacksRatings {
                        "For Symbol [%s] ,  PreviousCellStr [%s] ,  PreviousCellVal [%s] , CurrentCellStr [%s] ,  CurrentCellVal [%s]",
                         currentRow.getCell(0), previousCell, previousCellVal, currentCellStr, currentCellVal));
 
+                CellStyle style = workbook.createCellStyle();
                 if(currentCellVal != 0 && previousCellVal != 0) {
 
                     if(previousCellVal > currentCellVal) {
 
-                        CellStyle style = workbook.createCellStyle();
                         style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
                         style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-                        currentCell.setCellStyle(style);
 
                     } else if(previousCellVal < currentCellVal) {
 
-                        CellStyle style = workbook.createCellStyle();
                         style.setFillForegroundColor(IndexedColors.ROSE.getIndex());
                         style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-                        currentCell.setCellStyle(style);
                     }
 
                 } else if(currentCellVal != 0 && previousCellVal == 0) { //New Coverage
 
-                    CellStyle style = workbook.createCellStyle();
                     style.setFillForegroundColor(IndexedColors.AQUA.getIndex());
                     style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-                    currentCell.setCellStyle(style);
 
                 } else if(currentCellVal == 0 && previousCellVal != 0) { //No More Coverage
-                    CellStyle style = workbook.createCellStyle();
+
                     style.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
                     style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-                    currentCell.setCellStyle(style);
                 }
-
+                currentCell.setCellStyle(style);
                 currentCell.setCellValue(currentCellStr);
             }
 
@@ -461,12 +448,13 @@ public class ZacksRatings {
 
         switch(rankStr.trim()) {
 
-            case "StrongBuy" : return "1";
-            case "Buy" : return "2";
-            case "Hold" : return "3";
-            case "Sell" : return "4";
+            case "StrongBuy"  : return "1";
+            case "Strong Buy" : return "1";
+            case "Buy"        : return "2";
+            case "Hold"       : return "3";
+            case "Sell"       : return "4";
             case "StrongSell" : return "5";
-            default  : return Constants.ZERO_VALUE;
+            default           : return Constants.ZERO_VALUE;
         }
     }
 
