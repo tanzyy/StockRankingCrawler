@@ -20,13 +20,13 @@ public class Constants {
 
     public static final String SYMBOLS_TANZY_WATCH        = "amzn,goog,googl,nflx,aapl,nvda,fb,shop,tsla,adbe,anet,ba,mu,wmt," +
             "tgt,exas,ebay,baba,amat,crus,twtr,spot,docu,ibm,vmw,gsk";
-    public static final String SYMBOLS_TANZY_WATCH2       = "Dcph,nvax,ftr,nly,mnk,cy,ddd,qd,mat,ctrl,ctl,trvg,tzoo,trip,yelp,mtch," +
-            "pypl,avgo,vrtx,algn,txn,low,gme,big,rost,blk,vslr,abbv,fate,lmt,bl,fdx,cmcsa,hznp,dbx,cat,fdc,phm,alna,tol,symc,tmus";
-    public static final String SYMBOLS_TANZY_INVESTED     = "sq,roku,irbt,ntnx,abcd,curo,lb,m,gluu,ge,t,gern,wb,ibn,cost,amd,intc,f," +
-            "gm,abb,rrc,kmi,teva,alb,sap,wm,bac,botz,jd,mpw,msft,pfe,rds.a,wfc";
-    public static final String SYMBOLS_TANZY_TO_INVEST    = "etsy,pvtl,irt,rng,tndm,snap,conn,amma,edit,psec,glad,hcp";
+    public static final String SYMBOLS_TANZY_WATCH2       = "Dcph,nvax,ftr,nly,mnk,cy,ddd,qd,mat,ctrl,ctl,trvg,tzoo,trip,yelp,mtch,pypl,avgo,vrtx,algn,txn,low,gme,big,rost,blk," +
+            "vslr,abbv,fate,lmt,bl,fdx,cmcsa,hznp,dbx,cat,fdc,phm,alna,tol,symc,tmus,m,ibn,cost,f,rrc,kmi";
+    public static final String SYMBOLS_TANZY_INVESTED     = "sq,roku,irbt,ntnx,abcd,curo,lb,gluu,ge,t,gern,wb,amd,intc,gm,abb,teva,alb," +
+            "sap,wm,bac,botz,jd,mpw,msft,pfe,rds.a,wfc,snap,psec,glad,llnw";
+    public static final String SYMBOLS_TANZY_TO_INVEST    = "etsy,pvtl,irt,rng,tndm,conn,amma,edit,hcp,incy";
     public static final String SYMBOLS_TANZY_PENNY        = "rad,jagx,aprn,opgn,zsan,cris,nete,sgyp,agen,avxl,ohrp,snes,insy,chk,ftr,mobl,nvax,nihd,jcp,smrt,grpn,xene";
-    public static final String SYMBOLS_TANZY_GROWTH       = "llnw,crox,tbbk,spar,usat,cdxs,tndm";
+    public static final String SYMBOLS_TANZY_GROWTH       = "crox,tbbk,spar,usat,cdxs,tndm";
     public static final String SYMBOLS_TANZY_REPORT       = "abcd,gluu,gern,sq,ntnx,roku,irbt,jd,m,etsy,curo,brk.b";
     public static final String SYMBOLS_TANZY_REIT         = "IRT,HCP,KIM,MORT,PLD";
     public static final String SYMBOLS_TANZY_ETF_SMALL    = "PXSG,FYC,SLYG";

@@ -46,7 +46,7 @@ public class MarketBeatRatings extends BaseRatings {
     private static final String MB_NASDAQ_STOCK_URI = "https://www.marketbeat.com/stocks/NASDAQ/";
     private static final String MB_NYSE_STOCK_URI   = "https://www.marketbeat.com/stocks/NYSE/";
     private static final String MB_TICKER_NA        = "NA";
-    private static final int    MB_DATE_RANGE       = 1;
+    private static final int    MB_DATE_RANGE       = 10;
 
     private String rankDate;
     private String rankYear;
@@ -82,6 +82,8 @@ public class MarketBeatRatings extends BaseRatings {
         researchFirmOrderList.add(ResearcherID.BLAIR.getId());
         researchFirmOrderList.add(ResearcherID.STEPHENS.getId());
         researchFirmOrderList.add(ResearcherID.BARCLAYS.getId());
+        researchFirmOrderList.add(ResearcherID.BENCHMARK.getId());
+        researchFirmOrderList.add(ResearcherID.EVERCORE.getId());
     }
 
     public List<String> researchFirmOrderList = new ArrayList<>();
@@ -434,7 +436,14 @@ public class MarketBeatRatings extends BaseRatings {
 
             for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++){
 
-                Row currentRow           = sheet.getRow(rowIndex);
+                Row currentRow = sheet.getRow(rowIndex);
+                if(currentRow == null) {
+                    currentRow = sheet.createRow(rowIndex);
+                    Cell researchFirmCell = currentRow.createCell(0);
+                    String firm = ResearcherID.getNameByID(researchFirmOrderList.get(rowIndex - 1));
+                    researchFirmCell.setCellValue(firm);
+                }
+
                 Cell currentCell         = currentRow.createCell(1);
                 RankInfo currentRankInfo = allFetchedData.get(rowIndex - 1);
                 String currentCellStr    = getRankStrByRankInfo(currentRankInfo);
@@ -568,7 +577,9 @@ public class MarketBeatRatings extends BaseRatings {
         JANNEYSCOTT("Janney Montgomery Scott", "329"),   //for curo
         BLAIR("William Blair", "213"),                   //for curo
         STEPHENS("Stephens", "132"),                     //for curo
-        BARCLAYS("Barclays", "4");
+        BARCLAYS("Barclays", "4"),
+        BENCHMARK("Benchmark", "739"),
+        EVERCORE("Evercore ISI", "1745");
 
         private String id;
         private String name;

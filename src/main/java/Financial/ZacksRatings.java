@@ -220,7 +220,14 @@ public class ZacksRatings extends BaseRatings {
 
         //Do backup
         //Rename actual file to temp file
-
+        if(targetFile.exists()) {
+            try {
+                Files.copy(targetFile.toPath(), backupFileHandler.toPath());
+                targetFile.renameTo(tempFileHandler);
+            } catch (IOException e) {
+                LOG.error("IOException while BackingUp File  " + targetFile, e);
+            }
+        }
 
         if(tempFileHandler.exists()) {
             LOG.info(fileName + " exists.");
@@ -277,16 +284,24 @@ public class ZacksRatings extends BaseRatings {
             firstRowSecondCell.setCellValue(getRankDate());
             //END: Update date
 
-            for(int rowIndex=1; rowIndex<=rowCount; rowIndex++){
+            for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++){
 
-                Row currentRow           = sheet.getRow(rowIndex);
-                Cell currentCell         = currentRow.createCell(1);
                 RankInfo currentRankInfo = allFetchedData.get(rowIndex - 1);
+                Row currentRow           = sheet.getRow(rowIndex);
+                if(currentRow == null) {
+                    currentRow = sheet.createRow(rowIndex);
+                    Cell researchFirmCell = currentRow.createCell(0);
+                    researchFirmCell.setCellValue(currentRankInfo.getSymbol());
+                }
+
+                Cell currentCell         = currentRow.createCell(1);
                 String currentCellStr    = getRankStrByRankInfo(currentRankInfo);
                 Integer currentCellVal   = Integer.valueOf(getRankNumByStr(currentCellStr));
 
                 Cell previousCell        = currentRow.getCell(2);
-                Integer previousCellVal  = Integer.valueOf(getRankNumByStr(previousCell.toString()));
+                Integer previousCellVal  = 0;
+                if(previousCell != null)
+                    previousCellVal = Integer.valueOf(getRankNumByStr(previousCell.toString()));
 
                 LOG.info(String.format(
                        "For Symbol [%s] ,  PreviousCellStr [%s] ,  PreviousCellVal [%s] , CurrentCellStr [%s] ,  CurrentCellVal [%s]",
