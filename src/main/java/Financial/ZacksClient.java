@@ -16,7 +16,7 @@ public class ZacksClient {
     private static  String BACK_FILE_LOC    = "/Backup";
 
 
-    static boolean forReport = false;
+    static boolean forReport = true;
     static boolean isETF     = false;
 
     public static void main(String[] args) {
@@ -30,9 +30,8 @@ public class ZacksClient {
             new ZacksClient().processETFData(Constants.SYMBOLS_TANZY_ETF_WATCH, Constants.OUT_FILE_TANZY_ETF, "Watch", 2);
         } else {
             if(forReport) {
-//                new ZacksClient().processData(Constants.SYMBOLS_TANZY_REIT, Constants.OUT_FILE_TANZY_REIT);
-//                new ZacksClient().processData(Constants.SYMBOLS_TANZY_WATCH2, Constants.OUT_FILE_TANZY_WATCH2);
-                new ZacksClient().processData(Constants.SYMBOLS_D3L, Constants.OUT_FILE_D3L);
+                //new ZacksClient().processData(Constants.SYMBOLS_D3L, Constants.OUT_FILE_D3L);
+                new ZacksClient().processData(Constants.SYMBOLS_TANZY_TO_INVEST, Constants.OUT_FILE_TANZY_TO_INVEST);
             }
             else {
                 new ZacksClient().processData(Constants.SYMBOLS_TANZY_INVESTED, Constants.OUT_FILE_TANZY_INVESTED);

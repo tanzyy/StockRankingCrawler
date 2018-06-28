@@ -10,22 +10,27 @@ import java.util.Map;
 
 public class MarketBeatClient {
 
-    private static  String OUT_FILE_LOC = "/Reports/MarketBeatRank";
-    private static  String BACK_DIR     = "/Backup";
+    private static  String OUT_FILE_LOC  = "/Reports/MarketBeatRank";
+    private static  String BACK_DIR      = "/Backup";
+    private static final boolean FOR_NEW = false;
 
     public static void main(String[] args) {
 
         OUT_FILE_LOC  = System.getProperty("user.dir") + OUT_FILE_LOC;
 
-        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_INVESTED,  Constants.OUT_DIR_TANZY_INVESTED,   false);
-        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_WATCH,     Constants.OUT_DIR_TANZY_WATCH,      false);
-        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_WATCH2,    Constants.OUT_DIR_TANZY_WATCH2,     false);
-        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_GROWTH,    Constants.OUT_DIR_TANZY_GROWTH,     false);
-        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_TO_INVEST, Constants.OUT_DIR_TANZY_TO_INVEST,  false);
-        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_PENNY,     Constants.OUT_DIR_TANZY_PENNY,      false);
-        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_REPORT,    Constants.OUT_DIR_TANZY_REPORT,     false);
-        new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_REIT,      Constants.OUT_DIR_TANZY_REIT,       false);
-        new MarketBeatClient().processData(Constants.SYMBOLS_D3L,             Constants.OUT_DIR_D3L,              false);
+        if(FOR_NEW)
+            new MarketBeatClient().processData(Constants.SYMBOLS_NEW,             Constants.OUT_DIR_NEW,              true);
+        else {
+            new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_INVESTED,  Constants.OUT_DIR_TANZY_INVESTED,   false);
+            new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_WATCH,     Constants.OUT_DIR_TANZY_WATCH,      false);
+            new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_WATCH2,    Constants.OUT_DIR_TANZY_WATCH2,     false);
+            new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_GROWTH,    Constants.OUT_DIR_TANZY_GROWTH,     false);
+            new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_TO_INVEST, Constants.OUT_DIR_TANZY_TO_INVEST,  false);
+            new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_PENNY,     Constants.OUT_DIR_TANZY_PENNY,      false);
+            new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_REPORT,    Constants.OUT_DIR_TANZY_REPORT,     false);
+            new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_REIT,      Constants.OUT_DIR_TANZY_REIT,       false);
+            new MarketBeatClient().processData(Constants.SYMBOLS_D3L,             Constants.OUT_DIR_D3L,              false);
+        }
     }
 
     private void processData(String symbols, String dirName, boolean toUpdate) {

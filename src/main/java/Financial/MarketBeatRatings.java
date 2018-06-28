@@ -164,8 +164,14 @@ public class MarketBeatRatings extends BaseRatings {
                 document = Jsoup.connect(targetNasdaqURL).userAgent("Mozilla").maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
             }
 
-            Elements rows = document.getElementsByClass("ratingstable").first().select("tbody").select("tr");
-            //LOG.debug("Current rows are - " + rows.toString());
+            Elements rows = null;
+            try {
+                rows = document.getElementsByClass("ratingstable").first().select("tbody").select("tr");
+            } catch (NullPointerException e) {
+                LOG.warn("NPE while fetching data from NYSE URL. so calculating from NASDAQ URL.");
+                document = Jsoup.connect(targetNasdaqURL).userAgent("Mozilla").maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
+                rows = document.getElementsByClass("ratingstable").first().select("tbody").select("tr");
+            }
 
             for(Element row : rows) {
 

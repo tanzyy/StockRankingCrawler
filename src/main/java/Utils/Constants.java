@@ -18,6 +18,7 @@ public class Constants {
     public static final String OUT_DIR_TANZY_REIT      = "/TanzyREIT";
     public static final String OUT_DIR_TANZY_ETF       = "/Tanzy_ETF";
     public static final String OUT_DIR_D3L             = "/D3L";
+    public static final String OUT_DIR_NEW             = "/New";
 
     public static final String SYMBOLS_TANZY_WATCH        = "amzn,goog,googl,nflx,aapl,nvda,fb,shop,tsla,adbe,anet,ba,mu,wmt," +
             "tgt,exas,ebay,baba,amat,crus,twtr,spot,docu,ibm,vmw,gsk";
@@ -25,7 +26,7 @@ public class Constants {
             "vslr,abbv,fate,lmt,bl,fdx,cmcsa,hznp,dbx,cat,fdc,phm,alna,tol,symc,tmus,m,ibn,cost,f,rrc,kmi";
     public static final String SYMBOLS_TANZY_INVESTED     = "sq,roku,irbt,ntnx,abcd,curo,lb,gluu,ge,t,gern,wb,amd,intc,gm,abb,teva,alb," +
             "sap,wm,bac,botz,jd,mpw,msft,pfe,rds.a,wfc,snap,psec,glad,llnw";
-    public static final String SYMBOLS_TANZY_TO_INVEST    = "etsy,pvtl,irt,rng,tndm,conn,amma,edit,hcp,incy";
+    public static final String SYMBOLS_TANZY_TO_INVEST    = "etsy,pvtl,irt,rng,tndm,conn,amma,edit,hcp,incy,AOI,HCLP,I,HZNP";
     public static final String SYMBOLS_TANZY_PENNY        = "rad,jagx,aprn,opgn,zsan,cris,nete,sgyp,agen,avxl,ohrp,snes,insy,chk,ftr,mobl,nvax,nihd,jcp,smrt,grpn,xene";
     public static final String SYMBOLS_TANZY_GROWTH       = "crox,tbbk,spar,usat,cdxs,tndm";
     public static final String SYMBOLS_TANZY_REPORT       = "abcd,gluu,gern,sq,ntnx,roku,irbt,jd,m,etsy,curo,brk.b";
@@ -34,6 +35,7 @@ public class Constants {
     public static final String SYMBOLS_TANZY_ETF_THEMATIC = "BOTZ,ARKG";
     public static final String SYMBOLS_TANZY_ETF_WATCH    = "MORT,QQQ,SPY,VYM,VTI,VTV,ITA,DIA,IWM";
     public static final String SYMBOLS_D3L    = "NBR,SLB,XES,HCLP";
+    public static final String SYMBOLS_NEW    = "AOI,HCLP,I,HZNP";
 
     public static final String OUT_FILE_TANZY_WATCH     = "TanzyWatch.xlsx";
     public static final String OUT_FILE_TANZY_WATCH2    = "TanzyWatch2.xlsx";
@@ -45,6 +47,7 @@ public class Constants {
     public static final String OUT_FILE_TANZY_REIT      = "TanzyREIT.xlsx";
     public static final String OUT_FILE_TANZY_ETF       = "Tanzy_ETF.xlsx";
     public static final String OUT_FILE_D3L             = "D3L.xlsx";
+    public static final String OUT_FILE_NEW             = "New.xlsx";
 
 
     public static final String TEMP_PREFIX             = "TEMP_";
