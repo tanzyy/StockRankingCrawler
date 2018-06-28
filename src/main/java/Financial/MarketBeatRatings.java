@@ -46,7 +46,8 @@ public class MarketBeatRatings extends BaseRatings {
     private static final String MB_NASDAQ_STOCK_URI = "https://www.marketbeat.com/stocks/NASDAQ/";
     private static final String MB_NYSE_STOCK_URI   = "https://www.marketbeat.com/stocks/NYSE/";
     private static final String MB_TICKER_NA        = "NA";
-    private static final int    MB_DATE_RANGE       = 10;
+    private static final int    MB_DATE_RANGE       = 1;
+    private static  final String MB_RATINGS_URI     = "/price-target/";
 
     private String rankDate;
     private String rankYear;
@@ -153,8 +154,8 @@ public class MarketBeatRatings extends BaseRatings {
         Map<String, RankInfo> result = new HashMap<>();
 
         try {
-            String targetNasdaqURL = MB_NASDAQ_STOCK_URI + ticker;
-            String targetNYSEURL   = MB_NYSE_STOCK_URI + ticker;
+            String targetNasdaqURL = MB_NASDAQ_STOCK_URI + ticker + MB_RATINGS_URI;
+            String targetNYSEURL   = MB_NYSE_STOCK_URI + ticker + MB_RATINGS_URI;
             LOG.info(String.format("Ticker [%s], NASDAQ URL [%s] and NYSE URL [%s] ", ticker, targetNasdaqURL, targetNYSEURL));
 
             document = Jsoup.connect(targetNYSEURL).userAgent("Mozilla").maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
@@ -174,7 +175,7 @@ public class MarketBeatRatings extends BaseRatings {
             }
 
         } catch(Exception e) {
-            LOG.error(String.format("Error occurred for [%s] with error %s ", ticker,  e));
+            LOG.error(String.format("Error occurred for [%s] ", ticker), e);
         }
 
         result.forEach((k, v) -> System.out.println(String.format("For [%s], the research firm [%s] and Data is [%s]", ticker, k, v)));

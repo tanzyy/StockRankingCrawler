@@ -17,6 +17,7 @@ public class Constants {
     public static final String OUT_DIR_TANZY_REPORT    = "/TanzyReport";
     public static final String OUT_DIR_TANZY_REIT      = "/TanzyREIT";
     public static final String OUT_DIR_TANZY_ETF       = "/Tanzy_ETF";
+    public static final String OUT_DIR_D3L             = "/D3L";
 
     public static final String SYMBOLS_TANZY_WATCH        = "amzn,goog,googl,nflx,aapl,nvda,fb,shop,tsla,adbe,anet,ba,mu,wmt," +
             "tgt,exas,ebay,baba,amat,crus,twtr,spot,docu,ibm,vmw,gsk";
@@ -32,6 +33,7 @@ public class Constants {
     public static final String SYMBOLS_TANZY_ETF_SMALL    = "PXSG,FYC,SLYG";
     public static final String SYMBOLS_TANZY_ETF_THEMATIC = "BOTZ,ARKG";
     public static final String SYMBOLS_TANZY_ETF_WATCH    = "MORT,QQQ,SPY,VYM,VTI,VTV,ITA,DIA,IWM";
+    public static final String SYMBOLS_D3L    = "NBR,SLB,XES,HCLP";
 
     public static final String OUT_FILE_TANZY_WATCH     = "TanzyWatch.xlsx";
     public static final String OUT_FILE_TANZY_WATCH2    = "TanzyWatch2.xlsx";
@@ -41,7 +43,8 @@ public class Constants {
     public static final String OUT_FILE_TANZY_GROWTH    = "TanzyGrowth.xlsx";
     public static final String OUT_FILE_TANZY_REPORT    = "TanzyReport.xlsx";
     public static final String OUT_FILE_TANZY_REIT      = "TanzyREIT.xlsx";
-    public static final String OUT_FILE_TANZY_ETF         = "Tanzy_ETF.xlsx";
+    public static final String OUT_FILE_TANZY_ETF       = "Tanzy_ETF.xlsx";
+    public static final String OUT_FILE_D3L             = "D3L.xlsx";
 
 
     public static final String TEMP_PREFIX             = "TEMP_";

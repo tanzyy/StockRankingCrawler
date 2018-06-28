@@ -25,6 +25,7 @@ public class MarketBeatClient {
         new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_PENNY,     Constants.OUT_DIR_TANZY_PENNY,      false);
         new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_REPORT,    Constants.OUT_DIR_TANZY_REPORT,     false);
         new MarketBeatClient().processData(Constants.SYMBOLS_TANZY_REIT,      Constants.OUT_DIR_TANZY_REIT,       false);
+        new MarketBeatClient().processData(Constants.SYMBOLS_D3L,             Constants.OUT_DIR_D3L,              false);
     }
 
     private void processData(String symbols, String dirName, boolean toUpdate) {
