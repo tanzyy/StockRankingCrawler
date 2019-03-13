@@ -10,6 +10,7 @@ import java.nio.file.Paths;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -94,9 +95,21 @@ public class FileUtils {
         return isSuccess;
     }
 
+    public static void sortList(String commaSeparatedList) {
+
+        String[] strs = commaSeparatedList.split(",");
+        List<String> out = new ArrayList<>();
+        for(int i = strs.length-1; i >= 0; i--) {
+            out.add(strs[i]);
+        }
+        System.out.println(out);
+        System.out.println(commaSeparatedList.toLowerCase());
+    }
     public static void main(String[] args) {
-        copyFile(
-                "/Users/i852841/OneDriveSAPSE/Code_Personal_On_Git/StockRankingCrawler/target/test-classes/ZacksTest_FileExistWithChange.xlsx",
-                "/Users/i852841/Downloads");
+//        copyFile(
+//                "/Users/i852841/OneDriveSAPSE/Code_Personal_On_Git/StockRankingCrawler/target/test-classes/ZacksTest_FileExistWithChange.xlsx",
+//                "/Users/i852841/Downloads");
+
+        sortList("^VIX,SPY,QQQ,XLK,XLF,XLRE,XLE,XLC,XLV,XLP,XLY,XLI,XLB,XLU,SPDV,MJ,SCHD,VT,SOXX,SOXL,IHI,KBE,EFA,VOO,VTI,IVV,IBB,EEM,SLY,MDY,MDYG,SLYG");
     }
 }

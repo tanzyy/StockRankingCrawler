@@ -46,7 +46,7 @@ public class MarketBeatRatings extends BaseRatings {
     private static final String MB_NASDAQ_STOCK_URI = "https://www.marketbeat.com/stocks/NASDAQ/";
     private static final String MB_NYSE_STOCK_URI   = "https://www.marketbeat.com/stocks/NYSE/";
     private static final String MB_TICKER_NA        = "NA";
-    private static final int    MB_DATE_RANGE       = 1;
+    private static final int    MB_DATE_RANGE       = 4;
     private static  final String MB_RATINGS_URI     = "/price-target/";
 
     private String rankDate;
@@ -56,6 +56,9 @@ public class MarketBeatRatings extends BaseRatings {
 
         setRankDate(CommonUtils.getMonthDay());
         setRankYear(CommonUtils.getYear());
+
+        //Add Moffett Nathanson-- https://www.marketbeat.com/ratings/by-issuer/17096/
+        //Updated for At&T on Nov 26
 
         researchFirmOrderList.add(ResearcherID.NEEDHAM.getId());
         researchFirmOrderList.add(ResearcherID.CS.getId());

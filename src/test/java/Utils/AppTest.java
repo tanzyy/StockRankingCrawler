@@ -66,7 +66,7 @@ public class AppTest {
         excelProp.setWorkBookName(outFile);
         excelProp.setSheetIndex(1);
 
-        zacksRatings.writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC);
+        zacksRatings.writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC, true);
 
         Assert.assertTrue( true );
     }
@@ -90,7 +90,7 @@ public class AppTest {
         excelProp.setWorkBookName(outFile);
         excelProp.setSheetIndex(1);
 
-        zacksRatings.writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC);
+        zacksRatings.writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC, true);
 
         Assert.assertTrue( true );
     }

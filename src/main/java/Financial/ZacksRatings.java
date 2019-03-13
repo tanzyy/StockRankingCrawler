@@ -29,6 +29,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by i852841 on 5/12/18.
@@ -50,7 +52,9 @@ public class ZacksRatings extends BaseRatings {
     private static final String ZACKS_MAIN_URL          = "https://www.zacks.com/stock/quote/";
     private static final String ZACKS_ETF_URL           = "https://www.zacks.com/funds/etf/%s/profile?q=%s";
     private static final String ZACKS_RANK_UNAVAILABLE  = "UN";
-    private static final Logger LOG = Logger.getLogger(ZacksRatings.class);
+    private static final Logger LOG                     = Logger.getLogger(ZacksRatings.class);
+    private static final String VGM_STR                 = "Style Scores . Value \\| . Growth \\| . Momentum";
+    private static final Pattern VGM_PATEERN            = Pattern.compile(VGM_STR);
 
     private String rankDate;
     private String rankYear;
@@ -98,6 +102,40 @@ public class ZacksRatings extends BaseRatings {
         return rankInfo;
     }
 
+
+//    public RankInfo getData2(String symbol) {
+//
+//        Document document;
+//        RankInfo rankInfo = new RankInfo();
+//        rankInfo.setSymbol(symbol);
+//
+//        String rankData  = "";
+//        String priceData = "";
+//        try {
+//            String targetURL = ZACKS_MAIN_URL + symbol.toUpperCase() + "?q=" + symbol;
+//            LOG.info(targetURL);
+//
+//            document         = Jsoup.connect(targetURL).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
+//            Element rank     = document.select("section.pad0").first();
+//            //System.out.println(rank.text());
+//            getVGMScore(rank.text());
+//        } catch(Exception e) {
+//            LOG.error(String.format("Error occurred for [%s] with error ", symbol) ,e);
+//        }
+//
+////        if(rankData != null && rankData.length() != 0)
+////            rankInfo.setRank(rankData);
+////        else
+////            rankInfo.setRank(Constants.ZERO_VALUE);
+//
+////        if(priceData != null && priceData.length() != 0)
+////            rankInfo.setPrice(priceData);
+////        else
+////            rankInfo.setPrice(Constants.ZERO_VALUE);
+//
+//        LOG.info(rankInfo);
+//        return rankInfo;
+//    }
     /**
      * Price, Rank, NAV, Expense Ratio, Risk
      * @param symbol
@@ -496,7 +534,7 @@ public class ZacksRatings extends BaseRatings {
      * 4. Delete temp file
      * @param excelProp
      */
-    public void writeToOneXL(ExcelProp excelProp, List<RankInfo> allFetchedData, String outLOC, String backLOC) {
+    public void writeToOneXL(ExcelProp excelProp, List<RankInfo> allFetchedData, String outLOC, String backLOC, boolean isETF) {
 
         String fileWithLOC       = outLOC + File.separator + excelProp.getWorkBookName();
         File targetFileHandler   = new File(fileWithLOC);
@@ -529,6 +567,7 @@ public class ZacksRatings extends BaseRatings {
 
                 //Check if sheet exist
                 boolean isSheetExists = isSheetExist(excelProp.getSheetName(), workbook);
+                LOG.info(String.format("#####################  Sheet name [%s] existence [%s]", excelProp.getSheetName(), isSheetExists));
 
                 //Shift columns, if sheet exists
                 if(isSheetExists) {
@@ -536,12 +575,12 @@ public class ZacksRatings extends BaseRatings {
                     shiftColumns(tempFileWithLOC, fileWithLOC, excelProp);
 
                     //Insert New Rank data
-                    insertNewRankColumn(fileWithLOC, allFetchedData, excelProp);
+                    insertNewRankColumn(fileWithLOC, allFetchedData, excelProp, isETF);
 
                 } else {
 
                     //Insert New Rank data
-                    insertNewSheet(tempFileWithLOC, allFetchedData, excelProp);
+                    insertNewSheet(tempFileWithLOC, allFetchedData, excelProp, isETF);
                     tempFileHandler.renameTo(targetFileHandler);
                 }
 
@@ -574,7 +613,7 @@ public class ZacksRatings extends BaseRatings {
 
         } else {
             LOG.info(excelProp.getWorkBookName() + " does not exist, creating new one.");
-            createNewWorkBook(fileWithLOC, allFetchedData, excelProp);
+            createNewWorkBook(fileWithLOC, allFetchedData, excelProp, isETF);
         }
     }
 
@@ -604,7 +643,7 @@ public class ZacksRatings extends BaseRatings {
         op.close();
     }
 
-    private void insertNewSheet(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp) {
+    private void insertNewSheet(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp, boolean isETF) {
 
         try {
 
@@ -617,17 +656,33 @@ public class ZacksRatings extends BaseRatings {
             Cell firstRowSecondCell = firstRow.createCell(1);
             firstRowSecondCell.setCellValue(getRankDate());
 
-            for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++) {
+            if(isETF) {
+                for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++) {
 
-                Row currentRow           = sheet.createRow(rowIndex);
-                Cell symbolCell          = currentRow.createCell(0);
-                Cell rankCell            = currentRow.createCell(1);
-                RankInfo currentRankInfo = allFetchedData.get(rowIndex - 1);
+                    Row currentRow           = sheet.createRow(rowIndex);
+                    Cell symbolCell          = currentRow.createCell(0);
+                    Cell rankCell            = currentRow.createCell(1);
+                    RankInfo currentRankInfo = allFetchedData.get(rowIndex - 1);
 
-                LOG.info(String.format("For Symbol [%s] , CurrentCellStr [%s] ", currentRankInfo.getSymbol(), currentRankInfo.getETFInfo()));
+                    LOG.info(String.format("For Symbol [%s] , CurrentCellStr [%s] ", currentRankInfo.getSymbol(), currentRankInfo.getETFInfo()));
 
-                symbolCell.setCellValue(currentRankInfo.getSymbol());
-                rankCell.setCellValue(currentRankInfo.getETFInfo());
+                    symbolCell.setCellValue(currentRankInfo.getSymbol());
+                    rankCell.setCellValue(currentRankInfo.getETFInfo());
+                }
+            } else {
+
+                for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++) {
+
+                    Row currentRow           = sheet.createRow(rowIndex);
+                    Cell symbolCell          = currentRow.createCell(0);
+                    Cell rankCell            = currentRow.createCell(1);
+                    RankInfo currentRankInfo = allFetchedData.get(rowIndex - 1);
+
+                    LOG.info(String.format("For Symbol [%s] , CurrentCellStr [%s] ", currentRankInfo.getSymbol(), currentRankInfo.getRank()));
+
+                    symbolCell.setCellValue(currentRankInfo.getSymbol());
+                    rankCell.setCellValue(getRankStrByRankInfo(currentRankInfo));
+                }
             }
 
             inputStream.close();
@@ -645,7 +700,7 @@ public class ZacksRatings extends BaseRatings {
     }
 
 
-    private void insertNewRankColumn(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp) {
+    private void insertNewRankColumn(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp, boolean isETF) {
 
         try {
 
@@ -660,64 +715,168 @@ public class ZacksRatings extends BaseRatings {
             firstRowSecondCell.setCellValue(getRankDate());
             //END: Update date
 
-            for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++){
+            if(isETF) {
+                for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++){
 
-                Row currentRow            = sheet.getRow(rowIndex);
-                Cell currentCell          = null;
-                RankInfo currentRankInfo  = allFetchedData.get(rowIndex - 1);
+                    Row currentRow            = sheet.getRow(rowIndex);
+                    Cell currentCell          = null;
+                    RankInfo currentRankInfo  = allFetchedData.get(rowIndex - 1);
 
-                if(currentRow == null) {
-                    currentRow = sheet.createRow(rowIndex);
-                    currentCell = currentRow.createCell(1);
-                    Cell symbolCell = currentRow.createCell(0);
-                    symbolCell.setCellValue(currentRankInfo.getSymbol());
-                } else {
-                    currentCell = currentRow.createCell(1);
+                    if(currentRow == null) {
+                        currentRow = sheet.createRow(rowIndex);
+                        currentCell = currentRow.createCell(1);
+                        Cell symbolCell = currentRow.createCell(0);
+                        symbolCell.setCellValue(currentRankInfo.getSymbol());
+                    } else {
+                        currentCell = currentRow.createCell(1);
 
-                    String currentCellRankStr = currentRankInfo.getRank();
-                    Integer currentCellRank   = Integer.valueOf(getRankNum(currentCellRankStr));
+                        String currentCellRankStr = currentRankInfo.getRank();
+                        Integer currentCellRank   = Integer.valueOf(getRankNum(currentCellRankStr));
 
-                    String previousCell        = currentRow.getCell(2).toString();
-                    String previousCellRankStr = previousCell.substring(previousCell.indexOf("[") + 1, previousCell.indexOf("]"));
-                    Integer previousCellRankVal  = Integer.valueOf(getRankNum(previousCellRankStr));
+                        String previousCell        = currentRow.getCell(2).toString();
+                        String previousCellRankStr = previousCell.substring(previousCell.indexOf("[") + 1, previousCell.indexOf("]"));
+                        Integer previousCellRankVal  = Integer.valueOf(getRankNum(previousCellRankStr));
 
-                    LOG.info(String.format(
-                            "For Symbol [%s] ,  PreviousCellStr [%s] ,  PreviousCellVal [%s] , CurrentCellStr [%s] ,  CurrentCellVal [%s]",
-                            currentRow.getCell(0), previousCell, previousCellRankVal, currentCellRankStr, currentCellRank));
+                        LOG.info(String.format(
+                                "For Symbol [%s] ,  PreviousCellStr [%s] ,  PreviousCellVal [%s] , CurrentCellStr [%s] ,  CurrentCellVal [%s]",
+                                currentRow.getCell(0), previousCell, previousCellRankVal, currentCellRankStr, currentCellRank));
 
-                    if(currentCellRank != 0 && previousCellRankVal != 0) {
+                        if(currentCellRank != 0 && previousCellRankVal != 0) {
 
-                        if(previousCellRankVal > currentCellRank) {
+                            if(previousCellRankVal > currentCellRank) {
+
+                                CellStyle style = workbook.createCellStyle();
+                                style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
+                                style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+                                currentCell.setCellStyle(style);
+
+                            } else if(previousCellRankVal < currentCellRank) {
+
+                                CellStyle style = workbook.createCellStyle();
+                                style.setFillForegroundColor(IndexedColors.ROSE.getIndex());
+                                style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+                                currentCell.setCellStyle(style);
+                            }
+
+                        } else if(currentCellRank != 0 && previousCellRankVal == 0) { //New Coverage
 
                             CellStyle style = workbook.createCellStyle();
-                            style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
+                            style.setFillForegroundColor(IndexedColors.AQUA.getIndex());
                             style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
                             currentCell.setCellStyle(style);
 
-                        } else if(previousCellRankVal < currentCellRank) {
-
+                        } else if(currentCellRank == 0 && previousCellRankVal != 0) { //No More Coverage
                             CellStyle style = workbook.createCellStyle();
-                            style.setFillForegroundColor(IndexedColors.ROSE.getIndex());
+                            style.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
                             style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
                             currentCell.setCellStyle(style);
                         }
-
-                    } else if(currentCellRank != 0 && previousCellRankVal == 0) { //New Coverage
-
-                        CellStyle style = workbook.createCellStyle();
-                        style.setFillForegroundColor(IndexedColors.AQUA.getIndex());
-                        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-                        currentCell.setCellStyle(style);
-
-                    } else if(currentCellRank == 0 && previousCellRankVal != 0) { //No More Coverage
-                        CellStyle style = workbook.createCellStyle();
-                        style.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
-                        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-                        currentCell.setCellStyle(style);
                     }
+
+                    currentCell.setCellValue(currentRankInfo.getETFInfo());
+                }
+            } else {
+
+                for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++){
+
+                    Row currentRow            = sheet.getRow(rowIndex);
+                    Cell currentCell          = null;
+                    RankInfo currentRankInfo  = allFetchedData.get(rowIndex - 1);
+
+                    if(currentRow == null) {
+                        currentRow = sheet.createRow(rowIndex);
+                        currentCell = currentRow.createCell(1);
+                        Cell symbolCell = currentRow.createCell(0);
+                        symbolCell.setCellValue(currentRankInfo.getSymbol());
+                    } else {
+
+                        currentCell = currentRow.createCell(1);
+                        //String currentCellRankStr = currentRankInfo.getRank();
+                        //Integer currentCellRank   = Integer.valueOf(getRankNum(currentCellRankStr));
+
+                        String currentCellStr    = getRankStrByRankInfo(currentRankInfo);
+                        Integer currentCellVal   = Integer.valueOf(getRankNumByStr(currentCellStr));
+
+                        //String previousCell        = currentRow.getCell(2).toString();
+                        //String previousCellRankStr = previousCell.substring(previousCell.indexOf("[") + 1, previousCell.indexOf("]"));
+                        //Integer previousCellRankVal  = Integer.valueOf(getRankNum(previousCellRankStr));
+
+                        //LOG.info(String.format(
+                        //        "For Symbol [%s] ,  PreviousCellStr [%s] ,  PreviousCellVal [%s] , CurrentCellStr [%s] ,  CurrentCellVal [%s]",
+                        //        currentRow.getCell(0), previousCell, previousCellRankVal, currentCellRankStr, currentCellRank));
+
+                        Cell previousCell        = currentRow.getCell(2);
+                        Integer previousCellVal  = 0;
+                        if(previousCell != null)
+                            previousCellVal = Integer.valueOf(getRankNumByStr(previousCell.toString()));
+
+                        LOG.info(String.format(
+                                "For Symbol [%s] ,  PreviousCellStr [%s] ,  PreviousCellVal [%s] , CurrentCellStr [%s] ,  CurrentCellVal [%s]",
+                                currentRow.getCell(0), previousCell, previousCellVal, currentCellStr, currentCellVal));
+
+                        CellStyle style = workbook.createCellStyle();
+                        if(currentCellVal != 0 && previousCellVal != 0) {
+
+                            if(previousCellVal > currentCellVal) {
+
+                                style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
+                                style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+
+                            } else if(previousCellVal < currentCellVal) {
+
+                                style.setFillForegroundColor(IndexedColors.ROSE.getIndex());
+                                style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+                            }
+
+                        } else if(currentCellVal != 0 && previousCellVal == 0) { //New Coverage
+
+                            style.setFillForegroundColor(IndexedColors.AQUA.getIndex());
+                            style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+
+                        } else if(currentCellVal == 0 && previousCellVal != 0) { //No More Coverage
+
+                            style.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
+                            style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+                        }
+                        currentCell.setCellStyle(style);
+                        currentCell.setCellValue(currentCellStr);
+
+
+//                        if(currentCellRank != 0 && previousCellRankVal != 0) {
+//
+//                            if(previousCellRankVal > currentCellRank) {
+//
+//                                CellStyle style = workbook.createCellStyle();
+//                                style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
+//                                style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+//                                currentCell.setCellStyle(style);
+//
+//                            } else if(previousCellRankVal < currentCellRank) {
+//
+//                                CellStyle style = workbook.createCellStyle();
+//                                style.setFillForegroundColor(IndexedColors.ROSE.getIndex());
+//                                style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+//                                currentCell.setCellStyle(style);
+//                            }
+//
+//                        } else if(currentCellRank != 0 && previousCellRankVal == 0) { //New Coverage
+//
+//                            CellStyle style = workbook.createCellStyle();
+//                            style.setFillForegroundColor(IndexedColors.AQUA.getIndex());
+//                            style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+//                            currentCell.setCellStyle(style);
+//
+//                        } else if(currentCellRank == 0 && previousCellRankVal != 0) { //No More Coverage
+//                            CellStyle style = workbook.createCellStyle();
+//                            style.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
+//                            style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+//                            currentCell.setCellStyle(style);
+//                        }
+                    }
+
+//                    currentCell.setCellValue(currentRankInfo.getETFInfo());
                 }
 
-                currentCell.setCellValue(currentRankInfo.getETFInfo());
             }
 
             inputStream.close();
@@ -734,7 +893,7 @@ public class ZacksRatings extends BaseRatings {
         }
     }
 
-    private void createNewWorkBook(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp) {
+    private void createNewWorkBook(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp, boolean isETF) {
 
         try {
 
@@ -752,19 +911,37 @@ public class ZacksRatings extends BaseRatings {
 
             LOG.info("firstRowSecondCell " + firstRowSecondCell);
 
-            for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++){
+            if(isETF) {
+                for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++){
 
-                Row currentRow     = sheet.createRow((rowIndex));
-                Cell symbolCell    = currentRow.createCell(0);
-                Cell rankCell      = currentRow.createCell(1);
+                    Row currentRow     = sheet.createRow((rowIndex));
+                    Cell symbolCell    = currentRow.createCell(0);
+                    Cell rankCell      = currentRow.createCell(1);
 
-                RankInfo currentRankInfo = allFetchedData.get(rowIndex - 1);
+                    RankInfo currentRankInfo = allFetchedData.get(rowIndex - 1);
 
-                symbolCell.setCellValue(currentRankInfo.getSymbol());
-                LOG.info("Symbol : " + currentRankInfo.getSymbol());
+                    symbolCell.setCellValue(currentRankInfo.getSymbol());
+                    LOG.info("Symbol : " + currentRankInfo.getSymbol());
 
-                rankCell.setCellValue(currentRankInfo.getETFInfo());
+                    rankCell.setCellValue(currentRankInfo.getETFInfo());
+                }
+            } else {
+
+                for(int rowIndex=1; rowIndex<=allFetchedData.size(); rowIndex++){
+
+                    Row currentRow     = sheet.createRow((rowIndex));
+                    Cell symbolCell    = currentRow.createCell(0);
+                    Cell rankCell      = currentRow.createCell(1);
+
+                    RankInfo currentRankInfo = allFetchedData.get(rowIndex - 1);
+
+                    symbolCell.setCellValue(currentRankInfo.getSymbol());
+                    LOG.info("Symbol : " + currentRankInfo.getSymbol());
+
+                    rankCell.setCellValue(getRankStrByRankInfo(currentRankInfo));
+                }
             }
+
 
             FileOutputStream outputStream = new FileOutputStream(targetFile);
             workbook.write(outputStream);
@@ -775,6 +952,17 @@ public class ZacksRatings extends BaseRatings {
             LOG.error("Error while Creating New Sheet  " + targetFile, ex);
         }
     }
+
+//    private void getVGMScore(String data) {
+//
+//        Matcher matcher = VGM_PATEERN.matcher(data);
+//
+//        String rawScore = "";
+//        if(matcher.find())
+//            rawScore = matcher.start();
+//
+//        System.out.println("End.");
+//    }
 }
 
 
