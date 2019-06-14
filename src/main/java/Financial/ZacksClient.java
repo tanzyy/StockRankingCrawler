@@ -16,7 +16,7 @@ public class ZacksClient {
     private static  String BACK_FILE_LOC    = "/Backup";
 
 
-    static boolean firstTime = true;
+    static boolean firstTime = false;
     static boolean isOld     = false;
     static boolean isETF     = false;
 
@@ -87,6 +87,7 @@ public class ZacksClient {
                 new ZacksClient().processETFData(Constants.SYMBOLS_TANZY_ETF_WATCH,    Constants.OUT_FILE_TANZY_ETF, "Watch",    2);
                 new ZacksClient().processETFData(Constants.SYMBOLS_TANZY_ETF_EMERGING, Constants.OUT_FILE_TANZY_ETF, "Emerging", 3);
                 new ZacksClient().processETFData(Constants.SYMBOLS_TANZY_ETF_INDEXES,  Constants.OUT_FILE_TANZY_ETF, "Indexes",  4);
+                new ZacksClient().processETFData(Constants.SYMBOLS_TANZY_ETF_BOND_MLP, Constants.OUT_FILE_TANZY_ETF, "BondMLP",  5);
             }
         }
     }

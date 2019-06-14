@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class FileUtils {
 
@@ -95,6 +96,48 @@ public class FileUtils {
         return isSuccess;
     }
 
+    public static void clearBackupDir(String rootPath, String dirToDelete) {
+
+        List<String> results = new ArrayList<>();
+        getAllInstanceofSpecificDir(rootPath, dirToDelete, results);
+        results.forEach(System.out::println);
+
+        for (String result : results) {
+            Stream.of(new File(result).listFiles()).forEach(file -> file.delete());
+        }
+    }
+
+    /**
+     * This method will return absolute path of all occurrences of matched dir name @name under @rootPath
+     *
+     * @param rootPath under which target directories to look for.
+     * @param name name of directory to look for.
+     * @param results list holder to hold the absolute path for all occurrences of name directory
+     * @return results
+     */
+    public static List<String> getAllInstanceofSpecificDir(String rootPath, String name, List<String> results) {
+
+        File[] files = new File(rootPath).listFiles();
+
+        if(files != null) {
+
+            for (File f : files) {
+
+                if(f.isDirectory()) {
+
+                    if(name.equals(f.getName()))
+                        results.add(f.getAbsolutePath());
+                    else
+                        getAllInstanceofSpecificDir(f.getAbsolutePath(), name, results);
+
+                } else
+                    continue;
+            }
+        }
+
+        return results;
+    }
+
     public static void sortList(String commaSeparatedList) {
 
         String[] strs = commaSeparatedList.split(",");
@@ -105,11 +148,13 @@ public class FileUtils {
         System.out.println(out);
         System.out.println(commaSeparatedList.toLowerCase());
     }
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws IOException {
+
 //        copyFile(
 //                "/Users/i852841/OneDriveSAPSE/Code_Personal_On_Git/StockRankingCrawler/target/test-classes/ZacksTest_FileExistWithChange.xlsx",
 //                "/Users/i852841/Downloads");
 
-        sortList("^VIX,SPY,QQQ,XLK,XLF,XLRE,XLE,XLC,XLV,XLP,XLY,XLI,XLB,XLU,SPDV,MJ,SCHD,VT,SOXX,SOXL,IHI,KBE,EFA,VOO,VTI,IVV,IBB,EEM,SLY,MDY,MDYG,SLYG");
+//        sortList("^VIX,SPY,QQQ,XLK,XLF,XLRE,XLE,XLC,XLV,XLP,XLY,XLI,XLB,XLU,SPDV,MJ,SCHD,VT,SOXX,SOXL,IHI,KBE,EFA,VOO,VTI,IVV,IBB,EEM,SLY,MDY,MDYG,SLYG");
     }
 }

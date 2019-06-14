@@ -12,19 +12,20 @@ public class MarketBeatClient {
 
     private static  String OUT_FILE_LOC  = "/Reports/MarketBeatRank";
     private static  String BACK_DIR      = "/Backup";
-    private static final boolean FOR_NEW = true;
+    private static final boolean FOR_NEW = false;
     private static final boolean isOLD   = false;
 
     public static void main(String[] args) {
 
-        OUT_FILE_LOC  = System.getProperty("user.dir") + OUT_FILE_LOC;
-
         if(FOR_NEW) {
+            OUT_FILE_LOC  = System.getProperty("user.dir") + OUT_FILE_LOC;
             //new MarketBeatClient().processData(Constants.SYMBOLS_T_INV_LARGE,       Constants.OUT_DIR_T_INV_LARGE,       true);
-            new MarketBeatClient().processData(Constants.SYMBOLS_T_INV19_REIT,        Constants.OUT_DIR_T_INV19_REIT,        true);
+            //new MarketBeatClient().processData(Constants.SYMBOLS_T_INV19_REIT,        Constants.OUT_DIR_T_INV19_REIT,        false);
+            new MarketBeatClient().processData(Constants.SYMBOLS_T_INV19_LARGE,        Constants.OUT_DIR_T_INV19_LARGE,        false);
+
 
         } else if(isOLD) {
-
+            OUT_FILE_LOC  = System.getProperty("user.dir") + OUT_FILE_LOC;
             new MarketBeatClient().processData(Constants.SYMBOLS_T_INV_LARGE,       Constants.OUT_DIR_T_INV_LARGE,       false);
             new MarketBeatClient().processData(Constants.SYMBOLS_T_INV_SMALL,       Constants.OUT_DIR_T_INV_SMALL,       false);
             new MarketBeatClient().processData(Constants.SYMBOLS_T_INV_BASE,        Constants.OUT_DIR_T_INV_BASE,        false);

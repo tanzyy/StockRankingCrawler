@@ -46,7 +46,7 @@ public class MarketBeatRatings extends BaseRatings {
     private static final String MB_NASDAQ_STOCK_URI = "https://www.marketbeat.com/stocks/NASDAQ/";
     private static final String MB_NYSE_STOCK_URI   = "https://www.marketbeat.com/stocks/NYSE/";
     private static final String MB_TICKER_NA        = "NA";
-    private static final int    MB_DATE_RANGE       = 4;
+    private static final int    MB_DATE_RANGE       = 7;
     private static  final String MB_RATINGS_URI     = "/price-target/";
 
     private String rankDate;
@@ -88,6 +88,10 @@ public class MarketBeatRatings extends BaseRatings {
         researchFirmOrderList.add(ResearcherID.BARCLAYS.getId());
         researchFirmOrderList.add(ResearcherID.BENCHMARK.getId());
         researchFirmOrderList.add(ResearcherID.EVERCORE.getId());
+        researchFirmOrderList.add(ResearcherID.OPPENHEIMER.getId());
+        researchFirmOrderList.add(ResearcherID.GUGGENHEIM.getId());
+        researchFirmOrderList.add(ResearcherID.SUSQUEHANNA.getId());
+        researchFirmOrderList.add(ResearcherID.NOMURA.getId());
     }
 
     public List<String> researchFirmOrderList = new ArrayList<>();
@@ -589,7 +593,12 @@ public class MarketBeatRatings extends BaseRatings {
         STEPHENS("Stephens", "132"),                     //for curo
         BARCLAYS("Barclays", "4"),
         BENCHMARK("Benchmark", "739"),
-        EVERCORE("Evercore ISI", "1745");
+        EVERCORE("Evercore ISI", "1745"),
+        OPPENHEIMER("Oppenheimer Funds", "52"),
+        GUGGENHEIM("Guggenheim", "4701"),
+        SUSQUEHANNA("Susquehanna Bancshares", "1069"),
+        NOMURA("Nomura", "25862")
+        ;
 
         private String id;
         private String name;

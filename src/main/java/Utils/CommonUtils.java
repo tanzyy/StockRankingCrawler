@@ -76,7 +76,7 @@ public class CommonUtils {
             String rangeDateStr  = CommonUtils.calculateDateFrom(curDateStr, "M/dd/yyyy", -range);
             Date rangeDateObj    = Constants.dsdf.parse(rangeDateStr);
 
-            if(inDateObj.compareTo(rangeDateObj) >= 0) {
+            if(inDateObj.compareTo(rangeDateObj) > 0) {
                 //System.out.println(String.format("Input DateStr [%s] is within range from [%s] to [%s]", dateStr, rangeDateStr, curDateStr));
                 status = 1;
             } else {
@@ -90,5 +90,9 @@ public class CommonUtils {
         }
 
         return status;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(CommonUtils.isDateInRange("5/9/2019", 7));
     }
 }

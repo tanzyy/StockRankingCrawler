@@ -7,6 +7,38 @@ import java.text.SimpleDateFormat;
  */
 public class Constants {
 
+
+    //################################################################ Currently Used: Start ################################################################
+
+    public static final String SYMBOLS_T_INV19_LARGE       = "amzn,googl,fb,msft,aapl,nflx,nvda,v,blk,tsla,sq,ntnx,pvtl,ba,gm,sap,t,cy,amat,ko,x,pcg,sftby,jd," +
+            "gbt,acb,iipr,nlsn,myok,edit,met,sum,hiiq,dis,etfc,wm,bmy,twou,zuo,slp,cvs";
+
+    public static final String SYMBOLS_T_INV19_SMALL       = "ladr,cim,htgc,psec,lb,sig,ge,hpq,snap,gluu,swch,usat,sien,inov,bdsi,ino,gern,avxl,insy,nvax,ovid,akao,je,llnw," +
+            "lac,trxc,aprn,nio,riot,rad,ftr,blnk,nlnk,jagx,cris,any,vtvt,egan,trvg,smrt,ipci,mark,oncs,avgr,mosy,crbp,dlph,hx,boxl,nvta";
+
+    public static final String SYMBOLS_T_INV19_SUP_GROWTH  = "zen,roku,mdb,shop,dxc,twlo,irbt,rng,twou,prmw,fnko,ntn,iep";
+
+    public static final String SYMBOLS_T_INV19_BASE        = "intu,adbe,anet,csco,panw,chtr,intc,lrcx,vmw,cgc,apha,cron,zg,atvi,docu,spot,wm,mmm,cat,wmt,cost,tgt,low,m,etsy," +
+            "lulu,baba,tcehy,dis,ibm,twtr,dbx,fdx,gsk,pfe,lgnd,azn,abbv,jnj,unh,avgo,asml,rev,cmp,gis,ades,nke";
+
+    public static final String SYMBOLS_T_INV19_ROBI100_PER = "arql,bdsi,sien,myok,hiiq,boom,prmw,ovid,ino,merc,aldx,vktx,sybx,qnst,crbp";
+
+    public static final String SYMBOLS_T_INV19_LIFE        = "veev,ahsax,dhr,a,tmo,ilmn,tech";
+
+    public static final String SYMBOLS_T_INV19_REIT        = "dlr,o,amt,vtr,spg,ladr,cim,htgc,stor,agnc,nly,nrz";
+
+    public static final String SYMBOLS_TANZY_ETF_SMALL    = "pxsg,fyc,slyg,vempx,vscix";
+    public static final String SYMBOLS_TANZY_ETF_THEMATIC = "botz,arkg,ahsax,kre,kbe,ung,mj,ipo,eos";
+    public static final String SYMBOLS_TANZY_ETF_WATCH    = "mort,qqq,spy,vym,vti,vtv,ita,dia,iwm";
+    public static final String SYMBOLS_TANZY_ETF_EMERGING = "iif,sret,sptm,spem,emfm,iemg,vemix,vtpsx";
+    public static final String SYMBOLS_TANZY_ETF_INDEXES  = "xes,arkg,spy,qqq,xlk,xlf,xlre,xle,xlc,xlv,xlp,xly,xli,xlb,xlu,spdv,mj,schd,vt,soxx,soxl,ihi,kbe,efa,voo,vti," +
+            "ivv,ibb,eem,sly,mdy,mdyg,slyg";
+    public static final String SYMBOLS_TANZY_ETF_BOND_MLP = "fihbx,shyg,angl,cik,ghy,hyg,amlp,mlpa,mlpx,ymlp,mlpy,amj,mlpn,tlt,agg,reet";
+
+
+    //################################################################ Currently Used: End ################################################################
+
+
     //Config constants
     public static final String OUT_DIR_TANZY_WATCH     = "/TanzyWatch";
     public static final String OUT_DIR_TANZY_WATCH2    = "/TanzyWatch2";
@@ -49,24 +81,6 @@ public class Constants {
     public static final String SYMBOLS_TANZY_CURRENTWATCH = "swch,zts,x,sum,hain,flmn,arlo,awk,jci,rng,nlsn,vtsmx,any,etsy";
     public static final String SYMBOLS_TANZY_NEWIPO       = "flmn,arlo,pvtl,curo,nbev,sfix,docu,dbx";
 
-
-    public static final String SYMBOLS_T_INV19_LARGE       = "amzn,googl,fb,msft,aapl,nflx,nvda,v,blk,tsla,sq,ntnx,pvtl,ba,gm,sap,t,cy,amat,ko,x,pcg,sftby,jd,gbt,acb,iipr,nlsn,myok,edit";
-
-    public static final String SYMBOLS_T_INV19_SMALL       = "ladr,cim,htgc,psec,lb,sig,ge,hpq,snap,gluu,swch,usat,sien,inov,bdsi,ino,gern,avxl,insy,nvax,ovid,akao,je,llnw,lac,trxc,aprn,nio,riot,rad,ftr,blnk,nlnk,jagx,cris,any,vtvt,egan,trvg,smrt,ipci,mark,oncs,avgr,mosy";
-
-    public static final String SYMBOLS_T_INV19_SUP_GROWTH  = "zen,roku,mdb,shop,dxc,twlo,irbt,rng,twou,prmw,fnko,ntn,iep";
-
-    public static final String SYMBOLS_T_INV19_BASE        = "intu,adbe,anet,csco,panw,chtr,intc,lrcx,vmw,cgc,apha,cron,zg,atvi,docu,spot,wm,mmm,cat,wmt,cost,tgt,low,m,etsy,lulu,baba,techy,dis,ibm,twtr,dbx,fdx,gsk,pfe,lgnd,azn,abbv,jnj";
-
-    public static final String SYMBOLS_T_INV19_ROBI100_PER = "arql,bdsi,sien,myok,hiiq,boom,prmw,ovid,ino,merc,aldx,vktx,sybx";
-
-    public static final String SYMBOLS_T_INV19_LIFE        = "veev,ahsax,dhr,a,tmo,ilmn,tech";
-
-    public static final String SYMBOLS_T_INV19_REIT        = "dlr,o,amt,vtr,spg,ladr,cim,htgc";
-
-
-
-
     public static final String SYMBOLS_T_INV_LARGE        =
             "amzn,googl,fb,msft,aapl,nflx,nvda,v,tsla,sq,roku,ntnx,zen,pvtl,ba,gm,sap,t,cy,amat,ko,swch,x,pcg,sftby,jd,botz,xbi,sret,gbt";
 
@@ -99,11 +113,7 @@ public class Constants {
     public static final String SYMBOLS_TANZY_GROWTH       = "crox,tbbk,spar,usat,cdxs,tndm,abbv,xene,incy,md,evhc,mnk,swch";
     public static final String SYMBOLS_TANZY_REPORT       = "abcd,gluu,gern,sq,ntnx,roku,irbt,jd,m,etsy,curo,brk.b";
     public static final String SYMBOLS_TANZY_REIT         = "irt,hcp,kim,mort,pld";
-    public static final String SYMBOLS_TANZY_ETF_SMALL    = "pxsg,fyc,slyg";
-    public static final String SYMBOLS_TANZY_ETF_THEMATIC = "botz,arkg,ahsax";
-    public static final String SYMBOLS_TANZY_ETF_WATCH    = "mort,qqq,spy,vym,vti,vtv,ita,dia,iwm";
-    public static final String SYMBOLS_TANZY_ETF_EMERGING = "iif,sret,sptm,spem,emfm,iemg";
-    public static final String SYMBOLS_TANZY_ETF_INDEXES  = "xes,arkg,spy,qqq,xlk,xlf,xlre,xle,xlc,xlv,xlp,xly,xli,xlb,xlu,spdv,mj,schd,vt,soxx,soxl,ihi,kbe,efa,voo,vti,ivv,ibb,eem,sly,mdy,mdyg,slyg";
+
     public static final String SYMBOLS_D3L                = "nbr,slb,xes,hclp,gdxs,itub,lmfa,ueps,gst,vedl,staf,gol";
 
     public static final String SYMBOLS_NEW                = "dlr,o,amt,vtr,spg,ladr,cim,htgc,amlp";
