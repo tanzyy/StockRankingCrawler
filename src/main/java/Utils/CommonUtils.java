@@ -1,5 +1,7 @@
 package Utils;
 
+import VO.RankInfo;
+
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -91,6 +93,37 @@ public class CommonUtils {
 
         return status;
     }
+
+    public static RankInfo populateETFData(RankInfo rankInfo, String price, String rank, String risk, String nav, String exp) {
+
+        if(price != null && price.length() != 0)
+            rankInfo.setPrice(price.substring(0, price.indexOf(Constants.SEPARATOR_WHITE_SPACE)));
+        else
+            rankInfo.setPrice(Constants.ZERO_VALUE);
+
+        if(rank != null && rank.length() != 0)
+            rankInfo.setRank(rank);
+        else
+            rankInfo.setRank(Constants.UNAVAILABLE);
+
+        if(risk != null && risk.length() != 0)
+            rankInfo.setRisk(risk);
+        else
+            rankInfo.setRisk(Constants.UNAVAILABLE);
+
+        if(nav != null && nav.length() != 0)
+            rankInfo.setNav(nav);
+        else
+            rankInfo.setNav(Constants.UNAVAILABLE);
+
+        if(exp != null && exp.length() != 0)
+            rankInfo.setExpenseRatio(exp);
+        else
+            rankInfo.setExpenseRatio(Constants.UNAVAILABLE);
+
+        return rankInfo;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(CommonUtils.isDateInRange("5/9/2019", 7));

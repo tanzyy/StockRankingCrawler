@@ -2,56 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01614b1e-11e0-49c3-a49a-43c2fb464a1a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Financial/IndMFData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Financial/IndMFProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/ExcelAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ABBV.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ABBV.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ADBE.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ADBE.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ADES.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ADES.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ANET.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ANET.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/APHA.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/APHA.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ASML.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ASML.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ATVI.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ATVI.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/AVGO.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/AVGO.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/AZN.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/AZN.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/BABA.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/BABA.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_19_ADBE.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_19_ANET.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_19_INTU.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_20_CSCO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_20_PANW.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_21_CHTR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_21_INTC.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_22_APHA.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_22_CGC.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_22_LRCX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_22_VMW.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_23_CRON.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_23_ZG.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_24_ATVI.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_24_DOCU.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_24_SPOT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_25_CAT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_25_MMM.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_25_WM.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_25_WMT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_26_COST.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_26_LOW.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_26_M.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_26_TGT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_27_BABA.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_27_ETSY.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_27_LULU.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_28_DIS.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_28_IBM.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_28_TECHY.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_28_TWTR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_29_DBX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_29_FDX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_29_GSK.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_29_PFE.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_30_ABBV.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_30_AZN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_30_JNJ.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/Backup/2019_03_10_22_00_30_LGND.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/CAT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/CAT.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/CGC.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/CGC.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/CHTR.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/CHTR.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/CMP.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/CMP.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/COST.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/COST.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/CRON.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/CRON.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/CSCO.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/CSCO.xlsx" afterDir="false" />
@@ -60,6 +28,7 @@
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/DOCU.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/DOCU.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ETSY.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/ETSY.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/FDX.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/FDX.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/GIS.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/GIS.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/GSK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/GSK.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/IBM.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/IBM.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/INTC.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/INTC.xlsx" afterDir="false" />
@@ -71,12 +40,15 @@
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/LULU.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/LULU.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/M.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/M.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/MMM.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/MMM.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/NKE.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/NKE.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/PANW.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/PANW.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/PFE.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/PFE.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/REV.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/REV.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/SPOT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/SPOT.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/TECHY.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/TECHY.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/TCEHY.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/TCEHY.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/TGT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/TGT.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/TWTR.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/TWTR.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/UNH.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/UNH.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/VMW.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/VMW.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/WM.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/WM.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/WMT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_BASE/WMT.xlsx" afterDir="false" />
@@ -87,73 +59,21 @@
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/AMZN.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/AMZN.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/BA.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/BA.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/BLK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/BLK.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_51_AMZN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_51_GOOGL.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_52_FB.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_53_AAPL.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_53_MSFT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_54_NFLX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_54_NVDA.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_55_BLK.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_55_TSLA.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_55_V.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_56_NTNX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_56_SQ.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_57_BA.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_57_GM.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_57_PVTL.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_57_SAP.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_58_CY.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_58_T.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_59_AMAT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_59_KO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_59_PCG.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_51_59_X.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_52_02_JD.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_52_03_ACB.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_52_03_GBT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_52_03_IIPR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_52_04_EDIT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_52_04_MYOK.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_52_04_NLSN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_25_AMZN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_26_GOOGL.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_27_FB.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_27_MSFT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_28_AAPL.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_29_NFLX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_29_NVDA.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_29_V.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_30_BLK.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_30_SQ.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_30_TSLA.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_31_NTNX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_31_PVTL.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_32_BA.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_32_GM.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_32_SAP.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_32_T.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_33_AMAT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_33_CY.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_33_KO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_34_PCG.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_34_X.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_35_ACB.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_35_GBT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_35_JD.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_36_IIPR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_36_MYOK.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_36_NLSN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/Backup/2019_03_10_21_59_37_EDIT.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/BMY.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/BMY.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/CVS.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/CVS.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/CY.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/CY.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/DIS.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/DIS.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/EDIT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/EDIT.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/ETFC.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/ETFC.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/FB.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/FB.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/GBT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/GBT.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/GM.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/GM.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/GOOGL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/GOOGL.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/HIIQ.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/HIIQ.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/IIPR.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/IIPR.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/JD.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/JD.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/KO.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/KO.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/MET.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/MET.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/MSFT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/MSFT.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/MYOK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/MYOK.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/NFLX.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/NFLX.xlsx" afterDir="false" />
@@ -164,64 +84,47 @@
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/PVTL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/PVTL.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/SAP.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/SAP.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/SFTBY.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/SFTBY.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/SLP.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/SLP.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/SQ.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/SQ.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/SUM.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/SUM.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/T.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/T.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/TSLA.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/TSLA.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/TWOU.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/TWOU.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/V.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/V.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/WM.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/WM.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/X.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/X.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/ZUO.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LARGE/ZUO.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/A.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/A.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/AHSAX.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/AHSAX.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/Backup/2019_03_10_22_00_48_VEEV.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/Backup/2019_03_10_22_00_49_A.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/Backup/2019_03_10_22_00_49_AHSAX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/Backup/2019_03_10_22_00_49_DHR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/Backup/2019_03_10_22_00_49_TMO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/Backup/2019_03_10_22_00_50_ILMN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/Backup/2019_03_10_22_00_50_TECH.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/DHR.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/DHR.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/ILMN.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/ILMN.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/TECH.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/TECH.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/TMO.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/TMO.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/VEEV.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_LIFE/VEEV.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/AGNC.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/AGNC.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/AMT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/AMT.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/Backup/2019_03_12_18_35_21_AMT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/Backup/2019_03_12_18_35_21_DLR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/Backup/2019_03_12_18_35_21_O.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/Backup/2019_03_12_18_35_21_VTR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/Backup/2019_03_12_18_35_22_CIM.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/Backup/2019_03_12_18_35_22_HTGC.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/Backup/2019_03_12_18_35_22_LADR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/Backup/2019_03_12_18_35_22_SPG.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/CIM.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/CIM.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/DLR.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/DLR.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/HTGC.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/HTGC.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/LADR.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/LADR.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/NLY.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/NLY.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/NRZ.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/NRZ.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/O.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/O.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/SPG.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/SPG.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/STOR.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/STOR.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/VTR.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_REIT/VTR.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/ALDX.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/ALDX.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/ARQL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/ARQL.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/BDSI.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/BDSI.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/BOOM.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/BOOM.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_37_ARQL.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_37_BDSI.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_37_SIEN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_38_HIIQ.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_38_MYOK.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_39_BOOM.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_39_PRMW.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_40_INO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_40_OVID.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_41_ALDX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_41_MERC.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_42_SYBX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/Backup/2019_03_10_22_00_42_VKTX.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/CRBP.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/CRBP.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/HIIQ.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/HIIQ.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/INO.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/INO.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/MERC.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/MERC.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/MYOK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/MYOK.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/OVID.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/OVID.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/PRMW.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/PRMW.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/QNST.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/QNST.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/SIEN.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/SIEN.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/SYBX.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/SYBX.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/VKTX.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_ROBI100_PER/VKTX.xlsx" afterDir="false" />
@@ -232,92 +135,11 @@
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/AVXL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/AVXL.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/BDSI.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/BDSI.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/BLNK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/BLNK.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_11_LADR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_12_CIM.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_12_HTGC.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_12_LB.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_12_PSEC.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_13_GE.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_13_HPQ.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_13_SIG.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_13_SNAP.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_14_GLUU.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_14_SWCH.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_16_SIEN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_16_USAT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_17_BDSI.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_17_INOV.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_18_GERN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_18_INO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_19_AVXL.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_56_INSY.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_52_58_NVAX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_00_OVID.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_01_AKAO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_01_JE.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_01_LAC.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_01_LLNW.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_04_APRN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_05_NIO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_07_RIOT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_08_RAD.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_09_FTR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_10_BLNK.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_10_NLNK.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_11_CRIS.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_11_JAGX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_12_ANY.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_12_VTVT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_13_EGAN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_13_TRVG.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_16_SMRT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_53_17_IPCI.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_43_LADR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_44_CIM.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_44_HTGC.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_44_LB.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_44_PSEC.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_45_GE.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_45_HPQ.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_45_SIG.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_45_SNAP.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_46_GLUU.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_46_SWCH.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_46_USAT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_47_BDSI.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_47_INOV.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_47_SIEN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_48_GERN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_48_INO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_49_AVXL.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_50_INSY.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_50_NVAX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_51_AKAO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_51_JE.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_51_OVID.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_52_LAC.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_52_LLNW.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_53_APRN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_53_NIO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_53_RIOT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_54_FTR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_54_RAD.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_55_BLNK.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_55_NLNK.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_56_CRIS.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_56_JAGX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_57_ANY.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_57_VTVT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_58_EGAN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_58_TRVG.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_59_IPCI.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_21_59_59_SMRT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_22_00_00_MARK.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_22_00_00_ONCS.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_22_00_01_AVGR.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/Backup/2019_03_10_22_00_01_MOSY.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/BOXL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/BOXL.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/CIM.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/CIM.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/CRBP.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/CRBP.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/CRIS.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/CRIS.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/DLPH.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/DLPH.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/EGAN.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/EGAN.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/FTR.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/FTR.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/GE.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/GE.xlsx" afterDir="false" />
@@ -325,6 +147,7 @@
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/GLUU.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/GLUU.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/HPQ.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/HPQ.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/HTGC.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/HTGC.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/HX.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/HX.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/INO.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/INO.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/INOV.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/INOV.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/INSY.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/INSY.xlsx" afterDir="false" />
@@ -340,6 +163,7 @@
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/NIO.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/NIO.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/NLNK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/NLNK.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/NVAX.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/NVAX.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/NVTA.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/NVTA.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/ONCS.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/ONCS.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/OVID.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/OVID.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/PSEC.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/PSEC.xlsx" afterDir="false" />
@@ -354,18 +178,6 @@
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/TRXC.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/TRXC.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/USAT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/USAT.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/VTVT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SMALL/VTVT.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/Backup/2019_03_10_22_00_07_ZEN.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/Backup/2019_03_10_22_00_08_MDB.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/Backup/2019_03_10_22_00_08_ROKU.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/Backup/2019_03_10_22_00_09_DXC.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/Backup/2019_03_10_22_00_09_IRBT.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/Backup/2019_03_10_22_00_09_SHOP.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/Backup/2019_03_10_22_00_09_TWLO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/Backup/2019_03_10_22_00_10_RNG.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/Backup/2019_03_10_22_00_10_TWOU.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/Backup/2019_03_10_22_00_11_FNKO.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/Backup/2019_03_10_22_00_11_PRMW.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/Backup/2019_03_10_22_00_12_IEP.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/DXC.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/DXC.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/FNKO.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/FNKO.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/IEP.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/IEP.xlsx" afterDir="false" />
@@ -379,23 +191,12 @@
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/TWLO.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/TWLO.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/TWOU.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/TWOU.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/ZEN.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/2019/T_INV19_SUP_GROWTH/ZEN.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/MarketBeatRank/Tanzy_IOT/IBM.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/MarketBeatRank/Tanzy_IOT/IBM.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/ZacksRank/Tanzy_ETF.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/ZacksRank/Tanzy_ETF.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/ZacksRank/Tanzy_Inv2019.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/ZacksRank/Tanzy_Inv2019.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/tanzy_zacks_crwaler.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/tanzy_zacks_crwaler.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/tanzy_zacks_crwaler.log.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Financial/MarketBeatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Financial/MarketBeatClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Financial/MarketBeatRatings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Financial/MarketBeatRatings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Financial/ZacksClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Financial/ZacksClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Utils/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/CommonUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Financial/MarketBeatClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Financial/MarketBeatClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Financial/MarketBeatRatings$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Financial/MarketBeatRatings$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Financial/MarketBeatRatings$ResearcherID.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Financial/MarketBeatRatings$ResearcherID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Financial/MarketBeatRatings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Financial/MarketBeatRatings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Financial/ZacksClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Financial/ZacksClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utils/CommonUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/CommonUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VO/RankInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VO/RankInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/Constants.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Utils/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/FileUtils.class" afterDir="false" />
     </list>
@@ -415,8 +216,11 @@
       <file leaf-file-name="ZacksClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Financial/ZacksClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="27" />
+            <state relative-caret-position="512">
+              <caret line="142" column="77" selection-start-line="142" selection-start-column="65" selection-end-line="142" selection-end-column="77" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -424,8 +228,23 @@
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="99" selection-start-line="30" selection-start-column="99" selection-end-line="30" selection-end-column="99" />
+            <state relative-caret-position="139">
+              <caret line="198" column="66" selection-start-line="198" selection-start-column="66" selection-end-line="198" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndMFData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -433,8 +252,43 @@
       <file leaf-file-name="ZacksRatings.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Financial/ZacksRatings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12540">
-              <caret line="876" column="2" selection-start-line="876" selection-start-column="2" selection-end-line="876" selection-end-column="2" />
+            <state relative-caret-position="361">
+              <caret line="185" column="16" selection-start-line="185" selection-start-column="8" selection-end-line="185" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndMFProcessor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#593#594#0" expanded="true" />
+                <element signature="e#624#625#0" expanded="true" />
+                <element signature="e#672#673#0" expanded="true" />
+                <element signature="e#712#713#0" expanded="true" />
+                <element signature="e#747#748#0" expanded="true" />
+                <element signature="e#778#779#0" expanded="true" />
+                <element signature="e#826#827#0" expanded="true" />
+                <element signature="e#866#867#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RankInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/VO/RankInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="257" column="28" selection-start-line="257" selection-start-column="18" selection-end-line="257" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -451,41 +305,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MarketBeatClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Financial/MarketBeatClient.java">
+      <file leaf-file-name="ExcelAction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/ExcelAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="51" column="115" selection-start-line="51" selection-start-column="115" selection-end-line="51" selection-end-column="115" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileUtils.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/FileUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
-              <caret line="151" column="63" lean-forward="true" selection-start-line="151" selection-start-column="63" selection-end-line="151" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MarketBeatRatings.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Financial/MarketBeatRatings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommonUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/CommonUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+            <state relative-caret-position="708">
+              <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
               <folding>
-                <element signature="e#3046#3047#0" expanded="true" />
-                <element signature="e#3122#3123#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -502,12 +328,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>write</find>
-      <find>tan</find>
-      <find>SWCH</find>
-      <find>Stifel Nicolaus</find>
-      <find>WATCH</find>
-      <find>Evercore</find>
       <find>matcher</find>
       <find>new</find>
       <find>ZACKS_ETF_URL</find>
@@ -532,6 +352,12 @@
       <find>List data before sorting for ticker amzn</find>
       <find>pg</find>
       <find>is out of range from</find>
+      <find>class</find>
+      <find>navValue</find>
+      <find>getRankDate</find>
+      <find>getRankNum</find>
+      <find>getRankStrByRankInfo</find>
+      <find>getETFInfo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -546,10 +372,15 @@
         <option value="$PROJECT_DIR$/src/main/java/Financial/ZacksRatings.java" />
         <option value="$PROJECT_DIR$/src/main/java/Financial/MarketBeatClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/Financial/ZacksClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Utils/CommonUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Utils/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Financial/MarketBeatRatings.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/FileUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Financial/MarketBeatRatings.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/ExcelOut.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Financial/IndMFData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/CommonUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Financial/IndMFProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/VO/RankInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/ExcelAction.java" />
       </list>
     </option>
   </component>
@@ -579,9 +410,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="749" />
     <option name="y" value="23" />
-    <option name="width" value="1719" />
-    <option name="height" value="1364" />
+    <option name="width" value="1724" />
+    <option name="height" value="1359" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -589,6 +421,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -625,7 +458,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Experimemts" type="462c0819:PsiDirectoryNode" />
+              <item name="Financial" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StockRankingCrawler" type="b2602c69:ProjectViewProjectNode" />
@@ -643,7 +476,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -677,9 +509,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FileUtils">
-    <configuration name="CommonUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Utils.CommonUtils" />
+  <component name="RunManager" selected="Application.IndMFData">
+    <configuration name="FileUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Utils.FileUtils" />
       <module name="myexps" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -689,13 +521,24 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="FileUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Utils.FileUtils" />
+    <configuration name="IndMFData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Financial.IndMFData" />
       <module name="myexps" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Utils.*" />
+          <option name="PATTERN" value="Financial.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="IndMFProcessor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Financial.IndMFProcessor" />
+      <module name="myexps" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Financial.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -728,29 +571,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="AppTest2.testRandom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="myexps" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Utils" />
-      <option name="MAIN_CLASS_NAME" value="Utils.AppTest2" />
-      <option name="METHOD_NAME" value="testRandom" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -793,17 +613,17 @@
     <list>
       <item itemvalue="Application.ZacksClient" />
       <item itemvalue="Application.MarketBeatClient" />
-      <item itemvalue="JUnit.AppTest2.testRandom" />
       <item itemvalue="Application.FileUtils" />
-      <item itemvalue="Application.CommonUtils" />
+      <item itemvalue="Application.IndMFData" />
+      <item itemvalue="Application.IndMFProcessor" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FileUtils" />
+        <item itemvalue="Application.IndMFData" />
+        <item itemvalue="Application.IndMFProcessor" />
         <item itemvalue="Application.MarketBeatClient" />
         <item itemvalue="Application.ZacksClient" />
-        <item itemvalue="Application.CommonUtils" />
-        <item itemvalue="JUnit.AppTest2.testRandom" />
+        <item itemvalue="Application.FileUtils" />
       </list>
     </recent_temporary>
   </component>
@@ -892,23 +712,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1719" height="1364" extended-state="0" />
-    <editor active="true" />
+    <frame x="749" y="23" width="1724" height="1359" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3295325" />
-      <window_info anchor="bottom" id="Messages" order="18" weight="0.32611173" />
+      <window_info anchor="bottom" id="Messages" order="18" weight="0.32567352" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50183153" side_tool="true" weight="0.2690992" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.24603175" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4981685" visible="true" weight="0.45303866" />
-      <window_info anchor="bottom" id="Version Control" order="16" weight="0.3295325" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4981685" weight="0.1259905" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="16" visible="true" weight="0.32884312" />
       <window_info anchor="bottom" id="Terminal" order="17" weight="0.4709236" />
       <window_info id="Designer" order="6" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49915397" visible="true" weight="0.20989864" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49915397" visible="true" weight="0.22294886" />
       <window_info id="Learn" order="3" />
       <window_info id="Structure" order="5" sideWeight="0.500846" side_tool="true" weight="0.15595238" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.24969475" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.39817974" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.51901746" />
       <window_info id="Favorites" order="8" sideWeight="0.500846" side_tool="true" weight="0.15595238" />
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -934,12 +753,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Financial/ZacksRatings.java</url>
-          <line>120</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Financial/ZacksRatings.java</url>
           <line>957</line>
           <properties />
           <option name="timeStamp" value="17" />
@@ -953,7 +766,7 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -962,6 +775,26 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>document.text()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>System.out.println(document.text());</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>System.out.println(document.);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>System.out.println(document.getElementsByClass(&quot;navValue&quot;));</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>System.out.println(matcher.first);</expression-string>
         <language-id>JAVA</language-id>
@@ -1007,55 +840,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/MarketBeatRatings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7980">
-          <caret line="573" column="31" selection-start-line="573" selection-start-column="16" selection-end-line="573" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/ZacksClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/ZacksRatings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/MarketBeatClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/MarketBeatRatings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Financial/ZacksClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1277,20 +1061,6 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/VO/ExcelProp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/VO/RankInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2670">
-          <caret line="222" column="18" selection-start-line="222" selection-start-column="18" selection-end-line="222" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Utils/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -1298,10 +1068,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/StockrankCrawler.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="105" column="83" selection-start-line="105" selection-start-column="83" selection-end-line="105" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/MarketBeatRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/BaseRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/MarketBeatClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/VO/ExcelProp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/ExcelHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/ZacksClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="142" column="77" selection-start-line="142" selection-start-column="65" selection-end-line="142" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Financial/ZacksRatings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12540">
-          <caret line="876" column="2" selection-start-line="876" selection-start-column="2" selection-end-line="876" selection-end-column="2" />
+        <state relative-caret-position="361">
+          <caret line="185" column="16" selection-start-line="185" selection-start-column="8" selection-end-line="185" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/VO/ConfigVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/CommonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="96" column="17" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="17" />
+          <folding>
+            <element signature="e#3046#3047#0" expanded="true" />
+            <element signature="e#3122#3123#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1317,47 +1173,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="99" selection-start-line="30" selection-start-column="99" selection-end-line="30" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/MarketBeatClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="51" column="115" selection-start-line="51" selection-start-column="115" selection-end-line="51" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/ZacksClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/CommonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+        <state relative-caret-position="139">
+          <caret line="198" column="66" selection-start-line="198" selection-start-column="66" selection-end-line="198" selection-end-column="66" />
           <folding>
-            <element signature="e#3046#3047#0" expanded="true" />
-            <element signature="e#3122#3123#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/MarketBeatRatings.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/VO/RankInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+        <state relative-caret-position="561">
+          <caret line="257" column="28" selection-start-line="257" selection-start-column="18" selection-end-line="257" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/FileUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="151" column="63" lean-forward="true" selection-start-line="151" selection-start-column="63" selection-end-line="151" selection-end-column="63" />
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/ExcelAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

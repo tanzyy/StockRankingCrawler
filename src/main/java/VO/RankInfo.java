@@ -2,6 +2,8 @@ package VO;
 
 import Utils.Constants;
 
+import java.util.List;
+
 /**
  * Created by i852841 on 5/19/18.
  */
@@ -30,6 +32,8 @@ public class RankInfo {
     private String expenseRatio;
     private String risk;
 
+    private static final String OPEN_BRACE  = " [";
+    private static final String CLOSE_BRACE = "]";
 
     public enum RatingState {
 
@@ -239,6 +243,43 @@ public class RankInfo {
             sbr.append("]");
         }
 
+        return sbr.toString();
+    }
+
+    /**
+     * This one can be used for custom keys to be inserted per column.
+     * Default is --> Rank [UN]  Price [0] NAV [41.2700] Expense Ratio [UN] Risk [UN]
+     * Lets say if you want only NAV to be inserted, then pass RankInfo.nav
+     *
+     * @param keys
+     *
+     * @return
+     */
+    public String getETFInfo(List<String> keys) {
+
+        StringBuilder sbr = new StringBuilder();
+
+        for(String key : keys) {
+            sbr.append(key.toUpperCase()).append(OPEN_BRACE).append(key).append(CLOSE_BRACE);
+        }
+
+        sbr.append("Rank [");
+        sbr.append(rank);
+        sbr.append("]  Price [");
+        sbr.append(price);
+        sbr.append("]");
+
+        if(nav !=  null && nav.length() != 0) {
+            sbr.append(" NAV [");
+            sbr.append(nav);
+            sbr.append("] Expense Ratio [");
+            sbr.append(expenseRatio);
+            sbr.append("] Risk [");
+            sbr.append(risk);
+            sbr.append("]");
+        }
+
+        System.out.println(sbr.toString());
         return sbr.toString();
     }
 }
