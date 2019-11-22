@@ -43,7 +43,9 @@ public class IndMFData {
         excelProp.setSheetName(sheetName);
         excelProp.setSheetIndex(sheetIndex);
 
-        new ExcelAction().writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC, true);
+        List<String> attributes = new ArrayList<>();
+        attributes.add("nav");
+        new ExcelAction().writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC, true, attributes);
     }
 
 }

@@ -2,6 +2,7 @@ package VO;
 
 import Utils.Constants;
 
+import java.lang.reflect.Field;
 import java.util.List;
 
 /**
@@ -257,29 +258,27 @@ public class RankInfo {
      */
     public String getETFInfo(List<String> keys) {
 
+        if(keys == null || keys.size() == 0) {
+            return getETFInfo();
+        }
+
         StringBuilder sbr = new StringBuilder();
 
         for(String key : keys) {
-            sbr.append(key.toUpperCase()).append(OPEN_BRACE).append(key).append(CLOSE_BRACE);
+            try {
+                Field field = this.getClass().getDeclaredField(key);
+
+                //sbr.append(key.toUpperCase()).append(OPEN_BRACE).append(field.get(this)).append(CLOSE_BRACE);
+
+                //Dont want to push value with type name. Like for value NAV[21] it will be just 21. Hence commented above one.
+                sbr.append(field.get(this));
+
+            } catch (NoSuchFieldException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
         }
-
-        sbr.append("Rank [");
-        sbr.append(rank);
-        sbr.append("]  Price [");
-        sbr.append(price);
-        sbr.append("]");
-
-        if(nav !=  null && nav.length() != 0) {
-            sbr.append(" NAV [");
-            sbr.append(nav);
-            sbr.append("] Expense Ratio [");
-            sbr.append(expenseRatio);
-            sbr.append("] Risk [");
-            sbr.append(risk);
-            sbr.append("]");
-        }
-
-        System.out.println(sbr.toString());
         return sbr.toString();
     }
 }

@@ -1,6 +1,5 @@
 package Utils;
 
-import Financial.IndMFProcessor;
 import VO.ExcelProp;
 import VO.RankInfo;
 import org.apache.log4j.Logger;
@@ -33,7 +32,7 @@ public class ExcelAction {
      * 4. Delete temp file
      * @param excelProp
      */
-    public void writeToOneXL(ExcelProp excelProp, List<RankInfo> allFetchedData, String outLOC, String backLOC, boolean isETF) {
+    public void writeToOneXL(ExcelProp excelProp, List<RankInfo> allFetchedData, String outLOC, String backLOC, boolean isETF, List<String> attributes) {
 
         String fileWithLOC       = outLOC + File.separator + excelProp.getWorkBookName();
         File targetFileHandler   = new File(fileWithLOC);
@@ -74,12 +73,12 @@ public class ExcelAction {
                     shiftColumns(tempFileWithLOC, fileWithLOC, excelProp);
 
                     //Insert New Rank data
-                    insertNewRankColumn(fileWithLOC, allFetchedData, excelProp, isETF);
+                    insertNewRankColumn(fileWithLOC, allFetchedData, excelProp, isETF, attributes);
 
                 } else {
 
                     //Insert New Rank data
-                    insertNewSheet(tempFileWithLOC, allFetchedData, excelProp, isETF);
+                    insertNewSheet(tempFileWithLOC, allFetchedData, excelProp, isETF, attributes);
                     tempFileHandler.renameTo(targetFileHandler);
                 }
 
@@ -112,7 +111,7 @@ public class ExcelAction {
 
         } else {
             LOG.info(excelProp.getWorkBookName() + " does not exist, creating new one.");
-            createNewWorkBook(fileWithLOC, allFetchedData, excelProp, isETF);
+            createNewWorkBook(fileWithLOC, allFetchedData, excelProp, isETF, attributes);
         }
     }
 
@@ -143,7 +142,7 @@ public class ExcelAction {
         op.close();
     }
 
-    private void insertNewSheet(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp, boolean isETF) {
+    private void insertNewSheet(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp, boolean isETF, List<String> attributes) {
 
         try {
 
@@ -164,10 +163,10 @@ public class ExcelAction {
                     Cell rankCell            = currentRow.createCell(1);
                     RankInfo currentRankInfo = allFetchedData.get(rowIndex - 1);
 
-                    LOG.info(String.format("For Symbol [%s] , CurrentCellStr [%s] ", currentRankInfo.getSymbol(), currentRankInfo.getETFInfo()));
+                    LOG.info(String.format("For Symbol [%s] , CurrentCellStr [%s] ", currentRankInfo.getSymbol(), currentRankInfo.getETFInfo(attributes)));
 
                     symbolCell.setCellValue(currentRankInfo.getSymbol());
-                    rankCell.setCellValue(currentRankInfo.getETFInfo());
+                    rankCell.setCellValue(currentRankInfo.getETFInfo(attributes));
                 }
             } else {
 
@@ -199,7 +198,7 @@ public class ExcelAction {
         }
     }
 
-    private void insertNewRankColumn(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp, boolean isETF) {
+    private void insertNewRankColumn(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp, boolean isETF, List<String> attributes) {
 
         try {
 
@@ -272,7 +271,7 @@ public class ExcelAction {
                         }
                     }
 
-                    currentCell.setCellValue(currentRankInfo.getETFInfo());
+                    currentCell.setCellValue(currentRankInfo.getETFInfo(attributes));
                 }
             } else {
 
@@ -358,7 +357,7 @@ public class ExcelAction {
         }
     }
 
-    private void createNewWorkBook(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp, boolean isETF) {
+    private void createNewWorkBook(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp, boolean isETF, List<String> attributes) {
 
         try {
 
@@ -388,7 +387,7 @@ public class ExcelAction {
                     symbolCell.setCellValue(currentRankInfo.getSymbol());
                     LOG.info("Symbol : " + currentRankInfo.getSymbol());
 
-                    rankCell.setCellValue(currentRankInfo.getETFInfo());
+                    rankCell.setCellValue(currentRankInfo.getETFInfo(attributes));
                 }
             } else {
 
