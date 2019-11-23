@@ -180,15 +180,6 @@ public class Constants {
 
     public static final String OUT_FILE_IND_MF      = "IndMF.xlsx";
 
-//    static String[]  smallCapURLs = {
-//            "https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/mffactsheet/schemeid-16617.cms",
-//            "https://economictimes.indiatimes.com/sbi-small-cap-fund-direct-growth-/mffactsheet/schemeid-15787.cms",
-//            "https://economictimes.indiatimes.com/l%26t-emerging-businesses-fund-direct-growth-/mffactsheet/schemeid-26133.cms"
-//    };
-//
-//    public static List<String> smallCapURLList = Stream.of(smallCapURLs).collect(Collectors.toList());
-
-
      public static Map<String, String> smallCapMap = new LinkedHashMap<String, String>() {{
          put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/mffactsheet/schemeid-16617.cms");
          put("L&T"          , "https://economictimes.indiatimes.com/l%26t-emerging-businesses-fund-direct-growth-/mffactsheet/schemeid-26133.cms");
@@ -214,9 +205,58 @@ public class Constants {
          put("Union"        , "https://economictimes.indiatimes.com/union-small-cap-fund-direct-growth-/mffactsheet/schemeid-26860.cms");
      }};
 
+    public static Map<String, String> multiCapMap = new LinkedHashMap<String, String>() {{
+        put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-focused-30-fund-direct-plan-growth-/mffactsheet/schemeid-16021.cms");
+        put("L&T"          , "https://economictimes.indiatimes.com/l%26t-focused-equity-fund-direct-growth-/mffactsheet/schemeid-38083.cms");
+        put("Axis"         , "https://economictimes.indiatimes.com/axis-focused-25-fund--direct-plan/mffactsheet/schemeid-15684.cms");
+        put("SBI"          , "https://economictimes.indiatimes.com/sbi-focused-equity-fund--direct-plan/mffactsheet/schemeid-16324.cms");
+        put("Kotak"        , "https://economictimes.indiatimes.com/kotak-standard-multicap-fund--direct-plan/mffactsheet/schemeid-17140.cms");
+        put("Nipon"        , "https://economictimes.indiatimes.com/nippon-india-multi-cap-fund-direct-growth-/mffactsheet/schemeid-16068.cms");
+        put("DSP"          , "https://economictimes.indiatimes.com/dsp-equity-direct-plan-growth-/mffactsheet/schemeid-16386.cms");
+        put("ICICI"        , "https://economictimes.indiatimes.com/icici-prudential-multicap-fund-direct-plan-growth-/mffactsheet/schemeid-15874.cms");
+        put("Tata"         , "https://economictimes.indiatimes.com/tata-retirement-savings-fund-moderate-plan-direct-growth-/mffactsheet/schemeid-17017.cms");
+        put("Birla"        , "https://economictimes.indiatimes.com/aditya-birla-sun-life-equity-fund-direct-growth-/mffactsheet/schemeid-15741.cms");
+        put("Motilal"      , "https://economictimes.indiatimes.com/motilal-oswal-multicap-35-fund--direct-plan/mffactsheet/schemeid-26125.cms");
+        put("IDBI"         , "https://economictimes.indiatimes.com/idbi-diversified-equity-fund-direct-growth-/mffactsheet/schemeid-25144.cms");
+        put("Sundaram"     , "https://economictimes.indiatimes.com/sundaram-equity-fund-direct-growth-/mffactsheet/schemeid-40260.cms");
+        put("Invesco"      , "https://economictimes.indiatimes.com/invesco-india-multicap-fund-direct-growth-/mffactsheet/schemeid-16811.cms");
+        put("EdelWeiss"    , "https://economictimes.indiatimes.com/edelweiss-multi-cap-fund-direct-growth-/mffactsheet/schemeid-29263.cms");
+        put("Franklin"     , "https://economictimes.indiatimes.com/franklin-india-focused-equity-fund-direct-growth-/mffactsheet/schemeid-15990.cms");
+        put("Canara Robeco", "https://economictimes.indiatimes.com/canara-robeco-equity-diversified-fund-direct-growth-/mffactsheet/schemeid-16588.cms");
+        put("Principal"    , "https://economictimes.indiatimes.com/principal-multi-cap-growth-fund-direct-growth-/mffactsheet/schemeid-16580.cms");
+        put("Quant"        , "https://economictimes.indiatimes.com/quant-active-fund-direct-growth-/mffactsheet/schemeid-17361.cms");
+        put("Union"        , "https://economictimes.indiatimes.com/union-multi-cap-fund-direct-growth-/mffactsheet/schemeid-16412.cms");
 
+        //Expense - .26 , NIFTY 200
+        put("Mirae"        , "https://economictimes.indiatimes.com/mirae-asset-focused-fund-direct-growth-/mffactsheet/schemeid-39823.cms");
 
+        put("ParagParikh"  , "https://economictimes.indiatimes.com/parag-parikh-long-term-equity-fund-direct-growth-/mffactsheet/schemeid-19701.cms");
+    }};
 
+//    public static Map<String, String> focusedCapMap = new LinkedHashMap<String, String>() {{
+//        put("HDFC"         , "");
+//        put("L&T"          , "");
+//        put("Axis"         , "");
+//        put("SBI"          , "");
+//        put("Kotak"        , "");
+//        put("Nipon"        , "");
+//        put("DSP"          , "");
+//        put("ICICI"        , "");
+//        put("Tata"         , "");
+//        put("Birla"        , "");
+//        put("Motilal"      , "");
+//        put("IDBI"         , "");
+//        put("Sundaram"     , "");
+//        put("Invesco"      , "");
+//        put("EdelWeiss"    , "");
+//        put("Franklin"     , "");
+//        put("BOI Axa"      , "");
+//        put("Canara Robeco", "");
+//        put("HSBC"         , "");
+//        put("Principal"    , "");
+//        put("Quant"        , "");
+//        put("Union"        , "");
+//    }};
 
 
 

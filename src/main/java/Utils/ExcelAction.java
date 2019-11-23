@@ -289,55 +289,34 @@ public class ExcelAction {
                     } else {
 
                         currentCell = currentRow.createCell(1);
-                        //String currentCellRankStr = currentRankInfo.getRank();
-                        //Integer currentCellRank   = Integer.valueOf(getRankNum(currentCellRankStr));
+                        Double currentCellVal = Double.valueOf(currentRankInfo.getNav());
 
-                        String currentCellStr    = getRankStrByRankInfo(currentRankInfo);
-                        Integer currentCellVal   = Integer.valueOf(getRankNumByStr(currentCellStr));
+                        Cell previousCell       = currentRow.getCell(2);
+                        Double previousCellVal  = 0.0;
 
-                        //String previousCell        = currentRow.getCell(2).toString();
-                        //String previousCellRankStr = previousCell.substring(previousCell.indexOf("[") + 1, previousCell.indexOf("]"));
-                        //Integer previousCellRankVal  = Integer.valueOf(getRankNum(previousCellRankStr));
-
-                        //LOG.info(String.format(
-                        //        "For Symbol [%s] ,  PreviousCellStr [%s] ,  PreviousCellVal [%s] , CurrentCellStr [%s] ,  CurrentCellVal [%s]",
-                        //        currentRow.getCell(0), previousCell, previousCellRankVal, currentCellRankStr, currentCellRank));
-
-                        Cell previousCell        = currentRow.getCell(2);
-                        Integer previousCellVal  = 0;
                         if(previousCell != null)
-                            previousCellVal = Integer.valueOf(getRankNumByStr(previousCell.toString()));
+                            previousCellVal = Double.valueOf(previousCell.toString());
 
                         LOG.info(String.format(
-                                "For Symbol [%s] ,  PreviousCellStr [%s] ,  PreviousCellVal [%s] , CurrentCellStr [%s] ,  CurrentCellVal [%s]",
-                                currentRow.getCell(0), previousCell, previousCellVal, currentCellStr, currentCellVal));
+                                "For Symbol [%s] ,  PreviousCellStr [%s] ,  PreviousCellVal [%s] ,  CurrentCellVal [%s]",
+                                currentRow.getCell(0), previousCell, previousCellVal, currentCellVal));
 
                         CellStyle style = workbook.createCellStyle();
-                        if(currentCellVal != 0 && previousCellVal != 0) {
+                        if(currentCellVal != 0.0 && previousCellVal != 0.0) {
 
-                            if(previousCellVal > currentCellVal) {
+                            if(previousCellVal < currentCellVal) {
 
                                 style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
                                 style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 
-                            } else if(previousCellVal < currentCellVal) {
+                            } else if(previousCellVal > currentCellVal) {
 
                                 style.setFillForegroundColor(IndexedColors.ROSE.getIndex());
                                 style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
                             }
-
-                        } else if(currentCellVal != 0 && previousCellVal == 0) { //New Coverage
-
-                            style.setFillForegroundColor(IndexedColors.AQUA.getIndex());
-                            style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-
-                        } else if(currentCellVal == 0 && previousCellVal != 0) { //No More Coverage
-
-                            style.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
-                            style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
                         }
                         currentCell.setCellStyle(style);
-                        currentCell.setCellValue(currentCellStr);
+                        currentCell.setCellValue(currentCellVal);
                     }
                 }
 

@@ -3,15 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="01614b1e-11e0-49c3-a49a-43c2fb464a1a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/IndMFData/IndMF copy 2.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/IndMFData/IndMF copy.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/IndMFData/IndMF copy.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/IndMFData/IndMF.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/IndMFData/IndMF.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/tanzy_zacks_crwaler.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/tanzy_zacks_crwaler.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Financial/IndMFData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Financial/IndMFData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Utils/ExcelAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/ExcelAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/VO/RankInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VO/RankInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Financial/IndMFData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Financial/IndMFData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utils/ExcelAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/ExcelAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/VO/RankInfo$RatingState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/VO/RankInfo$RatingState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/VO/RankInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/VO/RankInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/Constants$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/Constants$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/Constants.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,23 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="187" column="2" lean-forward="true" selection-start-line="187" selection-start-column="2" selection-end-line="187" selection-end-column="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndMFData.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IndMFData.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+            <state relative-caret-position="674">
+              <caret line="51" column="116" selection-start-line="51" selection-start-column="116" selection-end-line="51" selection-end-column="116" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,28 +42,32 @@
       <file leaf-file-name="IndMFProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="227">
+              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#593#594#0" expanded="true" />
-                <element signature="e#624#625#0" expanded="true" />
-                <element signature="e#672#673#0" expanded="true" />
-                <element signature="e#712#713#0" expanded="true" />
-                <element signature="e#747#748#0" expanded="true" />
-                <element signature="e#778#779#0" expanded="true" />
-                <element signature="e#826#827#0" expanded="true" />
-                <element signature="e#866#867#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RankInfo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RankInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/VO/RankInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
+            <state relative-caret-position="530">
               <caret line="274" lean-forward="true" selection-start-line="274" selection-end-line="274" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="186" selection-start-line="186" selection-end-line="204" selection-end-column="137" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,8 +78,8 @@
       <file leaf-file-name="ExcelAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils/ExcelAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="75" column="97" selection-start-line="75" selection-start-column="87" selection-end-line="75" selection-end-column="97" />
+            <state relative-caret-position="84">
+              <caret line="315" column="29" selection-start-line="315" selection-start-column="29" selection-end-line="315" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,8 +98,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>new</find>
-      <find>ZACKS_ETF_URL</find>
       <find>edit</find>
       <find>SYMBOLS_TANZY_ETF_SMALL</find>
       <find>ladr</find>
@@ -135,6 +126,8 @@
       <find>getRankStrByRankInfo</find>
       <find>does not exist, creating new one</find>
       <find>getETFInfo</find>
+      <find>mffactsheet</find>
+      <find>SmallCap</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -154,10 +147,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Utils/ExcelOut.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/CommonUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/Financial/IndMFProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/VO/RankInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/ExcelAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/Financial/IndMFData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/VO/RankInfo.java" />
       </list>
     </option>
   </component>
@@ -189,7 +182,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="969" />
+    <option name="height" value="968" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -488,7 +481,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="969" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="968" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3295325" />
@@ -496,15 +489,15 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50183153" side_tool="true" weight="0.2690992" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.24603175" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4981685" visible="true" weight="0.35894495" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4981685" weight="0.4695752" />
       <window_info anchor="bottom" id="Version Control" order="16" weight="0.32884312" />
-      <window_info anchor="bottom" id="Terminal" order="17" weight="0.16640253" />
+      <window_info anchor="bottom" id="Terminal" order="17" weight="0.51261467" />
       <window_info id="Designer" order="6" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49915397" visible="true" weight="0.22893773" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49915397" visible="true" weight="0.22527473" />
       <window_info id="Learn" order="3" />
       <window_info id="Structure" order="5" sideWeight="0.500846" side_tool="true" weight="0.15595238" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.24969475" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.51901746" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.16188289" />
       <window_info id="Favorites" order="8" sideWeight="0.500846" side_tool="true" weight="0.15595238" />
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -534,6 +527,18 @@
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Utils/ExcelAction.java</url>
+          <line>234</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Utils/ExcelAction.java</url>
+          <line>233</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/Financial/ZacksRatings.java</url>
           <line>536</line>
@@ -543,7 +548,7 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="24" />
+      <option name="time" value="27" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -552,6 +557,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>System.out.println(currentCellRankStr);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>document.text()</expression-string>
         <language-id>JAVA</language-id>
@@ -938,28 +948,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/VO/RankInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="530">
+          <caret line="274" lean-forward="true" selection-start-line="274" selection-end-line="274" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#826#827#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils/ExcelAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="75" column="97" selection-start-line="75" selection-start-column="87" selection-end-line="75" selection-end-column="97" />
+        <state relative-caret-position="84">
+          <caret line="315" column="29" selection-start-line="315" selection-start-column="29" selection-end-line="315" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -968,8 +980,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="187" column="2" lean-forward="true" selection-start-line="187" selection-start-column="2" selection-end-line="187" selection-end-column="2" />
+        <state relative-caret-position="287">
+          <caret line="186" selection-start-line="186" selection-end-line="204" selection-end-column="137" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -978,18 +990,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/VO/RankInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="274" lean-forward="true" selection-start-line="274" selection-end-line="274" />
+        <state relative-caret-position="674">
+          <caret line="51" column="116" selection-start-line="51" selection-start-column="116" selection-end-line="51" selection-end-column="116" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

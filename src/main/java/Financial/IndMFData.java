@@ -16,17 +16,15 @@ public class IndMFData {
 
     public static void main(String[] args) {
 
-//        List<String> URLs = Constants.smallCapURLList;
-//        URLs.forEach(System.out::println);
-
         OUT_FILE_LOC  = System.getProperty("user.dir") + OUT_FILE_LOC;
         BACK_FILE_LOC = OUT_FILE_LOC + BACK_FILE_LOC;
 
-        new IndMFData().processSmallCapFund(Constants.OUT_FILE_IND_MF,"SmallCap", 0);
+        new IndMFData().processFund(Constants.OUT_FILE_IND_MF,"SmallCap", 0);
+        new IndMFData().processFund(Constants.OUT_FILE_IND_MF,"MultiCap", 1);
     }
 
 
-    private void processSmallCapFund(String outFile, String sheetName, int sheetIndex) {
+    private void processFund(String outFile, String sheetName, int sheetIndex) {
 
         ExcelProp excelProp = new ExcelProp();
         excelProp.setWorkBookName(outFile);
@@ -36,8 +34,14 @@ public class IndMFData {
 
         List<RankInfo> currentRankingData = new ArrayList<>();
 
-        for(Map.Entry<String, String> entry : Constants.smallCapMap.entrySet()) {
-            currentRankingData.add(indMFProcessor.getMFData(entry.getKey(), entry.getValue()));
+        if("SmallCap".equalsIgnoreCase(sheetName)) {
+            for(Map.Entry<String, String> entry : Constants.smallCapMap.entrySet()) {
+                currentRankingData.add(indMFProcessor.getMFData(entry.getKey(), entry.getValue()));
+            }
+        } else if("MultiCap".equalsIgnoreCase(sheetName)) {
+            for(Map.Entry<String, String> entry : Constants.multiCapMap.entrySet()) {
+                currentRankingData.add(indMFProcessor.getMFData(entry.getKey(), entry.getValue()));
+            }
         }
 
         excelProp.setSheetName(sheetName);
@@ -45,7 +49,7 @@ public class IndMFData {
 
         List<String> attributes = new ArrayList<>();
         attributes.add("nav");
-        new ExcelAction().writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC, true, attributes);
+        new ExcelAction().writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC, false, attributes);
     }
 
 }
