@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01614b1e-11e0-49c3-a49a-43c2fb464a1a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/IndMFData/IndMF_SmallCap.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/IndMFData/IndMF_SmallCap.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/IndMFData/~$IndMF_SmallCap.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/tanzy_zacks_crwaler.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/tanzy_zacks_crwaler.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Financial/IndMFProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Financial/IndMFProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Financial/IndMFProcessorExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Financial/IndMFProcessorExperiment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Financial/IndMFData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Financial/IndMFData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Financial/IndMFData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Financial/IndMFData.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +25,8 @@
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="263" column="30" selection-start-line="263" selection-start-column="30" selection-end-line="263" selection-end-column="30" />
+            <state relative-caret-position="193">
+              <caret line="181" column="31" selection-start-line="181" selection-start-column="31" selection-end-line="181" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndMFData.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IndMFData.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1702">
-              <caret line="125" column="123" selection-start-line="125" selection-start-column="123" selection-end-line="125" selection-end-column="123" />
+            <state relative-caret-position="199">
+              <caret line="90" column="63" selection-start-line="90" selection-start-column="63" selection-end-line="90" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndMFProcessor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndMFProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81">
@@ -138,10 +141,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Financial/IndMFDataExperiments.java" />
         <option value="$PROJECT_DIR$/src/main/java/VO/RankInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/ExcelAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Financial/IndMFData.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/Financial/IndMFProcessorExperiment.java" />
         <option value="$PROJECT_DIR$/src/main/java/Financial/IndMFProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Financial/IndMFData.java" />
       </list>
     </option>
   </component>
@@ -975,26 +978,6 @@ elems.get(4).text()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="263" column="30" selection-start-line="263" selection-start-column="30" selection-end-line="263" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1702">
-          <caret line="125" column="123" selection-start-line="125" selection-start-column="123" selection-end-line="125" selection-end-column="123" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFDataExperiments.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-11">
@@ -1016,6 +999,26 @@ elems.get(4).text()</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="90" column="128" selection-start-line="90" selection-start-column="128" selection-end-line="90" selection-end-column="128" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="181" column="31" selection-start-line="181" selection-start-column="31" selection-end-line="181" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Financial/IndMFData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="90" column="63" selection-start-line="90" selection-start-column="63" selection-end-line="90" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

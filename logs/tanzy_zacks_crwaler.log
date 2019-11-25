@@ -3715,3 +3715,51 @@ java.nio.file.FileAlreadyExistsException: /Users/i852841/_Codes/_Personal/StockR
 2019-11-24 22:21:14 INFO  [THREAD: main] ExcelAction:328 - For Symbol [UNION] ,  PreviousCellVal [12.45 --- 14.71 
  22-Aug-2019 --- 16-Apr-2019] ,  CurrentCellVal [₹14.44 ::: 12.45 --- 14.71 
  22-Aug-2019 --- 16-Apr-2019]
+2019-11-24 22:25:14 INFO  [THREAD: main] ExcelAction:59 - IndMF_SmallCap.xlsx exists.
+2019-11-24 22:25:15 INFO  [THREAD: main] ExcelAction:69 - #####################  Sheet name [NAV] existence [true]
+2019-11-24 22:28:48 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/mffactsheet/schemeid-16617.cms
+2019-11-24 22:28:49 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/l%26t-emerging-businesses-fund-direct-growth-/mffactsheet/schemeid-26133.cms
+2019-11-24 22:28:49 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/axis-small-cap-fund-direct-growth-/mffactsheet/schemeid-22335.cms
+2019-11-24 22:28:54 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/sbi-small-cap-fund-direct-growth-/mffactsheet/schemeid-15787.cms
+2019-11-24 22:28:54 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/Kotak%20Small%20Cap%20Fund%20Direct-Growth/mffactsheet/schemeid-16382.cms
+2019-11-24 22:28:59 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/nippon-india-small-cap-fund--direct-plan/mffactsheet/schemeid-16182.cms
+2019-11-24 22:28:59 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/dsp-small-cap-direct-plan-growth-/mffactsheet/schemeid-16411.cms
+2019-11-24 22:28:59 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/icici-prudential-smallcap-fund-direct-plan-growth-/mffactsheet/schemeid-17116.cms
+2019-11-24 22:29:04 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/tata-small-cap-fund-direct-growth-/mffactsheet/schemeid-37991.cms
+2019-11-24 22:29:09 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/aditya-birla-sun-life-small-cap-fund-direct-growth-/mffactsheet/schemeid-15935.cms
+2019-11-24 22:29:09 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/motilal-oswal-nifty-smallcap-250-index-fund-direct-growth-/mffactsheet/schemeid-40244.cms
+2019-11-24 22:29:15 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/idbi-small-cap-fund-direct-growth-/mffactsheet/schemeid-34272.cms
+2019-11-24 22:29:19 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/sundaram-small-cap-fund-direct-growth-/mffactsheet/schemeid-16112.cms
+2019-11-24 22:29:24 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/invesco-india-smallcap-fund-direct-growth-/mffactsheet/schemeid-37843.cms
+2019-11-24 22:29:28 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/edelweiss-small-cap-fund-direct-growth-/mffactsheet/schemeid-38851.cms
+2019-11-24 22:29:32 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/franklin-india-smaller-companies-direct-fund-growth-/mffactsheet/schemeid-16010.cms
+2019-11-24 22:29:36 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/boi-axa-small-cap-fund-direct-growth-/mffactsheet/schemeid-38283.cms
+2019-11-24 22:29:40 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/canara-robeco-small-cap-fund-direct-growth-/mffactsheet/schemeid-38817.cms
+2019-11-24 22:29:45 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/hsbc-small-cap-equity-fund-direct-growth-/mffactsheet/schemeid-16325.cms
+2019-11-24 22:29:49 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/principal-small-cap-fund-direct-growth-/mffactsheet/schemeid-39797.cms
+2019-11-24 22:29:53 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/quant-small-cap-fund-direct-plan-growth-/mffactsheet/schemeid-17366.cms
+2019-11-24 22:29:57 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/union-small-cap-fund-direct-growth-/mffactsheet/schemeid-26860.cms
+2019-11-24 22:30:01 INFO  [THREAD: main] ExcelAction:59 - IndMF_SmallCap.xlsx exists.
+2019-11-24 22:30:01 INFO  [THREAD: main] ExcelAction:69 - #####################  Sheet name [NAV] existence [true]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [HDFC] ,  PreviousCellStr [41.023] ,  PreviousCellVal [41.023] ,  CurrentCellVal [41.023]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [L&T] ,  PreviousCellStr [23.527] ,  PreviousCellVal [23.527] ,  CurrentCellVal [23.527]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [AXIS] ,  PreviousCellStr [33.54] ,  PreviousCellVal [33.54] ,  CurrentCellVal [33.54]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [SBI] ,  PreviousCellStr [58.0555] ,  PreviousCellVal [58.0555] ,  CurrentCellVal [58.0555]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [KOTAK] ,  PreviousCellStr [77.439] ,  PreviousCellVal [77.439] ,  CurrentCellVal [77.439]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [NIPON] ,  PreviousCellStr [40.7476] ,  PreviousCellVal [40.7476] ,  CurrentCellVal [40.7476]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [DSP] ,  PreviousCellStr [54.134] ,  PreviousCellVal [54.134] ,  CurrentCellVal [54.134]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [ICICI] ,  PreviousCellStr [26.14] ,  PreviousCellVal [26.14] ,  CurrentCellVal [26.14]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [TATA] ,  PreviousCellStr [10.7489] ,  PreviousCellVal [10.7489] ,  CurrentCellVal [10.7489]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [BIRLA] ,  PreviousCellStr [32.2205] ,  PreviousCellVal [32.2205] ,  CurrentCellVal [32.2205]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [MOTILAL] ,  PreviousCellStr [10.5183] ,  PreviousCellVal [10.5183] ,  CurrentCellVal [10.5183]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [IDBI] ,  PreviousCellStr [9.42] ,  PreviousCellVal [9.42] ,  CurrentCellVal [9.42]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [SUNDARAM] ,  PreviousCellStr [78.0468] ,  PreviousCellVal [78.0468] ,  CurrentCellVal [78.0468]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [INVESCO] ,  PreviousCellStr [10.75] ,  PreviousCellVal [10.75] ,  CurrentCellVal [10.75]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [EDELWEISS] ,  PreviousCellStr [10.945] ,  PreviousCellVal [10.945] ,  CurrentCellVal [10.945]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [FRANKLIN] ,  PreviousCellStr [52.7536] ,  PreviousCellVal [52.7536] ,  CurrentCellVal [52.7536]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [BOI AXA] ,  PreviousCellStr [10.38] ,  PreviousCellVal [10.38] ,  CurrentCellVal [10.38]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [CANARA ROBECO] ,  PreviousCellStr [9.5] ,  PreviousCellVal [9.5] ,  CurrentCellVal [9.5]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [HSBC] ,  PreviousCellStr [45.3514] ,  PreviousCellVal [45.3514] ,  CurrentCellVal [45.3514]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [PRINCIPAL] ,  PreviousCellStr [10.25] ,  PreviousCellVal [10.25] ,  CurrentCellVal [10.25]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [QUANT] ,  PreviousCellStr [41.3028] ,  PreviousCellVal [41.3028] ,  CurrentCellVal [41.3028]
+2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [UNION] ,  PreviousCellStr [14.44] ,  PreviousCellVal [14.44] ,  CurrentCellVal [14.44]
