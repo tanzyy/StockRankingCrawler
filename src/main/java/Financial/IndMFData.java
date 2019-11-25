@@ -20,7 +20,7 @@ public class IndMFData {
         FIFTY_TWO_WEEK
     };
 
-    private static DataTypeToExtract dataToExtract = DataTypeToExtract.DAILY_NAV;
+    private static DataTypeToExtract dataToExtract = DataTypeToExtract.FIFTY_TWO_WEEK;
 
     public static void main(String[] args) {
 
@@ -36,7 +36,7 @@ public class IndMFData {
             new IndMFData().processFundForOtherAttributes(Constants.OUT_FILE_IND_MF_SMALL_CAP);
 
         } else if(DataTypeToExtract.FIFTY_TWO_WEEK.equals(dataToExtract)) {
-
+            new IndMFData().processFiftyTwoWeek(Constants.OUT_FILE_IND_MF_SMALL_CAP,"52Week", 7);
         }
     }
 
@@ -101,6 +101,29 @@ public class IndMFData {
         List<String> attributes = new ArrayList<>();
         attributes.add("nav");
         new ExcelAction().writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC, false, attributes, true);
+    }
+
+
+    private void processFiftyTwoWeek(String outFile, String sheetName, int sheetIndex) {
+
+        ExcelProp excelProp = new ExcelProp();
+        excelProp.setWorkBookName(outFile);
+
+        IndMFProcessor indMFProcessor = new IndMFProcessor();
+        indMFProcessor.init();
+
+        List<RankInfo> currentRankingData = new ArrayList<>();
+
+        for(Map.Entry<String, String> entry : Constants.smallCapFiftyTwoWeek.entrySet()) {
+            currentRankingData.add(indMFProcessor.getMFDataFiftyTwoWeek(entry.getKey(), entry.getValue()));
+        }
+
+        excelProp.setSheetName(sheetName);
+        excelProp.setSheetIndex(sheetIndex);
+
+        List<String> attributes = new ArrayList<>();
+        attributes.add("fiftyTwoWeek");
+        new ExcelAction().writeToOneXL(excelProp, currentRankingData, OUT_FILE_LOC, BACK_FILE_LOC, false, attributes, false);
     }
 
 }

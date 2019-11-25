@@ -259,10 +259,38 @@ public class Constants {
         put("Union"        , "https://economictimes.indiatimes.com/union-small-cap-fund--direct-plan/fund-factsheet/schemeid-26860.cms");
     }};
 
+    public static Map<String, String> smallCapFiftyTwoWeek = new LinkedHashMap<String, String>() {{
+        put("HDFC"         , "https://www.personalfn.com/factsheet/hdfc-small-cap-fund-g-direct-plan");
+        //TODO URL not working
+        put("L&T"          , "https://www.personalfn.com/factsheet/hdfc-small-cap-fund-g-direct-plan");
+        put("Axis"         , "https://www.personalfn.com/factsheet/axis-small-cap-fund-g-direct-plan");
+        put("SBI"          , "https://www.personalfn.com/factsheet/sbi-small-cap-fund-g-direct-plan");
+        put("Kotak"        , "https://www.personalfn.com/factsheet/kotak-small-cap-fund-g-direct-plan");
+        put("Nipon"        , "https://www.personalfn.com/factsheet/nippon-india-small-cap-fund-g-direct-plan");
+        put("DSP"          , "https://www.personalfn.com/factsheet/dsp-small-cap-fund-g-direct-plan");
+        put("ICICI"        , "https://www.personalfn.com/factsheet/icici-pru-smallcap-fund-g-direct-plan");
+        put("Tata"         , "https://www.personalfn.com/factsheet/tata-small-cap-fund-g-direct-plan");
+        put("Birla"        , "https://www.personalfn.com/factsheet/aditya-birla-sl-small-cap-fund-g-direct-plan");
+        put("Motilal"      , "https://www.personalfn.com/factsheet/motilal-oswal-nifty-smallcap-250-index-fund-g-direct-plan");
+        put("IDBI"         , "https://www.personalfn.com/factsheet/idbi-small-cap-fund-g-direct-plan");
+        put("Sundaram"     , "https://www.personalfn.com/factsheet/sundaram-small-cap-fund-g-direct-plan");
+        put("Invesco"      , "https://www.personalfn.com/factsheet/invesco-india-smallcap-fund-g-direct-plan");
+        put("EdelWeiss"    , "https://www.personalfn.com/factsheet/edelweiss-small-cap-fund-g-direct-plan");
+        put("Franklin"     , "https://www.personalfn.com/factsheet/franklin-india-smaller-cos-fund-g-direct-plan");
+        //TODO URL not working
+        put("BOI Axa"      , "https://www.personalfn.com/factsheet/franklin-india-smaller-cos-fund-g-direct-plan");
+        put("Canara Robeco", "https://www.personalfn.com/factsheet/canara-rob-small-cap-fund-g-direct-plan");
+        put("HSBC"         , "https://www.personalfn.com/factsheet/hsbc-small-cap-equity-fund-g-direct-plan");
+        put("Principal"    , "https://www.personalfn.com/factsheet/principal-small-cap-fund-g-direct-plan");
+        put("Quant"        , "https://www.personalfn.com/factsheet/quant-small-cap-fund-g-direct-plan");
+        put("Union"        , "https://www.personalfn.com/factsheet/union-small-cap-fund-g-direct-plan");
+    }};
+
     public static final String TEST_OUT_FILE_IND_MF      = "TestIndMF.xlsx";
     public static Map<String, String> testMap = new LinkedHashMap<String, String>() {{
         put("Axis"         , "https://www.personalfn.com/factsheet/axis-small-cap-fund-g-direct-plan");
     }};
+
 
 
 //    public static Map<String, String> focusedCapMap = new LinkedHashMap<String, String>() {{
@@ -289,19 +317,6 @@ public class Constants {
 //        put("Quant"        , "");
 //        put("Union"        , "");
 //    }};
-
-
-
-
-
-
-
-
-
-
-
-
-//    https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/fund-factsheet/schemeid-16617.cms
 
 
 

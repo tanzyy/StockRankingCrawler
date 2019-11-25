@@ -3536,3 +3536,91 @@ java.nio.file.FileAlreadyExistsException: /Users/i852841/_Codes/_Personal/StockR
 2019-11-24 21:28:31 INFO  [THREAD: main] ExcelAction:301 - For Symbol [PRINCIPAL] ,  PreviousCellStr [10.25] ,  PreviousCellVal [10.25] ,  CurrentCellVal [10.25]
 2019-11-24 21:28:31 INFO  [THREAD: main] ExcelAction:301 - For Symbol [QUANT] ,  PreviousCellStr [41.3028] ,  PreviousCellVal [41.3028] ,  CurrentCellVal [41.3028]
 2019-11-24 21:28:31 INFO  [THREAD: main] ExcelAction:301 - For Symbol [UNION] ,  PreviousCellStr [14.44] ,  PreviousCellVal [14.44] ,  CurrentCellVal [14.44]
+2019-11-24 21:47:59 INFO  [THREAD: main] ExcelAction:59 - IndMF_SmallCap.xlsx exists.
+2019-11-24 21:48:00 INFO  [THREAD: main] ExcelAction:69 - #####################  Sheet name [52Week] existence [true]
+2019-11-24 21:50:14 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/hdfc-small-cap-fund-g-direct-plan
+2019-11-24 21:50:17 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/axis-small-cap-fund-g-direct-plan
+2019-11-24 21:50:18 INFO  [THREAD: main] ExcelAction:59 - IndMF_SmallCap.xlsx exists.
+2019-11-24 21:50:19 INFO  [THREAD: main] ExcelAction:69 - #####################  Sheet name [52Week] existence [true]
+2019-11-24 21:50:19 INFO  [THREAD: main] ExcelAction:327 - For Symbol [HDFC] ,  PreviousCellVal [41.023] ,  CurrentCellVal [39.30]
+2019-11-24 21:50:19 INFO  [THREAD: main] ExcelAction:327 - For Symbol [L&T] ,  PreviousCellVal [23.527] ,  CurrentCellVal [26.86]
+2019-11-24 21:50:51 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/hdfc-small-cap-fund-g-direct-plan
+2019-11-24 21:50:54 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/axis-small-cap-fund-g-direct-plan
+2019-11-24 21:50:55 INFO  [THREAD: main] ExcelAction:59 - IndMF_SmallCap.xlsx exists.
+2019-11-24 21:50:55 INFO  [THREAD: main] ExcelAction:69 - #####################  Sheet name [52Week] existence [true]
+2019-11-24 21:56:54 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/hdfc-small-cap-fund-g-direct-plan
+2019-11-24 21:56:57 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/axis-small-cap-fund-g-direct-plan
+2019-11-24 21:56:58 INFO  [THREAD: main] ExcelAction:59 - IndMF_SmallCap.xlsx exists.
+2019-11-24 21:56:58 INFO  [THREAD: main] ExcelAction:69 - #####################  Sheet name [52Week] existence [true]
+2019-11-24 21:56:59 INFO  [THREAD: main] ExcelAction:328 - For Symbol [HDFC] ,  PreviousCellVal [41.023] ,  CurrentCellVal [39.30 --- 47.98 
+ 22-Aug-2019 --- 02-Apr-2019]
+2019-11-24 21:56:59 INFO  [THREAD: main] ExcelAction:328 - For Symbol [L&T] ,  PreviousCellVal [23.527] ,  CurrentCellVal [26.86 --- 33.98 
+ 10-Dec-2018 --- 04-Nov-2019]
+2019-11-24 22:13:48 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/hdfc-small-cap-fund-g-direct-plan
+2019-11-24 22:13:52 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/hdfc-small-cap-fund-g-direct-plan
+2019-11-24 22:13:52 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/axis-small-cap-fund-g-direct-plan
+2019-11-24 22:13:53 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/sbi-small-cap-fund-g-direct-plan
+2019-11-24 22:13:54 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/kotak-small-cap-fund-g-direct-plan
+2019-11-24 22:13:55 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/nippon-india-small-cap-fund-g-direct-plan
+2019-11-24 22:13:55 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/dsp-small-cap-fund-g-direct-plan
+2019-11-24 22:13:56 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/icici-pru-smallcap-fund-g-direct-plan
+2019-11-24 22:13:57 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/tata-small-cap-fund-g-direct-plan
+2019-11-24 22:13:58 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/aditya-birla-sl-small-cap-fund-g-direct-plan
+2019-11-24 22:13:59 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/motilal-oswal-nifty-smallcap-250-index-fund-g-direct-plan
+2019-11-24 22:14:00 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/idbi-small-cap-fund-g-direct-plan
+2019-11-24 22:14:01 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/sundaram-small-cap-fund-g-direct-plan
+2019-11-24 22:14:02 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/invesco-india-smallcap-fund-g-direct-plan
+2019-11-24 22:14:02 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/edelweiss-small-cap-fund-g-direct-plan
+2019-11-24 22:14:03 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/franklin-india-smaller-cos-fund-g-direct-plan
+2019-11-24 22:14:04 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/franklin-india-smaller-cos-fund-g-direct-plan
+2019-11-24 22:14:05 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/canara-rob-small-cap-fund-g-direct-plan
+2019-11-24 22:14:05 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/hsbc-small-cap-equity-fund-g-direct-plan
+2019-11-24 22:14:06 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/principal-small-cap-fund-g-direct-plan
+2019-11-24 22:14:07 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/quant-small-cap-fund-g-direct-plan
+2019-11-24 22:14:07 INFO  [THREAD: main] IndMFProcessor:86 - https://www.personalfn.com/factsheet/union-small-cap-fund-g-direct-plan
+2019-11-24 22:14:08 INFO  [THREAD: main] ExcelAction:59 - IndMF_SmallCap.xlsx exists.
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:69 - #####################  Sheet name [52Week] existence [true]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [HDFC] ,  PreviousCellVal [41.023] ,  CurrentCellVal [39.30 --- 47.98 
+ 22-Aug-2019 --- 02-Apr-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [L&T] ,  PreviousCellVal [23.527] ,  CurrentCellVal [39.30 --- 47.98 
+ 22-Aug-2019 --- 02-Apr-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [AXIS] ,  PreviousCellVal [33.54] ,  CurrentCellVal [26.86 --- 33.98 
+ 10-Dec-2018 --- 04-Nov-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [SBI] ,  PreviousCellVal [58.0555] ,  CurrentCellVal [49.72 --- 58.52 
+ 18-Feb-2019 --- 04-Nov-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [KOTAK] ,  PreviousCellVal [77.439] ,  CurrentCellVal [67.92 --- 78.70 
+ 05-Aug-2019 --- 03-Jun-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [NIPON] ,  PreviousCellVal [40.7476] ,  CurrentCellVal [36.21 --- 43.87 
+ 22-Aug-2019 --- 27-May-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [DSP] ,  PreviousCellVal [54.134] ,  CurrentCellVal [49.61 --- 59.25 
+ 22-Aug-2019 --- 28-May-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [ICICI] ,  PreviousCellVal [26.14] ,  CurrentCellVal [22.17 --- 27.42 
+ 18-Feb-2019 --- 04-Jun-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [TATA] ,  PreviousCellVal [10.7489] ,  CurrentCellVal [9.57 --- 10.92 
+ 05-Aug-2019 --- 27-May-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [BIRLA] ,  PreviousCellVal [32.2205] ,  CurrentCellVal [30.03 --- 38.16 
+ 23-Aug-2019 --- 01-Apr-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [MOTILAL] ,  PreviousCellVal [10.5183] ,  CurrentCellVal [9.96 --- 10.72 
+ 07-Oct-2019 --- 04-Nov-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [IDBI] ,  PreviousCellVal [9.42] ,  CurrentCellVal [8.58 --- 10.15 
+ 22-Aug-2019 --- 28-May-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [SUNDARAM] ,  PreviousCellVal [78.0468] ,  CurrentCellVal [70.67 --- 88.90 
+ 22-Aug-2019 --- 28-May-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [INVESCO] ,  PreviousCellVal [10.75] ,  CurrentCellVal [9.36 --- 10.91 
+ 22-Aug-2019 --- 28-May-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [EDELWEISS] ,  PreviousCellVal [10.945] ,  CurrentCellVal [9.85 --- 11.57 
+ 05-Aug-2019 --- 28-May-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [FRANKLIN] ,  PreviousCellVal [52.7536] ,  CurrentCellVal [49.44 --- 59.27 
+ 22-Aug-2019 --- 01-Apr-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [BOI AXA] ,  PreviousCellVal [10.38] ,  CurrentCellVal [49.44 --- 59.27 
+ 22-Aug-2019 --- 01-Apr-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [CANARA ROBECO] ,  PreviousCellVal [9.5] ,  CurrentCellVal [8.61 --- 10.59 
+ 23-Aug-2019 --- 15-Apr-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [HSBC] ,  PreviousCellVal [45.3514] ,  CurrentCellVal [43.63 --- 53.34 
+ 22-Aug-2019 --- 02-Apr-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [PRINCIPAL] ,  PreviousCellVal [10.25] ,  CurrentCellVal [9.11 --- 10.31 
+ 22-Aug-2019 --- 28-May-2019]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [QUANT] ,  PreviousCellVal [41.3028] ,  CurrentCellVal [36.46 --- 53.78 
+ 22-Aug-2019 --- 19-Dec-2018]
+2019-11-24 22:14:09 INFO  [THREAD: main] ExcelAction:328 - For Symbol [UNION] ,  PreviousCellVal [14.44] ,  CurrentCellVal [12.45 --- 14.71 
+ 22-Aug-2019 --- 16-Apr-2019]

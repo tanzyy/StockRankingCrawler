@@ -290,6 +290,7 @@ public class ExcelAction {
                     } else if (isNumeric){
 
                         currentCell = currentRow.createCell(1);
+                        //TODO make it agnostic to nav
                         Double currentCellVal = Double.valueOf(currentRankInfo.getNav());
 
                         Cell previousCell       = currentRow.getCell(2);

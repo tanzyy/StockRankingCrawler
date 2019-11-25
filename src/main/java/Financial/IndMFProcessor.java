@@ -77,6 +77,40 @@ public class IndMFProcessor {
      * @param url
      * @return
      */
+    public RankInfo getMFDataFiftyTwoWeek(String symbol, String url) {
+
+        Document document;
+        RankInfo rankInfo = new RankInfo();
+        rankInfo.setSymbol(symbol);
+
+        LOG.info(url);
+
+        try {
+            document = Jsoup.connect(url).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
+
+            StringBuilder  fiftyTwoWeekData = new StringBuilder(document.select("#overview > ul > li:nth-child(10) > label").text());
+            fiftyTwoWeekData.append(" --- ")
+                    .append(document.select("#overview > ul > li:nth-child(12) > label").text())
+                    .append(" \n ")
+                    .append(document.select("#overview > ul > li:nth-child(11) > label").text())
+                    .append(" --- ")
+                    .append(document.select("#overview > ul > li:nth-child(13) > label").text());
+
+            rankInfo.setFiftyTwoWeek(fiftyTwoWeekData.toString());
+
+        } catch (IOException e) {
+            LOG.error(String.format("Error occurred for [%s] with error ", symbol), e);
+        }
+
+        return rankInfo;
+    }
+
+    /**
+     * This is from economictimes.
+     * @param symbol
+     * @param url
+     * @return
+     */
     public RankInfo getMFDataFromEconomicTimes(String symbol, String url) {
 
         Document document;

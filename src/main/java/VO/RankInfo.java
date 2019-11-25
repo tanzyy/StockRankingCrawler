@@ -39,6 +39,7 @@ public class RankInfo {
     private String peRatio;
     private String pbRatio;
     private String manager;
+    private String fiftyTwoWeek;
 
 
     private static final String OPEN_BRACE  = " [";
@@ -213,6 +214,14 @@ public class RankInfo {
 
     public void setManager(String manager) {
         this.manager = manager;
+    }
+
+    public String getFiftyTwoWeek() {
+        return fiftyTwoWeek;
+    }
+
+    public void setFiftyTwoWeek(String fiftyTwoWeek) {
+        this.fiftyTwoWeek = fiftyTwoWeek;
     }
 
 
