@@ -293,7 +293,13 @@ public class ExcelAction {
 
                         currentCell = currentRow.createCell(1);
                         //TODO make it agnostic to nav
-                        Double currentCellVal = Double.valueOf(currentRankInfo.getNav());
+                        //In case data is unavailable for the scheme
+                        Double currentCellVal = 0.0;
+                        if(currentRankInfo.getNav() != "UN") {
+                            currentCellVal = Double.valueOf(currentRankInfo.getNav());
+                        }
+
+
 
                         Cell previousCell       = currentRow.getCell(2);
                         Double previousCellVal  = 0.0;

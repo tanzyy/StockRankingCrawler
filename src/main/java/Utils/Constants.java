@@ -181,6 +181,7 @@ public class Constants {
     public static final String OUT_FILE_IND_MF           = "IndMF.xlsx";
     public static final String OUT_FILE_IND_MF_SMALL_CAP = "IndMF_SmallCap.xlsx";
     public static final String OUT_FILE_IND_MF_MULTI_CAP = "IndMF_MultiCap.xlsx";
+    public static final String OUT_FILE_IND_MF_MID_CAP   = "IndMF_MidCap.xlsx";
 
      public static Map<String, String> smallCapMap = new LinkedHashMap<String, String>() {{
          put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/mffactsheet/schemeid-16617.cms");
@@ -262,7 +263,6 @@ public class Constants {
 
     public static Map<String, String> smallCapFiftyTwoWeek = new LinkedHashMap<String, String>() {{
         put("HDFC"         , "https://www.personalfn.com/factsheet/hdfc-small-cap-fund-g-direct-plan");
-        //TODO URL not working
         put("L&T"          , "https://www.personalfn.com/factsheet/hdfc-small-cap-fund-g-direct-plan");
         put("Axis"         , "https://www.personalfn.com/factsheet/axis-small-cap-fund-g-direct-plan");
         put("SBI"          , "https://www.personalfn.com/factsheet/sbi-small-cap-fund-g-direct-plan");
@@ -278,14 +278,88 @@ public class Constants {
         put("Invesco"      , "https://www.personalfn.com/factsheet/invesco-india-smallcap-fund-g-direct-plan");
         put("EdelWeiss"    , "https://www.personalfn.com/factsheet/edelweiss-small-cap-fund-g-direct-plan");
         put("Franklin"     , "https://www.personalfn.com/factsheet/franklin-india-smaller-cos-fund-g-direct-plan");
-        //TODO URL not working
         put("BOI Axa"      , "https://www.personalfn.com/factsheet/franklin-india-smaller-cos-fund-g-direct-plan");
         put("Canara Robeco", "https://www.personalfn.com/factsheet/canara-rob-small-cap-fund-g-direct-plan");
-        put("HSBC"         , "https://www.personalfn.com/factsheet/hsbc-small-cap-equity-fund-g-direct-plan");
+        put("Mirae"        , "https://www.personalfn.com/factsheet/hsbc-small-cap-equity-fund-g-direct-plan");
         put("Principal"    , "https://www.personalfn.com/factsheet/principal-small-cap-fund-g-direct-plan");
         put("Quant"        , "https://www.personalfn.com/factsheet/quant-small-cap-fund-g-direct-plan");
-        put("Union"        , "https://www.personalfn.com/factsheet/union-small-cap-fund-g-direct-plan");
+        put("UTI"          , "https://www.personalfn.com/factsheet/union-small-cap-fund-g-direct-plan");
     }};
+
+    public static Map<String, String> midCapNAV = new LinkedHashMap<String, String>() {{
+        put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-mid-cap-opportunities-fund/mffactsheet/schemeid-5067.cms");
+        put("L&T"          , "https://economictimes.indiatimes.com/lt-midcap-fund--direct-plan/mffactsheet/schemeid-16280.cms");
+        put("Axis"         , "https://economictimes.indiatimes.com/axis-midcap-fund--direct-plan/mffactsheet/schemeid-15690.cms");
+        put("SBI"          , "https://economictimes.indiatimes.com/sbi-magnum-midcap-fund--direct-plan/mffactsheet/schemeid-16235.cms");
+        put("Kotak"        , "https://economictimes.indiatimes.com/kotak-emerging-equity-fund--direct-plan/mffactsheet/schemeid-17134.cms");
+        put("Nipon"        , "https://economictimes.indiatimes.com/nippon-india-growth-fund--direct-plan/mffactsheet/schemeid-16083.cms");
+        put("DSP"          , "https://economictimes.indiatimes.com/dsp-midcap-fund--direct-plan/mffactsheet/schemeid-16438.cms");
+        put("ICICI"        , "https://economictimes.indiatimes.com/icici-prudential-midcap-fund--direct-plan/mffactsheet/schemeid-15960.cms");
+        put("Tata"         , "https://economictimes.indiatimes.com/tata-midcap-growth-fund--direct-plan/mffactsheet/schemeid-16717.cms");
+        put("Birla"        , "https://economictimes.indiatimes.com/aditya-birla-sun-life-mid-cap-fund--direct-plan/mffactsheet/schemeid-15870.cms");
+        put("Motilal"      , "https://economictimes.indiatimes.com/motilal-oswal-large-and-midcap-fund--direct-plan/mffactsheet/schemeid-40338.cms");
+        put("IDBI"         , "https://economictimes.indiatimes.com/idbi-midcap-fund--direct-plan/mffactsheet/schemeid-33333.cms");
+        put("Sundaram"     , "https://economictimes.indiatimes.com/sundaram-mid-cap-fund--direct-plan/mffactsheet/schemeid-16125.cms");
+        put("Invesco"      , "https://economictimes.indiatimes.com/invesco-india-mid-cap-fund--direct-plan/mffactsheet/schemeid-16807.cms");
+        put("EdelWeiss"    , "https://economictimes.indiatimes.com/edelweiss-mid-cap-fund--direct-plan/mffactsheet/schemeid-16586.cms");
+        put("Franklin"     , "https://economictimes.indiatimes.com/franklin-india-prima-fund--direct-plan/mffactsheet/schemeid-16003.cms");
+        put("BOI Axa"      , "https://economictimes.indiatimes.com/boi-axa-mid-small-cap-equity-debt-fund--direct-plan/mffactsheet/schemeid-32609.cms");
+        put("Canara Robeco", "https://economictimes.indiatimes.com/canara-robeco-emerging-equities-fund--direct-plan/mffactsheet/schemeid-16581.cms");
+        put("Mirae"        , "https://economictimes.indiatimes.com/mirae-asset-midcap-fund--direct-plan/mffactsheet/schemeid-40048.cms");
+        put("Principal"    , "https://economictimes.indiatimes.com/principal-midcap-fund--direct-plan/mffactsheet/schemeid-40417.cms");
+        put("Quant"        , "https://economictimes.indiatimes.com/quant-mid-cap-fund--direct-plan/mffactsheet/schemeid-17375.cms");
+        put("UTI"          , "https://economictimes.indiatimes.com/uti-mid-cap-fund--direct-plan/mffactsheet/schemeid-15920.cms");
+    }};
+
+    public static Map<String, String> midCapOther = new LinkedHashMap<String, String>() {{
+        put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-mid-cap-opportunities-fund/fund-factsheet/schemeid-5067.cms");
+        put("L&T"          , "https://economictimes.indiatimes.com/lt-midcap-fund--direct-plan/fund-factsheet/schemeid-16280.cms");
+        put("Axis"         , "https://economictimes.indiatimes.com/axis-midcap-fund--direct-plan/fund-factsheet/schemeid-15690.cms");
+        put("SBI"          , "https://economictimes.indiatimes.com/sbi-magnum-midcap-fund--direct-plan/fund-factsheet/schemeid-16235.cms");
+        put("Kotak"        , "https://economictimes.indiatimes.com/kotak-emerging-equity-fund--direct-plan/fund-factsheet/schemeid-17134.cms");
+        put("Nipon"        , "https://economictimes.indiatimes.com/nippon-india-growth-fund--direct-plan/fund-factsheet/schemeid-16083.cms");
+        put("DSP"          , "https://economictimes.indiatimes.com/dsp-midcap-fund--direct-plan/fund-factsheet/schemeid-16438.cms");
+        put("ICICI"        , "https://economictimes.indiatimes.com/icici-prudential-midcap-fund--direct-plan/fund-factsheet/schemeid-15960.cms");
+        put("Tata"         , "https://economictimes.indiatimes.com/tata-midcap-growth-fund--direct-plan/fund-factsheet/schemeid-16717.cms");
+        put("Birla"        , "https://economictimes.indiatimes.com/aditya-birla-sun-life-mid-cap-fund--direct-plan/fund-factsheet/schemeid-15870.cms");
+        put("Motilal"      , "https://economictimes.indiatimes.com/motilal-oswal-large-and-midcap-fund--direct-plan/fund-factsheet/schemeid-40338.cms");
+        put("IDBI"         , "https://economictimes.indiatimes.com/idbi-midcap-fund--direct-plan/fund-factsheet/schemeid-33333.cms");
+        put("Sundaram"     , "https://economictimes.indiatimes.com/sundaram-mid-cap-fund--direct-plan/fund-factsheet/schemeid-16125.cms");
+        put("Invesco"      , "https://economictimes.indiatimes.com/invesco-india-mid-cap-fund--direct-plan/fund-factsheet/schemeid-16807.cms");
+        put("EdelWeiss"    , "https://economictimes.indiatimes.com/edelweiss-mid-cap-fund--direct-plan/fund-factsheet/schemeid-16586.cms");
+        put("Franklin"     , "https://economictimes.indiatimes.com/franklin-india-prima-fund--direct-plan/fund-factsheet/schemeid-16003.cms");
+        put("BOI Axa"      , "https://economictimes.indiatimes.com/boi-axa-mid-small-cap-equity-debt-fund--direct-plan/fund-factsheet/schemeid-32609.cms");
+        put("Canara Robeco", "https://economictimes.indiatimes.com/canara-robeco-emerging-equities-fund--direct-plan/fund-factsheet/schemeid-16581.cms");
+        put("HSBC"         , "https://economictimes.indiatimes.com/mirae-asset-midcap-fund--direct-plan/fund-factsheet/schemeid-40048.cms");
+        put("Principal"    , "https://economictimes.indiatimes.com/principal-midcap-fund--direct-plan/fund-factsheet/schemeid-40417.cms");
+        put("Quant"        , "https://economictimes.indiatimes.com/quant-mid-cap-fund--direct-plan/fund-factsheet/schemeid-17375.cms");
+        put("UTI"          , "https://economictimes.indiatimes.com/uti-mid-cap-fund--direct-plan/fund-factsheet/schemeid-15920.cms");
+    }};
+
+//    public static Map<String, String> midCapNAV = new LinkedHashMap<String, String>() {{
+//        put("HDFC"         , "");
+//        put("L&T"          , "");
+//        put("Axis"         , "");
+//        put("SBI"          , "");
+//        put("Kotak"        , "");
+//        put("Nipon"        , "");
+//        put("DSP"          , "");
+//        put("ICICI"        , "");
+//        put("Tata"         , "");
+//        put("Birla"        , "");
+//        put("Motilal"      , "");
+//        put("IDBI"         , "");
+//        put("Sundaram"     , "");
+//        put("Invesco"      , "");
+//        put("EdelWeiss"    , "");
+//        put("Franklin"     , "");
+//        put("BOI Axa"      , "");
+//        put("Canara Robeco", "");
+//        put("HSBC"         , "");
+//        put("Principal"    , "");
+//        put("Quant"        , "");
+//        put("Union"        , "");
+//    }};
 
     public static final String TEST_OUT_FILE_IND_MF      = "TestIndMF.xlsx";
     public static Map<String, String> testMap = new LinkedHashMap<String, String>() {{

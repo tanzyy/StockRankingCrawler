@@ -20,7 +20,7 @@ public class IndMFData {
         FIFTY_TWO_WEEK
     };
 
-    private static DataTypeToExtract dataToExtract = DataTypeToExtract.DAILY_NAV;
+    private static DataTypeToExtract dataToExtract = DataTypeToExtract.OTHER_ATTRIBUTES;
 
     public static void main(String[] args) {
 
@@ -29,11 +29,13 @@ public class IndMFData {
 
 
         if(DataTypeToExtract.DAILY_NAV.equals(dataToExtract)) {
-            //new IndMFData().processFund(Constants.OUT_FILE_IND_MF_SMALL_CAP,"NAV", 0);
+            new IndMFData().processFund(Constants.OUT_FILE_IND_MF_SMALL_CAP,"NAV", 0);
             new IndMFData().processFund(Constants.OUT_FILE_IND_MF_MULTI_CAP,"NAV", 0);
+            new IndMFData().processFund(Constants.OUT_FILE_IND_MF_MID_CAP  ,"NAV", 0);
 
         } else if(DataTypeToExtract.OTHER_ATTRIBUTES.equals(dataToExtract)) {
             new IndMFData().processFundForOtherAttributes(Constants.OUT_FILE_IND_MF_SMALL_CAP);
+            new IndMFData().processFundForOtherAttributes(Constants.OUT_FILE_IND_MF_MID_CAP);
 
         } else if(DataTypeToExtract.FIFTY_TWO_WEEK.equals(dataToExtract)) {
             new IndMFData().processFiftyTwoWeek(Constants.OUT_FILE_IND_MF_SMALL_CAP,"52Week", 7);
@@ -50,9 +52,18 @@ public class IndMFData {
 
         List<RankInfo> currentRankingData = new ArrayList<>();
 
-        for(Map.Entry<String, String> entry : Constants.smallCapMapOther.entrySet()) {
-            currentRankingData.add(indMFProcessor.getOtherMFDataFromEconomicTimes(entry.getKey(), entry.getValue()));
+        if(Constants.OUT_FILE_IND_MF_SMALL_CAP.equalsIgnoreCase(outFile)) {
+
+            for(Map.Entry<String, String> entry : Constants.smallCapMapOther.entrySet()) {
+                currentRankingData.add(indMFProcessor.getOtherMFDataFromEconomicTimes(entry.getKey(), entry.getValue()));
+            }
+        } else if(Constants.OUT_FILE_IND_MF_MID_CAP.equalsIgnoreCase(outFile)) {
+
+            for(Map.Entry<String, String> entry : Constants.midCapOther.entrySet()) {
+                currentRankingData.add(indMFProcessor.getOtherMFDataFromEconomicTimes(entry.getKey(), entry.getValue()));
+            }
         }
+
 
         List<String> otherAttributes = new ArrayList();
         otherAttributes.add("underlyingIndex");
@@ -88,13 +99,18 @@ public class IndMFData {
         if(Constants.OUT_FILE_IND_MF_SMALL_CAP.equalsIgnoreCase(outFile)) {
 
             for(Map.Entry<String, String> entry : Constants.smallCapMap.entrySet()) {
-                currentRankingData.add(indMFProcessor.getMFDataFromEconomicTimes(entry.getKey(), entry.getValue()));
+                currentRankingData.add(indMFProcessor.getMFDataNAVFromEconomicTimes(entry.getKey(), entry.getValue()));
             }
 
         } else if(Constants.OUT_FILE_IND_MF_MULTI_CAP.equalsIgnoreCase(outFile)) {
 
             for(Map.Entry<String, String> entry : Constants.multiCapMap.entrySet()) {
-                currentRankingData.add(indMFProcessor.getMFDataFromEconomicTimes(entry.getKey(), entry.getValue()));
+                currentRankingData.add(indMFProcessor.getMFDataNAVFromEconomicTimes(entry.getKey(), entry.getValue()));
+            }
+        } else if(Constants.OUT_FILE_IND_MF_MID_CAP.equalsIgnoreCase(outFile)) {
+
+            for(Map.Entry<String, String> entry : Constants.midCapNAV.entrySet()) {
+                currentRankingData.add(indMFProcessor.getMFDataNAVFromEconomicTimes(entry.getKey(), entry.getValue()));
             }
         }
 

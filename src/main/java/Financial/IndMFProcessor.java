@@ -113,7 +113,7 @@ public class IndMFProcessor {
      * @param url
      * @return
      */
-    public RankInfo getMFDataFromEconomicTimes(String symbol, String url) {
+    public RankInfo getMFDataNAVFromEconomicTimes(String symbol, String url) {
 
         Document document;
         RankInfo rankInfo = new RankInfo();
