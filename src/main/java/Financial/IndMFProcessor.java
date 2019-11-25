@@ -88,8 +88,10 @@ public class IndMFProcessor {
         try {
             document = Jsoup.connect(url).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
 
-            StringBuilder  fiftyTwoWeekData = new StringBuilder(document.select("#overview > ul > li:nth-child(10) > label").text());
-            fiftyTwoWeekData.append(" --- ")
+            StringBuilder  fiftyTwoWeekData = new StringBuilder(document.select("#funddetails > ul > li.nav-status > div > label").text());
+            fiftyTwoWeekData.append(" ::: ")
+                    .append(document.select("#overview > ul > li:nth-child(10) > label").text())
+                    .append(" --- ")
                     .append(document.select("#overview > ul > li:nth-child(12) > label").text())
                     .append(" \n ")
                     .append(document.select("#overview > ul > li:nth-child(11) > label").text())

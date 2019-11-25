@@ -56,7 +56,7 @@ public class IndMFProcessorExperiment {
 
             //Elements stt = document.select("#overview > ul > li:nth-child(10) > label");
             //Elements stt = document.select("#overview > ul > li:nth-child(11) > label");
-            System.out.println(document.select("#overview > ul > li:nth-child(12) > label").text());
+            System.out.println(document.select("#funddetails > ul > li.nav-status > div > label").text());
 //            System.out.println(stt.size());
 //            for (Element el : stt) {
 //                System.out.println(el.text());
