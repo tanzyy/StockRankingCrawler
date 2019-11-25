@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.nio.file.Files;
 import java.util.List;
 
@@ -32,7 +33,7 @@ public class ExcelAction {
      * 4. Delete temp file
      * @param excelProp
      */
-    public void writeToOneXL(ExcelProp excelProp, List<RankInfo> allFetchedData, String outLOC, String backLOC, boolean isETF, List<String> attributes) {
+    public void writeToOneXL(ExcelProp excelProp, List<RankInfo> allFetchedData, String outLOC, String backLOC, boolean isETF, List<String> attributes, boolean isNumeric) {
 
         String fileWithLOC       = outLOC + File.separator + excelProp.getWorkBookName();
         File targetFileHandler   = new File(fileWithLOC);
@@ -73,7 +74,7 @@ public class ExcelAction {
                     shiftColumns(tempFileWithLOC, fileWithLOC, excelProp);
 
                     //Insert New Rank data
-                    insertNewRankColumn(fileWithLOC, allFetchedData, excelProp, isETF, attributes);
+                    insertNewRankColumn(fileWithLOC, allFetchedData, excelProp, isETF, attributes, isNumeric);
 
                 } else {
 
@@ -198,7 +199,7 @@ public class ExcelAction {
         }
     }
 
-    private void insertNewRankColumn(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp, boolean isETF, List<String> attributes) {
+    private void insertNewRankColumn(String targetFile, List<RankInfo> allFetchedData, ExcelProp excelProp, boolean isETF, List<String> attributes, boolean isNumeric) {
 
         try {
 
@@ -286,7 +287,7 @@ public class ExcelAction {
                         currentCell = currentRow.createCell(1);
                         Cell symbolCell = currentRow.createCell(0);
                         symbolCell.setCellValue(currentRankInfo.getSymbol());
-                    } else {
+                    } else if (isNumeric){
 
                         currentCell = currentRow.createCell(1);
                         Double currentCellVal = Double.valueOf(currentRankInfo.getNav());
@@ -315,6 +316,20 @@ public class ExcelAction {
                                 style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
                             }
                         }
+                        currentCell.setCellStyle(style);
+                        currentCell.setCellValue(currentCellVal);
+                    } else {
+
+                        currentCell           = currentRow.createCell(1);
+                        String currentCellVal = currentRankInfo.getETFInfo(attributes);
+                        Cell previousCellVal  = currentRow.getCell(2);
+
+                        LOG.info(String.format(
+                                "For Symbol [%s] ,  PreviousCellVal [%s] ,  CurrentCellVal [%s]",
+                                currentRow.getCell(0), previousCellVal, currentCellVal));
+
+                        CellStyle style = workbook.createCellStyle();
+                        //style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
                         currentCell.setCellStyle(style);
                         currentCell.setCellValue(currentCellVal);
                     }

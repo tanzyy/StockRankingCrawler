@@ -11,10 +11,10 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 
 
-public class IndMFProcessor {
+public class IndMFProcessorExperiment {
 
     private static final int    DATA_SIZE_IN_MB  = 100;
-    private static final Logger LOG              = Logger.getLogger(IndMFProcessor.class);
+    private static final Logger LOG              = Logger.getLogger(IndMFProcessorExperiment.class);
 
     private String rankDate;
     private String rankYear;
@@ -53,15 +53,15 @@ public class IndMFProcessor {
 
         try {
             document = Jsoup.connect(url).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
-            elem = document.getElementsByClass("factsheetListing");
 
-            Elements elems = elem.select("li");
-            rankInfo.setUnderlyingIndex(elems.get(1).children().get(1).text());
-            rankInfo.setAum(elems.get(2).children().get(1).text());
-            rankInfo.setExpenseRatio(elems.get(3).children().get(1).text());
-            rankInfo.setManager(elems.get(4).children().get(1).text());
-            rankInfo.setPeRatio(elems.get(5).children().get(1).text() + "---" + elems.get(6).children().get(1).text());
-            rankInfo.setPbRatio(elems.get(7).children().get(1).text() + "---" + elems.get(8).children().get(1).text());
+            //Elements stt = document.select("#overview > ul > li:nth-child(10) > label");
+            //Elements stt = document.select("#overview > ul > li:nth-child(11) > label");
+            System.out.println(document.select("#overview > ul > li:nth-child(12) > label").text());
+//            System.out.println(stt.size());
+//            for (Element el : stt) {
+//                System.out.println(el.text());
+//            }
+
 
         } catch (IOException e) {
             LOG.error(String.format("Error occurred for [%s] with error ", symbol), e);

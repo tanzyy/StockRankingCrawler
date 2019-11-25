@@ -162,7 +162,7 @@ public class Constants {
     public static final String EXTENSION_XLSX          = ".xlsx";
 
     public static final SimpleDateFormat sdf   = new SimpleDateFormat("MMM_dd");
-    public static final SimpleDateFormat tsdf  = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+    public static final SimpleDateFormat tsdf  = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss.SSS");
     public static final SimpleDateFormat ysdf  = new SimpleDateFormat("yyyy");
     public static final SimpleDateFormat dsdf  = new SimpleDateFormat("M/dd/yyyy");
 
@@ -178,7 +178,8 @@ public class Constants {
 
     //India Investments
 
-    public static final String OUT_FILE_IND_MF      = "IndMF.xlsx";
+    public static final String OUT_FILE_IND_MF           = "IndMF.xlsx";
+    public static final String OUT_FILE_IND_MF_SMALL_CAP = "IndMF_SmallCap.xlsx";
 
      public static Map<String, String> smallCapMap = new LinkedHashMap<String, String>() {{
          put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/mffactsheet/schemeid-16617.cms");
@@ -233,6 +234,37 @@ public class Constants {
         put("ParagParikh"  , "https://economictimes.indiatimes.com/parag-parikh-long-term-equity-fund-direct-growth-/mffactsheet/schemeid-19701.cms");
     }};
 
+    public static Map<String, String> smallCapMapOther = new LinkedHashMap<String, String>() {{
+        put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/fund-factsheet/schemeid-16617.cms");
+        put("L&T"          , "https://economictimes.indiatimes.com/lt-emerging-businesses-fund--direct-plan/fund-factsheet/schemeid-26133.cms");
+        put("Axis"         , "https://economictimes.indiatimes.com/axis-small-cap-fund--direct-plan/fund-factsheet/schemeid-22335.cms");
+        put("SBI"          , "https://economictimes.indiatimes.com/sbi-small-cap-fund--direct-plan/fund-factsheet/schemeid-15787.cms");
+        put("Kotak"        , "https://economictimes.indiatimes.com/kotak-small-cap-fund--direct-plan/fund-factsheet/schemeid-16382.cms");
+        put("Nipon"        , "https://economictimes.indiatimes.com/nippon-india-small-cap-fund--direct-plan/fund-factsheet/schemeid-16182.cms");
+        put("DSP"          , "https://economictimes.indiatimes.com/dsp-small-cap-fund--direct-plan/fund-factsheet/schemeid-16411.cms");
+        put("ICICI"        , "https://economictimes.indiatimes.com/icici-prudential-smallcap-fund--direct-plan/fund-factsheet/schemeid-17116.cms");
+        put("Tata"         , "https://economictimes.indiatimes.com/tata-small-cap-fund--direct-plan/fund-factsheet/schemeid-37991.cms");
+        put("Birla"        , "https://economictimes.indiatimes.com/aditya-birla-sun-life-small-cap-fund--direct-plan/fund-factsheet/schemeid-15935.cms");
+        put("Motilal"      , "https://economictimes.indiatimes.com/motilal-oswal-nifty-smallcap-250-index-fund--direct-plan/fund-factsheet/schemeid-40244.cms");
+        put("IDBI"         , "https://economictimes.indiatimes.com/idbi-small-cap-fund--direct-plan/fund-factsheet/schemeid-34272.cms");
+        put("Sundaram"     , "https://economictimes.indiatimes.com/sundaram-small-cap-fund--direct-plan/fund-factsheet/schemeid-16112.cms");
+        put("Invesco"      , "https://economictimes.indiatimes.com/invesco-india-smallcap-fund--direct-plan/fund-factsheet/schemeid-37843.cms");
+        put("EdelWeiss"    , "https://economictimes.indiatimes.com/edelweiss-small-cap-fund--direct-plan/fund-factsheet/schemeid-38851.cms");
+        put("Franklin"     , "https://economictimes.indiatimes.com/franklin-india-smaller-companies-fund--direct-plan/fund-factsheet/schemeid-16010.cms");
+        put("BOI Axa"      , "https://economictimes.indiatimes.com/boi-axa-small-cap-fund--direct-plan/fund-factsheet/schemeid-38283.cms");
+        put("Canara Robeco", "https://economictimes.indiatimes.com/canara-robeco-small-cap-fund--direct-plan/fund-factsheet/schemeid-38817.cms");
+        put("HSBC"         , "https://economictimes.indiatimes.com/hsbc-small-cap-equity-fund--direct-plan/fund-factsheet/schemeid-16325.cms");
+        put("Principal"    , "https://economictimes.indiatimes.com/principal-small-cap-fund--direct-plan/fund-factsheet/schemeid-39797.cms");
+        put("Quant"        , "https://economictimes.indiatimes.com/quant-small-cap-fund--direct-plan/fund-factsheet/schemeid-17366.cms");
+        put("Union"        , "https://economictimes.indiatimes.com/union-small-cap-fund--direct-plan/fund-factsheet/schemeid-26860.cms");
+    }};
+
+    public static final String TEST_OUT_FILE_IND_MF      = "TestIndMF.xlsx";
+    public static Map<String, String> testMap = new LinkedHashMap<String, String>() {{
+        put("Axis"         , "https://www.personalfn.com/factsheet/axis-small-cap-fund-g-direct-plan");
+    }};
+
+
 //    public static Map<String, String> focusedCapMap = new LinkedHashMap<String, String>() {{
 //        put("HDFC"         , "");
 //        put("L&T"          , "");
@@ -269,7 +301,7 @@ public class Constants {
 
 
 
-
+//    https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/fund-factsheet/schemeid-16617.cms
 
 
 

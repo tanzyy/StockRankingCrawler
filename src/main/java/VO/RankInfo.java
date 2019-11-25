@@ -33,6 +33,14 @@ public class RankInfo {
     private String expenseRatio;
     private String risk;
 
+    //This is for Indian MF
+    private String underlyingIndex;
+    private String aum;
+    private String peRatio;
+    private String pbRatio;
+    private String manager;
+
+
     private static final String OPEN_BRACE  = " [";
     private static final String CLOSE_BRACE = "]";
 
@@ -169,6 +177,44 @@ public class RankInfo {
         this.dateReported = dateReported;
     }
 
+    public String getUnderlyingIndex() { return underlyingIndex; }
+
+    public void setUnderlyingIndex(String underlyingIndex) {
+        this.underlyingIndex = underlyingIndex;
+    }
+
+    public String getAum() {
+        return aum;
+    }
+
+    public void setAum(String aum) {
+        this.aum = aum;
+    }
+
+    public String getPeRatio() {
+        return peRatio;
+    }
+
+    public void setPeRatio(String peRatio) {
+        this.peRatio = peRatio;
+    }
+
+    public String getPbRatio() {
+        return pbRatio;
+    }
+
+    public void setPbRatio(String pbRatio) {
+        this.pbRatio = pbRatio;
+    }
+
+    public String getManager() {
+        return manager;
+    }
+
+    public void setManager(String manager) {
+        this.manager = manager;
+    }
+
 
     /**
      * Mainly for test case purpose which will avoid recreating rankInfo object.
@@ -221,6 +267,14 @@ public class RankInfo {
             sbr.append(risk);
             sbr.append("]");
         }
+
+        //MF Data
+        sbr.append("]  UnderlyingIndex [").append(underlyingIndex);
+        sbr.append("]  AUM [").append(aum);
+        sbr.append("]  ExpenseRatio [").append(expenseRatio);
+        sbr.append("]  Manager [").append(manager);
+        sbr.append("]  PERatio [").append(peRatio);
+        sbr.append("]  PBRatio [").append(pbRatio);
 
         return sbr.toString();
     }
