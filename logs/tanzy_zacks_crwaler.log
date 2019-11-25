@@ -3763,3 +3763,233 @@ java.nio.file.FileAlreadyExistsException: /Users/i852841/_Codes/_Personal/StockR
 2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [PRINCIPAL] ,  PreviousCellStr [10.25] ,  PreviousCellVal [10.25] ,  CurrentCellVal [10.25]
 2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [QUANT] ,  PreviousCellStr [41.3028] ,  PreviousCellVal [41.3028] ,  CurrentCellVal [41.3028]
 2019-11-24 22:30:02 INFO  [THREAD: main] ExcelAction:302 - For Symbol [UNION] ,  PreviousCellStr [14.44] ,  PreviousCellVal [14.44] ,  CurrentCellVal [14.44]
+2019-11-24 22:36:21 INFO  [THREAD: main] ExcelAction:59 - IndMF_MultiCap.xlsx exists.
+2019-11-24 22:36:22 INFO  [THREAD: main] ExcelAction:69 - #####################  Sheet name [NAV] existence [true]
+2019-11-24 22:37:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/hdfc-focused-30-fund-direct-plan-growth-/mffactsheet/schemeid-16021.cms
+2019-11-24 22:37:23 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/l%26t-focused-equity-fund-direct-growth-/mffactsheet/schemeid-38083.cms
+2019-11-24 22:37:28 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/axis-focused-25-fund--direct-plan/mffactsheet/schemeid-15684.cms
+2019-11-24 22:37:28 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/sbi-focused-equity-fund--direct-plan/mffactsheet/schemeid-16324.cms
+2019-11-24 22:37:29 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/kotak-standard-multicap-fund--direct-plan/mffactsheet/schemeid-17140.cms
+2019-11-24 22:37:29 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/nippon-india-multi-cap-fund-direct-growth-/mffactsheet/schemeid-16068.cms
+2019-11-24 22:37:34 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/dsp-equity-direct-plan-growth-/mffactsheet/schemeid-16386.cms
+2019-11-24 22:37:39 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/icici-prudential-multicap-fund-direct-plan-growth-/mffactsheet/schemeid-15874.cms
+2019-11-24 22:37:46 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/tata-retirement-savings-fund-moderate-plan-direct-growth-/mffactsheet/schemeid-17017.cms
+2019-11-24 22:37:47 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/aditya-birla-sun-life-equity-fund-direct-growth-/mffactsheet/schemeid-15741.cms
+2019-11-24 22:37:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/motilal-oswal-multicap-35-fund--direct-plan/mffactsheet/schemeid-26125.cms
+2019-11-24 22:37:56 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/idbi-diversified-equity-fund-direct-growth-/mffactsheet/schemeid-25144.cms
+2019-11-24 22:38:01 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/sundaram-equity-fund-direct-growth-/mffactsheet/schemeid-40260.cms
+2019-11-24 22:38:05 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/invesco-india-multicap-fund-direct-growth-/mffactsheet/schemeid-16811.cms
+2019-11-24 22:38:12 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/edelweiss-multi-cap-fund-direct-growth-/mffactsheet/schemeid-29263.cms
+2019-11-24 22:38:12 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/franklin-india-focused-equity-fund-direct-growth-/mffactsheet/schemeid-15990.cms
+2019-11-24 22:38:13 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/canara-robeco-equity-diversified-fund-direct-growth-/mffactsheet/schemeid-16588.cms
+2019-11-24 22:38:13 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/principal-multi-cap-growth-fund-direct-growth-/mffactsheet/schemeid-16580.cms
+2019-11-24 22:38:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/quant-active-fund-direct-growth-/mffactsheet/schemeid-17361.cms
+2019-11-24 22:38:23 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/union-multi-cap-fund-direct-growth-/mffactsheet/schemeid-16412.cms
+2019-11-24 22:38:27 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/mirae-asset-focused-fund-direct-growth-/mffactsheet/schemeid-39823.cms
+2019-11-24 22:38:31 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/parag-parikh-long-term-equity-fund-direct-growth-/mffactsheet/schemeid-19701.cms
+2019-11-24 22:38:31 INFO  [THREAD: main] ExcelAction:59 - IndMF_MultiCap.xlsx exists.
+2019-11-24 22:38:32 INFO  [THREAD: main] ExcelAction:69 - #####################  Sheet name [NAV] existence [true]
+2019-11-24 22:44:01 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/hdfc-focused-30-fund-direct-plan-growth-/mffactsheet/schemeid-16021.cms
+2019-11-24 22:44:02 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/l%26t-focused-equity-fund-direct-growth-/mffactsheet/schemeid-38083.cms
+2019-11-24 22:44:02 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/axis-focused-25-fund--direct-plan/mffactsheet/schemeid-15684.cms
+2019-11-24 22:44:02 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/sbi-focused-equity-fund--direct-plan/mffactsheet/schemeid-16324.cms
+2019-11-24 22:44:02 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/kotak-standard-multicap-fund--direct-plan/mffactsheet/schemeid-17140.cms
+2019-11-24 22:44:06 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/nippon-india-multi-cap-fund-direct-growth-/mffactsheet/schemeid-16068.cms
+2019-11-24 22:44:06 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/dsp-equity-direct-plan-growth-/mffactsheet/schemeid-16386.cms
+2019-11-24 22:44:06 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/icici-prudential-multicap-fund-direct-plan-growth-/mffactsheet/schemeid-15874.cms
+2019-11-24 22:44:06 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/tata-retirement-savings-fund-moderate-plan-direct-growth-/mffactsheet/schemeid-17017.cms
+2019-11-24 22:44:10 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/aditya-birla-sun-life-equity-fund-direct-growth-/mffactsheet/schemeid-15741.cms
+2019-11-24 22:44:10 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/motilal-oswal-multicap-35-fund--direct-plan/mffactsheet/schemeid-26125.cms
+2019-11-24 22:44:10 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/idbi-diversified-equity-fund-direct-growth-/mffactsheet/schemeid-25144.cms
+2019-11-24 22:44:10 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/sundaram-equity-fund-direct-growth-/mffactsheet/schemeid-40260.cms
+2019-11-24 22:44:11 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/invesco-india-multicap-fund-direct-growth-/mffactsheet/schemeid-16811.cms
+2019-11-24 22:44:11 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/edelweiss-multi-cap-fund-direct-growth-/mffactsheet/schemeid-29263.cms
+2019-11-24 22:44:11 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/franklin-india-focused-equity-fund-direct-growth-/mffactsheet/schemeid-15990.cms
+2019-11-24 22:44:11 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/canara-robeco-equity-diversified-fund-direct-growth-/mffactsheet/schemeid-16588.cms
+2019-11-24 22:44:11 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/principal-multi-cap-growth-fund-direct-growth-/mffactsheet/schemeid-16580.cms
+2019-11-24 22:44:11 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/quant-active-fund-direct-growth-/mffactsheet/schemeid-17361.cms
+2019-11-24 22:44:11 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/union-multi-cap-fund-direct-growth-/mffactsheet/schemeid-16412.cms
+2019-11-24 22:44:11 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/mirae-asset-focused-fund-direct-growth-/mffactsheet/schemeid-39823.cms
+2019-11-24 22:44:11 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/parag-parikh-long-term-equity-fund-direct-growth-/mffactsheet/schemeid-19701.cms
+2019-11-24 22:44:11 INFO  [THREAD: main] ExcelAction:59 - IndMF_MultiCap.xlsx exists.
+2019-11-24 22:44:11 INFO  [THREAD: main] ExcelAction:69 - #####################  Sheet name [NAV] existence [true]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [HDFC] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [HDFC] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [82.435]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [L&T] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [L&T] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [11.48]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [AXIS] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [AXIS] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [32.76]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [SBI] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [SBI] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [160.4488]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [KOTAK] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [KOTAK] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [39.33]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [NIPON] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [NIPON] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [101.1792]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [DSP] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [DSP] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [43.769]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [ICICI] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [ICICI] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [310.5]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [TATA] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [TATA] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [34.2329]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [BIRLA] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [BIRLA] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [796.42]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [MOTILAL] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [MOTILAL] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [28.1649]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [IDBI] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [IDBI] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [23.4]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [SUNDARAM] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [SUNDARAM] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [10.701]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [INVESCO] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [INVESCO] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [52.4]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [EDELWEISS] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [EDELWEISS] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [15.546]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [FRANKLIN] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [FRANKLIN] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [44.9265]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [CANARA ROBECO] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [CANARA ROBECO] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [144.64]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [PRINCIPAL] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [PRINCIPAL] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [148.35]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [QUANT] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [QUANT] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [194.5691]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [UNION] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [UNION] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [21.42]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [MIRAE] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [MIRAE] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [11.754]
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:292 - Processing [PARAGPARIKH] 
+2019-11-24 22:44:12 INFO  [THREAD: main] ExcelAction:304 - For Symbol [PARAGPARIKH] ,  PreviousCellStr [null] ,  PreviousCellVal [0.0] ,  CurrentCellVal [27.3172]
+2019-11-24 22:46:17 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/hdfc-focused-30-fund-direct-plan-growth-/mffactsheet/schemeid-16021.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/l%26t-focused-equity-fund-direct-growth-/mffactsheet/schemeid-38083.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/axis-focused-25-fund--direct-plan/mffactsheet/schemeid-15684.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/sbi-focused-equity-fund--direct-plan/mffactsheet/schemeid-16324.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/kotak-standard-multicap-fund--direct-plan/mffactsheet/schemeid-17140.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/nippon-india-multi-cap-fund-direct-growth-/mffactsheet/schemeid-16068.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/dsp-equity-direct-plan-growth-/mffactsheet/schemeid-16386.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/icici-prudential-multicap-fund-direct-plan-growth-/mffactsheet/schemeid-15874.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/tata-retirement-savings-fund-moderate-plan-direct-growth-/mffactsheet/schemeid-17017.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/aditya-birla-sun-life-equity-fund-direct-growth-/mffactsheet/schemeid-15741.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/motilal-oswal-multicap-35-fund--direct-plan/mffactsheet/schemeid-26125.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/idbi-diversified-equity-fund-direct-growth-/mffactsheet/schemeid-25144.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/sundaram-equity-fund-direct-growth-/mffactsheet/schemeid-40260.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/invesco-india-multicap-fund-direct-growth-/mffactsheet/schemeid-16811.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/edelweiss-multi-cap-fund-direct-growth-/mffactsheet/schemeid-29263.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/franklin-india-focused-equity-fund-direct-growth-/mffactsheet/schemeid-15990.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/canara-robeco-equity-diversified-fund-direct-growth-/mffactsheet/schemeid-16588.cms
+2019-11-24 22:46:18 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/principal-multi-cap-growth-fund-direct-growth-/mffactsheet/schemeid-16580.cms
+2019-11-24 22:46:19 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/quant-active-fund-direct-growth-/mffactsheet/schemeid-17361.cms
+2019-11-24 22:46:19 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/union-multi-cap-fund-direct-growth-/mffactsheet/schemeid-16412.cms
+2019-11-24 22:46:19 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/mirae-asset-focused-fund-direct-growth-/mffactsheet/schemeid-39823.cms
+2019-11-24 22:46:19 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/parag-parikh-long-term-equity-fund-direct-growth-/mffactsheet/schemeid-19701.cms
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:59 - IndMF_MultiCap.xlsx exists.
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:69 - #####################  Sheet name [NAV] existence [true]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [HDFC] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [HDFC] ,  PreviousCellStr [82.435] ,  PreviousCellVal [82.435] ,  CurrentCellVal [82.435]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [L&T] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [L&T] ,  PreviousCellStr [11.48] ,  PreviousCellVal [11.48] ,  CurrentCellVal [11.48]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [AXIS] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [AXIS] ,  PreviousCellStr [32.76] ,  PreviousCellVal [32.76] ,  CurrentCellVal [32.76]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [SBI] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [SBI] ,  PreviousCellStr [160.4488] ,  PreviousCellVal [160.4488] ,  CurrentCellVal [160.4488]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [KOTAK] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [KOTAK] ,  PreviousCellStr [39.33] ,  PreviousCellVal [39.33] ,  CurrentCellVal [39.33]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [NIPON] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [NIPON] ,  PreviousCellStr [101.1792] ,  PreviousCellVal [101.1792] ,  CurrentCellVal [101.1792]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [DSP] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [DSP] ,  PreviousCellStr [43.769] ,  PreviousCellVal [43.769] ,  CurrentCellVal [43.769]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [ICICI] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [ICICI] ,  PreviousCellStr [310.5] ,  PreviousCellVal [310.5] ,  CurrentCellVal [310.5]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [TATA] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [TATA] ,  PreviousCellStr [34.2329] ,  PreviousCellVal [34.2329] ,  CurrentCellVal [34.2329]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [BIRLA] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [BIRLA] ,  PreviousCellStr [796.42] ,  PreviousCellVal [796.42] ,  CurrentCellVal [796.42]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [MOTILAL] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [MOTILAL] ,  PreviousCellStr [28.1649] ,  PreviousCellVal [28.1649] ,  CurrentCellVal [28.1649]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [IDBI] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [IDBI] ,  PreviousCellStr [23.4] ,  PreviousCellVal [23.4] ,  CurrentCellVal [23.4]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [SUNDARAM] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [SUNDARAM] ,  PreviousCellStr [10.701] ,  PreviousCellVal [10.701] ,  CurrentCellVal [10.701]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [INVESCO] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [INVESCO] ,  PreviousCellStr [52.4] ,  PreviousCellVal [52.4] ,  CurrentCellVal [52.4]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [EDELWEISS] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [EDELWEISS] ,  PreviousCellStr [15.546] ,  PreviousCellVal [15.546] ,  CurrentCellVal [15.546]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [FRANKLIN] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [FRANKLIN] ,  PreviousCellStr [44.9265] ,  PreviousCellVal [44.9265] ,  CurrentCellVal [44.9265]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [CANARA ROBECO] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [CANARA ROBECO] ,  PreviousCellStr [144.64] ,  PreviousCellVal [144.64] ,  CurrentCellVal [144.64]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [PRINCIPAL] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [PRINCIPAL] ,  PreviousCellStr [148.35] ,  PreviousCellVal [148.35] ,  CurrentCellVal [148.35]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [QUANT] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [QUANT] ,  PreviousCellStr [194.5691] ,  PreviousCellVal [194.5691] ,  CurrentCellVal [194.5691]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [UNION] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [UNION] ,  PreviousCellStr [21.42] ,  PreviousCellVal [21.42] ,  CurrentCellVal [21.42]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [MIRAE] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [MIRAE] ,  PreviousCellStr [11.754] ,  PreviousCellVal [11.754] ,  CurrentCellVal [11.754]
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:285 - Processing [PARAGPARIKH] 
+2019-11-24 22:46:19 INFO  [THREAD: main] ExcelAction:304 - For Symbol [PARAGPARIKH] ,  PreviousCellStr [27.3172] ,  PreviousCellVal [27.3172] ,  CurrentCellVal [27.3172]
+2019-11-24 22:46:46 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/hdfc-focused-30-fund-direct-plan-growth-/mffactsheet/schemeid-16021.cms
+2019-11-24 22:46:47 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/l%26t-focused-equity-fund-direct-growth-/mffactsheet/schemeid-38083.cms
+2019-11-24 22:46:47 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/axis-focused-25-fund--direct-plan/mffactsheet/schemeid-15684.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/sbi-focused-equity-fund--direct-plan/mffactsheet/schemeid-16324.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/kotak-standard-multicap-fund--direct-plan/mffactsheet/schemeid-17140.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/nippon-india-multi-cap-fund-direct-growth-/mffactsheet/schemeid-16068.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/dsp-equity-direct-plan-growth-/mffactsheet/schemeid-16386.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/icici-prudential-multicap-fund-direct-plan-growth-/mffactsheet/schemeid-15874.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/tata-retirement-savings-fund-moderate-plan-direct-growth-/mffactsheet/schemeid-17017.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/aditya-birla-sun-life-equity-fund-direct-growth-/mffactsheet/schemeid-15741.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/motilal-oswal-multicap-35-fund--direct-plan/mffactsheet/schemeid-26125.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/idbi-diversified-equity-fund-direct-growth-/mffactsheet/schemeid-25144.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/sundaram-equity-fund-direct-growth-/mffactsheet/schemeid-40260.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/invesco-india-multicap-fund-direct-growth-/mffactsheet/schemeid-16811.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/edelweiss-multi-cap-fund-direct-growth-/mffactsheet/schemeid-29263.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/franklin-india-focused-equity-fund-direct-growth-/mffactsheet/schemeid-15990.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/canara-robeco-equity-diversified-fund-direct-growth-/mffactsheet/schemeid-16588.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/principal-multi-cap-growth-fund-direct-growth-/mffactsheet/schemeid-16580.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/quant-active-fund-direct-growth-/mffactsheet/schemeid-17361.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/union-multi-cap-fund-direct-growth-/mffactsheet/schemeid-16412.cms
+2019-11-24 22:46:51 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/mirae-asset-focused-fund-direct-growth-/mffactsheet/schemeid-39823.cms
+2019-11-24 22:46:52 INFO  [THREAD: main] IndMFProcessor:122 - https://economictimes.indiatimes.com/parag-parikh-long-term-equity-fund-direct-growth-/mffactsheet/schemeid-19701.cms
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:59 - IndMF_MultiCap.xlsx exists.
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:69 - #####################  Sheet name [NAV] existence [true]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [HDFC] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [HDFC] ,  PreviousCellStr [82.435] ,  PreviousCellVal [82.435] ,  CurrentCellVal [82.435]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [L&T] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [L&T] ,  PreviousCellStr [11.48] ,  PreviousCellVal [11.48] ,  CurrentCellVal [11.48]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [AXIS] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [AXIS] ,  PreviousCellStr [32.76] ,  PreviousCellVal [32.76] ,  CurrentCellVal [32.76]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [SBI] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [SBI] ,  PreviousCellStr [160.4488] ,  PreviousCellVal [160.4488] ,  CurrentCellVal [160.4488]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [KOTAK] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [KOTAK] ,  PreviousCellStr [39.33] ,  PreviousCellVal [39.33] ,  CurrentCellVal [39.33]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [NIPON] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [NIPON] ,  PreviousCellStr [101.1792] ,  PreviousCellVal [101.1792] ,  CurrentCellVal [101.1792]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [DSP] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [DSP] ,  PreviousCellStr [43.769] ,  PreviousCellVal [43.769] ,  CurrentCellVal [43.769]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [ICICI] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [ICICI] ,  PreviousCellStr [310.5] ,  PreviousCellVal [310.5] ,  CurrentCellVal [310.5]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [TATA] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [TATA] ,  PreviousCellStr [34.2329] ,  PreviousCellVal [34.2329] ,  CurrentCellVal [34.2329]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [BIRLA] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [BIRLA] ,  PreviousCellStr [796.42] ,  PreviousCellVal [796.42] ,  CurrentCellVal [796.42]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [MOTILAL] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [MOTILAL] ,  PreviousCellStr [28.1649] ,  PreviousCellVal [28.1649] ,  CurrentCellVal [28.1649]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [IDBI] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [IDBI] ,  PreviousCellStr [23.4] ,  PreviousCellVal [23.4] ,  CurrentCellVal [23.4]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [SUNDARAM] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [SUNDARAM] ,  PreviousCellStr [10.701] ,  PreviousCellVal [10.701] ,  CurrentCellVal [10.701]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [INVESCO] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [INVESCO] ,  PreviousCellStr [52.4] ,  PreviousCellVal [52.4] ,  CurrentCellVal [52.4]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [EDELWEISS] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [EDELWEISS] ,  PreviousCellStr [15.546] ,  PreviousCellVal [15.546] ,  CurrentCellVal [15.546]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [FRANKLIN] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [FRANKLIN] ,  PreviousCellStr [44.9265] ,  PreviousCellVal [44.9265] ,  CurrentCellVal [44.9265]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [CANARA ROBECO] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [CANARA ROBECO] ,  PreviousCellStr [144.64] ,  PreviousCellVal [144.64] ,  CurrentCellVal [144.64]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [PRINCIPAL] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [PRINCIPAL] ,  PreviousCellStr [148.35] ,  PreviousCellVal [148.35] ,  CurrentCellVal [148.35]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [QUANT] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [QUANT] ,  PreviousCellStr [194.5691] ,  PreviousCellVal [194.5691] ,  CurrentCellVal [194.5691]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [UNION] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [UNION] ,  PreviousCellStr [21.42] ,  PreviousCellVal [21.42] ,  CurrentCellVal [21.42]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [MIRAE] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [MIRAE] ,  PreviousCellStr [11.754] ,  PreviousCellVal [11.754] ,  CurrentCellVal [11.754]
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:285 - Processing [PARAGPARIKH] 
+2019-11-24 22:46:52 INFO  [THREAD: main] ExcelAction:304 - For Symbol [PARAGPARIKH] ,  PreviousCellStr [27.3172] ,  PreviousCellVal [27.3172] ,  CurrentCellVal [27.3172]

@@ -282,6 +282,8 @@ public class ExcelAction {
                     Cell currentCell          = null;
                     RankInfo currentRankInfo  = allFetchedData.get(rowIndex - 1);
 
+                    LOG.info(String.format("Processing [%s] ", currentRankInfo.getSymbol()));
+
                     if(currentRow == null) {
                         currentRow = sheet.createRow(rowIndex);
                         currentCell = currentRow.createCell(1);

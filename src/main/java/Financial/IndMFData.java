@@ -29,8 +29,8 @@ public class IndMFData {
 
 
         if(DataTypeToExtract.DAILY_NAV.equals(dataToExtract)) {
-            new IndMFData().processFund(Constants.OUT_FILE_IND_MF_SMALL_CAP,"NAV", 0);
-            //new IndMFData().processFund(Constants.OUT_FILE_IND_MF,"MultiCap", 1);
+            //new IndMFData().processFund(Constants.OUT_FILE_IND_MF_SMALL_CAP,"NAV", 0);
+            new IndMFData().processFund(Constants.OUT_FILE_IND_MF_MULTI_CAP,"NAV", 0);
 
         } else if(DataTypeToExtract.OTHER_ATTRIBUTES.equals(dataToExtract)) {
             new IndMFData().processFundForOtherAttributes(Constants.OUT_FILE_IND_MF_SMALL_CAP);
@@ -91,7 +91,7 @@ public class IndMFData {
                 currentRankingData.add(indMFProcessor.getMFDataFromEconomicTimes(entry.getKey(), entry.getValue()));
             }
 
-        } else if("MultiCap".equalsIgnoreCase(sheetName)) {
+        } else if(Constants.OUT_FILE_IND_MF_MULTI_CAP.equalsIgnoreCase(outFile)) {
 
             for(Map.Entry<String, String> entry : Constants.multiCapMap.entrySet()) {
                 currentRankingData.add(indMFProcessor.getMFDataFromEconomicTimes(entry.getKey(), entry.getValue()));

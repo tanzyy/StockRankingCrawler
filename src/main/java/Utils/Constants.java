@@ -180,6 +180,7 @@ public class Constants {
 
     public static final String OUT_FILE_IND_MF           = "IndMF.xlsx";
     public static final String OUT_FILE_IND_MF_SMALL_CAP = "IndMF_SmallCap.xlsx";
+    public static final String OUT_FILE_IND_MF_MULTI_CAP = "IndMF_MultiCap.xlsx";
 
      public static Map<String, String> smallCapMap = new LinkedHashMap<String, String>() {{
          put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/mffactsheet/schemeid-16617.cms");
