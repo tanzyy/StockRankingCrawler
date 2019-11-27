@@ -11,6 +11,21 @@ import java.util.Map;
 
 public class IndMFData {
 
+    /**
+     * TODO Make it in property file
+     *
+     * Other TODO
+     * 1. Update processFund method and make NAV agnostic
+     * 2. Error handling
+     * 3. Make fund houses same for all category
+     * 4. Email facility
+     * 5. Explore AWS
+     *
+     */
+    private static DataTypeToExtract dataToExtract = DataTypeToExtract.DAILY_NAV;
+
+
+
     private static  String OUT_FILE_LOC     = "/Reports/IndMFData";
     private static  String BACK_FILE_LOC    = "/Backup";
 
@@ -19,8 +34,6 @@ public class IndMFData {
         OTHER_ATTRIBUTES,
         FIFTY_TWO_WEEK
     };
-
-    private static DataTypeToExtract dataToExtract = DataTypeToExtract.OTHER_ATTRIBUTES;
 
     public static void main(String[] args) {
 
