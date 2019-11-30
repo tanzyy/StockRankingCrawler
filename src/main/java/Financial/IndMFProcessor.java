@@ -72,7 +72,7 @@ public class IndMFProcessor {
     }
 
     /**
-     * This is from economictimes.
+     * This is from Personal Finance.
      * @param symbol
      * @param url
      * @return
@@ -126,30 +126,6 @@ public class IndMFProcessor {
             String nav = document.getElementsByClass("navValue").text();
             rankInfo.setNav(nav);
             rankInfo = CommonUtils.populateETFData(rankInfo, null, null, null, nav, null);
-        } catch (IOException e) {
-            LOG.error(String.format("Error occurred for [%s] with error ", symbol), e);
-        }
-
-        return rankInfo;
-    }
-
-    public RankInfo getTestMFData(String symbol, String url) {
-
-        Document document;
-        RankInfo rankInfo = new RankInfo();
-        rankInfo.setSymbol(symbol);
-
-        Elements elem = null;
-
-        LOG.info(url);
-
-        try {
-            document = Jsoup.connect(url).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
-            elem = document.getElementsByClass("factsheetListing");
-
-            Elements elems = elem.select("li");
-            System.out.println(elems.get(1).children().get(1).text());
-
         } catch (IOException e) {
             LOG.error(String.format("Error occurred for [%s] with error ", symbol), e);
         }

@@ -56,12 +56,19 @@ public class IndMFProcessorExperiment {
 
             //Elements stt = document.select("#overview > ul > li:nth-child(10) > label");
             //Elements stt = document.select("#overview > ul > li:nth-child(11) > label");
-            System.out.println(document.select("#funddetails > ul > li.nav-status > div > label").text());
+
+            //No output
+            //System.out.println(document.select("#mainPage > div.fullSec.w2 > div:nth-child(3) > div.f2 > div.progress > div.legend1").text());
+
+            System.out.println(document.select("div.fullSec:nth-child(5) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2)").text());
+
+
 //            System.out.println(stt.size());
 //            for (Element el : stt) {
 //                System.out.println(el.text());
 //            }
 
+            System.out.println("Make debugger wait!!!");
 
         } catch (IOException e) {
             LOG.error(String.format("Error occurred for [%s] with error ", symbol), e);

@@ -1,14 +1,16 @@
 package Utils;
 
+import VO.MFInfo;
+
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Created by i852841 on 5/19/18.
  */
 public class Constants {
+
+    public static final String COMMA = ",";
 
 
     //################################################################ Currently Used: Start ################################################################
@@ -180,6 +182,7 @@ public class Constants {
 
     public static final String OUT_FILE_IND_MF           = "IndMF.xlsx";
     public static final String OUT_FILE_IND_MF_SMALL_CAP = "IndMF_SmallCap.xlsx";
+    public static final String OUT_FILE_IND_MF_SMALL_CAP_NEW = "NEW_IndMF_SmallCap.xlsx";
     public static final String OUT_FILE_IND_MF_MULTI_CAP = "IndMF_MultiCap.xlsx";
     public static final String OUT_FILE_IND_MF_MID_CAP   = "IndMF_MidCap.xlsx";
 
@@ -336,72 +339,149 @@ public class Constants {
         put("UTI"          , "https://economictimes.indiatimes.com/uti-mid-cap-fund--direct-plan/fund-factsheet/schemeid-15920.cms");
     }};
 
-//    public static Map<String, String> midCapNAV = new LinkedHashMap<String, String>() {{
-//        put("HDFC"         , "");
-//        put("L&T"          , "");
-//        put("Axis"         , "");
-//        put("SBI"          , "");
-//        put("Kotak"        , "");
-//        put("Nipon"        , "");
-//        put("DSP"          , "");
-//        put("ICICI"        , "");
-//        put("Tata"         , "");
-//        put("Birla"        , "");
-//        put("Motilal"      , "");
-//        put("IDBI"         , "");
-//        put("Sundaram"     , "");
-//        put("Invesco"      , "");
-//        put("EdelWeiss"    , "");
-//        put("Franklin"     , "");
-//        put("BOI Axa"      , "");
-//        put("Canara Robeco", "");
-//        put("HSBC"         , "");
-//        put("Principal"    , "");
-//        put("Quant"        , "");
-//        put("Union"        , "");
-//    }};
 
-    public static final String TEST_OUT_FILE_IND_MF      = "TestIndMF.xlsx";
+    public static final String TEST_OUT_FILE_IND_MF  = "TestIndMF.xlsx";
     public static Map<String, String> testMap = new LinkedHashMap<String, String>() {{
-        put("Axis"         , "https://www.personalfn.com/factsheet/axis-small-cap-fund-g-direct-plan");
+        //put("Axis"         , "https://www.personalfn.com/factsheet/axis-small-cap-fund-g-direct-plan");
+        put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/mffactsheet/schemeid-16617.cms");
+        //put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/fund-factsheet/schemeid-16617.cms");
+
     }};
 
 
 
-//    public static Map<String, String> focusedCapMap = new LinkedHashMap<String, String>() {{
-//        put("HDFC"         , "");
-//        put("L&T"          , "");
-//        put("Axis"         , "");
-//        put("SBI"          , "");
-//        put("Kotak"        , "");
-//        put("Nipon"        , "");
-//        put("DSP"          , "");
-//        put("ICICI"        , "");
-//        put("Tata"         , "");
-//        put("Birla"        , "");
-//        put("Motilal"      , "");
-//        put("IDBI"         , "");
-//        put("Sundaram"     , "");
-//        put("Invesco"      , "");
-//        put("EdelWeiss"    , "");
-//        put("Franklin"     , "");
-//        put("BOI Axa"      , "");
-//        put("Canara Robeco", "");
-//        put("HSBC"         , "");
-//        put("Principal"    , "");
-//        put("Quant"        , "");
-//        put("Union"        , "");
-//    }};
+    public enum MF_IND_URI_ECONOMICTIMES {
+
+        //NAV, 52 Week
+        NAV("mffactsheet"),
+
+        //1,3,6 Months Return, Benchmark, ER, AUM, FundManager, Top 5 Sector exposure, Market Cap exposure, PE, PB
+        FACTS("fund-factsheet"),
+
+        //Number of Holdings, Top5, Top10 Holdings Percentage, Top3, Top5 Sectors Holdings
+        HOLDINGS("mffundinfo");
+
+      private final String uri;
+
+      MF_IND_URI_ECONOMICTIMES(String uri) {
+          this.uri = uri;
+      }
+
+      public String getURI() {
+          return this.uri;
+      }
+    }
+
+    public enum MF_IND_QUERY_ECONOMICTIMES {
+
+        nav(MFInfo.MF_PROPERTY.nav, "#mainSection > div > div > div > div.schemeDetails > div.navData > span.latestNav.pdlt20 > span.navValue"),
+        fiftyTwoWeek(MFInfo.MF_PROPERTY.fiftyTwoWeek, "query2"),
+        benchmark(MFInfo.MF_PROPERTY.benchmark, "#mainPage > div:nth-child(1) > div.subSec.mright40.factSheetSec > ul > li.benchmarkName > span.val.bold"),
+        expenseRatio(MFInfo.MF_PROPERTY.expenseRatio, "#mainPage > div:nth-child(1) > div.subSec.mright40.factSheetSec > ul > li:nth-child(4) > span.val.bold"),
+        aum(MFInfo.MF_PROPERTY.aum, "#mainPage > div:nth-child(1) > div.subSec.mright40.factSheetSec > ul > li:nth-child(3) > span.val.bold"),
+        manager(MFInfo.MF_PROPERTY.manager, "#mainPage > div:nth-child(1) > div.subSec.mright40.factSheetSec > ul > li:nth-child(5) > span.val.bold"),
+        //Fund vs Benchmark
+        peRatio(MFInfo.MF_PROPERTY.peRatio, "#mainPage > div:nth-child(11) > div.subSec.mright40.valMetrics > ul:nth-child(3) > li:nth-child(1) > span.val,#mainPage > div:nth-child(11) > div.subSec.mright40.valMetrics > ul:nth-child(3) > li:nth-child(2) > span.val"),
+        pbRatio(MFInfo.MF_PROPERTY.pbRatio, "#mainPage > div:nth-child(11) > div.subSec.mright40.valMetrics > ul:nth-child(5) > li:nth-child(1) > span.val,#mainPage > div:nth-child(11) > div.subSec.mright40.valMetrics > ul:nth-child(5) > li:nth-child(2) > span.val"),
+        //Returns 1,3 & 6 Months, 1 Year, 3 Year, 5 Year
+        returns(MFInfo.MF_PROPERTY.returns, "#mainPage > div.fullSec.trailReturns > div > div.data > div:nth-child(1) > div.fundData,#mainPage > div.fullSec.trailReturns > div > div.data > div:nth-child(2) > div.fundData,#mainPage > div.fullSec.trailReturns > div > div.data > div:nth-child(3) > div.fundData,#mainPage > div.fullSec.trailReturns > div > div.data > div:nth-child(4) > div.fundData,#mainPage > div.fullSec.trailReturns > div > div.data > div:nth-child(5) > div.fundData,#mainPage > div.fullSec.trailReturns > div > div.data > div:nth-child(6) > div.fundData"),
+        holdingSectorTop5(MFInfo.MF_PROPERTY.holdingSectorTop5, "#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(1) > div.w50.flt,#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(1) > div.w25.flt.txtCenter,#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(2) > div.w50.flt\n" +
+        ",#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(2) > div.w25.flt.txtCenter,#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(3) > div.w50.flt,#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(3) > div.w25.flt.txtCenter,#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(4) > div.w50.flt,#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(4) > div.w25.flt.txtCenter,#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(5) > div.w50.flt,#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(5) > div.w25.flt.txtCenter"),
+        holdingTotalStocks(MFInfo.MF_PROPERTY.holdingTotalStocks, "#mainPage > div:nth-child(4) > div:nth-child(2) > ul > li:nth-child(1) > span.val"),
+        holdingTotalSector(MFInfo.MF_PROPERTY.holdingTotalSector, "#mainPage > div:nth-child(4) > div:nth-child(2) > ul > li:nth-child(5) > span.val"),
+        holdingPercentStockTop5(MFInfo.MF_PROPERTY.holdingPercentStockTop5, "#mainPage > div:nth-child(4) > div:nth-child(2) > ul > li:nth-child(2) > span.val"),
+        holdingPercentStockTop10(MFInfo.MF_PROPERTY.holdingPercentStockTop10, "#mainPage > div:nth-child(4) > div:nth-child(2) > ul > li:nth-child(3) > span.val"),
+        holdingPercentSectorTop3(MFInfo.MF_PROPERTY.holdingPercentSectorTop3, "#mainPage > div:nth-child(4) > div:nth-child(2) > ul > li:nth-child(6) > span.val"),
+        holdingPercentSectorTop5(MFInfo.MF_PROPERTY.holdingPercentSectorTop5, "#mainPage > div:nth-child(4) > div:nth-child(2) > ul > li:nth-child(7) > span.val"),
+        //Giant, Large, Mid, Small, Micro
+        holdingMarketCap(MFInfo.MF_PROPERTY.holdingMarketCap, "#mainPage > div:nth-child(9) > div.subSec.mright40.top5Sec.mrktCap > div.data > div:nth-child(1) > div.w20.flt.txtCenter,#mainPage > div:nth-child(9) > div.subSec.mright40.top5Sec.mrktCap > div.data > div:nth-child(2) > div.w20.flt.txtCenter,#mainPage > div:nth-child(9) > div.subSec.mright40.top5Sec.mrktCap > div.data > div:nth-child(3) > div.w20.flt.txtCenter,#mainPage > div:nth-child(9) > div.subSec.mright40.top5Sec.mrktCap > div.data > div:nth-child(4) > div.w20.flt.txtCenter,#mainPage > div:nth-child(9) > div.subSec.mright40.top5Sec.mrktCap > div.data > div:nth-child(5) > div.w20.flt.txtCenter");
+
+        private final MFInfo.MF_PROPERTY mfInfoProperty;
+        private final String             query;
+
+        MF_IND_QUERY_ECONOMICTIMES(MFInfo.MF_PROPERTY mfInfoProperty, String query) {
+            this.query          = query;
+            this.mfInfoProperty = mfInfoProperty;
+        }
+
+        public String getQuery() {
+            return this.query;
+        }
+
+        public String getMFProperty() {
+            return this.mfInfoProperty.toString();
+        }
+    }
+
+    /**
+     * 1 - Fund name like hdfc-small-cap-fund--direct-plan
+     * 2 - URI like mffactsheet
+     * 3 - Scheme ID like schemeid-16617
+     * All above examples are part of
+     * https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/mffactsheet/schemeid-16617.cms
+     */
+    public static String url_economictimes = "https://economictimes.indiatimes.com/${arg1}/${arg2}/${arg3}.cms";
 
 
+    public static final Map<String, String> ECONOMIC_TIMES_SCHEME_ID_MAP = new LinkedHashMap<String, String>(){{
+
+        put("HDFC"         , "hdfc-small-cap-fund--direct-plan,schemeid-16617");
+        put("L&T"          , "l%26t-emerging-businesses-fund-direct-growth-,schemeid-26133");
+        put("Axis"         , "axis-small-cap-fund-direct-growth-,schemeid-22335");
+        put("SBI"          , "sbi-small-cap-fund-direct-growth-,schemeid-15787");
+        put("Kotak"        , "Kotak%20Small%20Cap%20Fund%20Direct-Growth,schemeid-16382");
+        put("Nipon"        , "nippon-india-small-cap-fund--direct-plan,schemeid-16182");
+        put("DSP"          , "dsp-small-cap-direct-plan-growth-,schemeid-16411");
+        put("ICICI"        , "icici-prudential-smallcap-fund-direct-plan-growth-,schemeid-17116");
+        put("Tata"         , "tata-small-cap-fund-direct-growth-,schemeid-37991");
+        put("Birla"        , "aditya-birla-sun-life-small-cap-fund-direct-growth-,schemeid-15935");
+        put("Motilal"      , "motilal-oswal-nifty-smallcap-250-index-fund-direct-growth-,schemeid-40244");
+        put("IDBI"         , "idbi-small-cap-fund-direct-growth-,schemeid-34272");
+        put("Sundaram"     , "sundaram-small-cap-fund-direct-growth-,schemeid-16112");
+        put("Invesco"      , "invesco-india-smallcap-fund-direct-growth-,schemeid-37843");
+        put("EdelWeiss"    , "edelweiss-small-cap-fund-direct-growth-,schemeid-38851");
+        put("Franklin"     , "franklin-india-smaller-companies-direct-fund-growth-,schemeid-16010");
+        put("BOI Axa"      , "boi-axa-small-cap-fund-direct-growth-,schemeid-38283");
+        put("Canara Robeco", "canara-robeco-small-cap-fund-direct-growth-,schemeid-38817");
+        put("HSBC"         , "hsbc-small-cap-equity-fund-direct-growth-,schemeid-16325");
+        put("Principal"    , "principal-small-cap-fund-direct-growth-,schemeid-39797");
+        put("Quant"        , "quant-small-cap-fund-direct-plan-growth-,schemeid-17366");
+        put("Union"        , "union-small-cap-fund-direct-growth-,schemeid-26860");
+
+    }};
 
 
+    public static void main(String[] args) {
+        //System.out.println(String.format(url_economictimes, "one","two","three"));
+
+//        System.out.println(MF_IND_QUERY_ECONOMICTIMES.nav.getQuery());
+//        System.out.println(MF_IND_QUERY_ECONOMICTIMES.nav.getMFProperty());
+//        System.out.println(MF_IND_QUERY_ECONOMICTIMES.nav.toString());
+//
+//        System.out.println(MF_IND_QUERY_ECONOMICTIMES.fiftyTwoWeek.getQuery());
+//        System.out.println(MF_IND_QUERY_ECONOMICTIMES.fiftyTwoWeek.getMFProperty());
 
 
+        //Get Enum object by string https://www.java67.com/2012/08/string-to-enum-in-java-conversion.html
+//        String str = "nav";
+//        Enum propQueryEnum =  Enum.valueOf(MF_IND_QUERY_ECONOMICTIMES.class, str);
+//        System.out.println(propQueryEnum);
+//        System.out.println(((MF_IND_QUERY_ECONOMICTIMES) propQueryEnum).getMFProperty());
+//        System.out.println(((MF_IND_QUERY_ECONOMICTIMES) propQueryEnum).getQuery());
 
 
+        getStr("#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(1) > div.w50.flt,#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(1) > div.w25.flt.txtCenter,#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(2) > div.w50.flt\\n\" +\n" +
+                "        \",#marketcap > div.subSec.mright40.top5Sec > div.data > div:nth-child(2) > div.w25.flt.txtCenter");
 
 
+    }
+
+
+    private static void getStr(String str) {
+
+        String[] strnew = str.split(",");
+        System.out.println(strnew.length);
+    }
 
 
 }

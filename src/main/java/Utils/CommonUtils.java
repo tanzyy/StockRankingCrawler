@@ -5,8 +5,10 @@ import VO.RankInfo;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by i852841 on 5/19/18.
@@ -124,8 +126,16 @@ public class CommonUtils {
         return rankInfo;
     }
 
+    public static List<String> getListByCommaSeparatedString(String commaSepString) {
+        return Arrays.asList(commaSepString.split("\\s*,\\s*"));
+    }
+
 
     public static void main(String[] args) {
-        System.out.println(CommonUtils.isDateInRange("5/9/2019", 7));
+
+        String alpha = "A";
+        System.out.println(getListByCommaSeparatedString(alpha));
+
+        //System.out.println(CommonUtils.isDateInRange("5/9/2019", 7));
     }
 }

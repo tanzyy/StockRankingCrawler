@@ -21,6 +21,10 @@ public class IndMFData {
      * 4. Email facility
      * 5. Explore AWS
      *
+     * 6. Other attribute : Holdings Number, Sectors Number, Top 3 sector holdings, Top 5 sector holdings
+     * 7. 1 month return, 3 month return, 6 month return
+     * 8. Market Cap Exposure- Giant, Large. Medium, Small, Tiny
+     * 8. Indexes NAV
      */
     private static DataTypeToExtract dataToExtract = DataTypeToExtract.DAILY_NAV;
 

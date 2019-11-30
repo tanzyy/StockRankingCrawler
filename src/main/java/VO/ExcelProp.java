@@ -5,10 +5,12 @@ package VO;
  */
 public class ExcelProp {
 
-    String workBookName;
-    String sheetName;
+    String  workBookName;
+    String  sheetName;
     Integer sheetIndex;
     Integer columnIndex;
+    String  fileLoc;
+    String  backFileLoc;
 
     public ExcelProp() {
         sheetIndex  = 0;
@@ -45,5 +47,21 @@ public class ExcelProp {
 
     public void setColumnIndex(int columnIndex) {
         this.columnIndex = columnIndex;
+    }
+
+    public String getFileLoc() {
+        return fileLoc;
+    }
+
+    public void setFileLoc(String fileLoc) {
+        this.fileLoc = fileLoc;
+    }
+
+    public String getBackFileLoc() {
+        return backFileLoc;
+    }
+
+    public void setBackFileLoc(String backFileLoc) {
+        this.backFileLoc = backFileLoc;
     }
 }
