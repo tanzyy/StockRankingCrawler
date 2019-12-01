@@ -33,19 +33,10 @@ public class IndMFDataExperiments {
 
         List<RankInfo> currentRankingData = new ArrayList<>();
 
-        if("SmallCap".equalsIgnoreCase(sheetName)) {
-            for(Map.Entry<String, String> entry : Constants.smallCapMap.entrySet()) {
-                currentRankingData.add(indMFProcessor.getTestMFData(entry.getKey(), entry.getValue()));
-            }
-        } else if("MultiCap".equalsIgnoreCase(sheetName)) {
-            for(Map.Entry<String, String> entry : Constants.multiCapMap.entrySet()) {
-                currentRankingData.add(indMFProcessor.getTestMFData(entry.getKey(), entry.getValue()));
-            }
-        } else {
             for(Map.Entry<String, String> entry : Constants.testMap.entrySet()) {
                 currentRankingData.add(indMFProcessor.getOtherMFDataFromEconomicTimes(entry.getKey(), entry.getValue()));
             }
-        }
+
 
 //        excelProp.setSheetName(sheetName);
 //        excelProp.setSheetIndex(sheetIndex);

@@ -185,6 +185,7 @@ public class Constants {
     public static final String OUT_FILE_IND_MF_SMALL_CAP_NEW = "NEW_IndMF_SmallCap.xlsx";
     public static final String OUT_FILE_IND_MF_MULTI_CAP = "IndMF_MultiCap.xlsx";
     public static final String OUT_FILE_IND_MF_MID_CAP   = "IndMF_MidCap.xlsx";
+    public static final String OUT_FILE_IND_MF_INDEX     = "IndMF_Index.xlsx";
 
      public static Map<String, String> smallCapMap = new LinkedHashMap<String, String>() {{
          put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/mffactsheet/schemeid-16617.cms");
@@ -343,7 +344,7 @@ public class Constants {
     public static final String TEST_OUT_FILE_IND_MF  = "TestIndMF.xlsx";
     public static Map<String, String> testMap = new LinkedHashMap<String, String>() {{
         //put("Axis"         , "https://www.personalfn.com/factsheet/axis-small-cap-fund-g-direct-plan");
-        put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/mffactsheet/schemeid-16617.cms");
+        put("HDFC"         , "https://in.investing.com/indices/india-indices");
         //put("HDFC"         , "https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/fund-factsheet/schemeid-16617.cms");
 
     }};
@@ -370,6 +371,16 @@ public class Constants {
       public String getURI() {
           return this.uri;
       }
+    }
+
+    public enum MF_IND_URI_NSE {
+
+        //NAV, 52 Week
+        NAV;
+
+        public String getURI() {
+            return null;
+        }
     }
 
     public enum MF_IND_QUERY_ECONOMICTIMES {
@@ -413,6 +424,28 @@ public class Constants {
         }
     }
 
+    public enum MF_IND_QUERY_NSE {
+
+        nav(MFInfo.MF_PROPERTY.nav, "#indexvalue");
+
+        private final MFInfo.MF_PROPERTY mfInfoProperty;
+        private final String             query;
+
+        MF_IND_QUERY_NSE(MFInfo.MF_PROPERTY mfInfoProperty, String query) {
+            this.query          = query;
+            this.mfInfoProperty = mfInfoProperty;
+        }
+
+        public String getQuery() {
+            return this.query;
+        }
+
+        public String getMFProperty() {
+            return this.mfInfoProperty.toString();
+        }
+    }
+
+
     /**
      * 1 - Fund name like hdfc-small-cap-fund--direct-plan
      * 2 - URI like mffactsheet
@@ -421,33 +454,45 @@ public class Constants {
      * https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/mffactsheet/schemeid-16617.cms
      */
     public static String url_economictimes = "https://economictimes.indiatimes.com/${arg1}/${arg2}/${arg3}.cms";
+    public static String url_nse = "https://www.niftyindices.com/indices/equity/broad-based-indices/${arg1}";
 
 
-    public static final Map<String, String> ECONOMIC_TIMES_SCHEME_ID_MAP = new LinkedHashMap<String, String>(){{
+    public static final Map<String, String> ECONOMIC_TIMES_SCHEME_ID_MAP_SML = new LinkedHashMap<String, String>(){{
 
         put("HDFC"         , "hdfc-small-cap-fund--direct-plan,schemeid-16617");
         put("L&T"          , "l%26t-emerging-businesses-fund-direct-growth-,schemeid-26133");
         put("Axis"         , "axis-small-cap-fund-direct-growth-,schemeid-22335");
-        put("SBI"          , "sbi-small-cap-fund-direct-growth-,schemeid-15787");
-        put("Kotak"        , "Kotak%20Small%20Cap%20Fund%20Direct-Growth,schemeid-16382");
-        put("Nipon"        , "nippon-india-small-cap-fund--direct-plan,schemeid-16182");
-        put("DSP"          , "dsp-small-cap-direct-plan-growth-,schemeid-16411");
-        put("ICICI"        , "icici-prudential-smallcap-fund-direct-plan-growth-,schemeid-17116");
-        put("Tata"         , "tata-small-cap-fund-direct-growth-,schemeid-37991");
-        put("Birla"        , "aditya-birla-sun-life-small-cap-fund-direct-growth-,schemeid-15935");
-        put("Motilal"      , "motilal-oswal-nifty-smallcap-250-index-fund-direct-growth-,schemeid-40244");
-        put("IDBI"         , "idbi-small-cap-fund-direct-growth-,schemeid-34272");
-        put("Sundaram"     , "sundaram-small-cap-fund-direct-growth-,schemeid-16112");
-        put("Invesco"      , "invesco-india-smallcap-fund-direct-growth-,schemeid-37843");
-        put("EdelWeiss"    , "edelweiss-small-cap-fund-direct-growth-,schemeid-38851");
-        put("Franklin"     , "franklin-india-smaller-companies-direct-fund-growth-,schemeid-16010");
-        put("BOI Axa"      , "boi-axa-small-cap-fund-direct-growth-,schemeid-38283");
-        put("Canara Robeco", "canara-robeco-small-cap-fund-direct-growth-,schemeid-38817");
-        put("HSBC"         , "hsbc-small-cap-equity-fund-direct-growth-,schemeid-16325");
-        put("Principal"    , "principal-small-cap-fund-direct-growth-,schemeid-39797");
-        put("Quant"        , "quant-small-cap-fund-direct-plan-growth-,schemeid-17366");
-        put("Union"        , "union-small-cap-fund-direct-growth-,schemeid-26860");
+//        put("SBI"          , "sbi-small-cap-fund-direct-growth-,schemeid-15787");
+//        put("Kotak"        , "Kotak%20Small%20Cap%20Fund%20Direct-Growth,schemeid-16382");
+//        put("Nipon"        , "nippon-india-small-cap-fund--direct-plan,schemeid-16182");
+//        put("DSP"          , "dsp-small-cap-direct-plan-growth-,schemeid-16411");
+//        put("ICICI"        , "icici-prudential-smallcap-fund-direct-plan-growth-,schemeid-17116");
+//        put("Tata"         , "tata-small-cap-fund-direct-growth-,schemeid-37991");
+//        put("Birla"        , "aditya-birla-sun-life-small-cap-fund-direct-growth-,schemeid-15935");
+//        put("Motilal"      , "motilal-oswal-nifty-smallcap-250-index-fund-direct-growth-,schemeid-40244");
+//        put("IDBI"         , "idbi-small-cap-fund-direct-growth-,schemeid-34272");
+//        put("Sundaram"     , "sundaram-small-cap-fund-direct-growth-,schemeid-16112");
+//        put("Invesco"      , "invesco-india-smallcap-fund-direct-growth-,schemeid-37843");
+//        put("EdelWeiss"    , "edelweiss-small-cap-fund-direct-growth-,schemeid-38851");
+//        put("Franklin"     , "franklin-india-smaller-companies-direct-fund-growth-,schemeid-16010");
+//        put("BOI Axa"      , "boi-axa-small-cap-fund-direct-growth-,schemeid-38283");
+//        put("Canara Robeco", "canara-robeco-small-cap-fund-direct-growth-,schemeid-38817");
+//        put("HSBC"         , "hsbc-small-cap-equity-fund-direct-growth-,schemeid-16325");
+//        put("Principal"    , "principal-small-cap-fund-direct-growth-,schemeid-39797");
+//        put("Quant"        , "quant-small-cap-fund-direct-plan-growth-,schemeid-17366");
+//        put("Union"        , "union-small-cap-fund-direct-growth-,schemeid-26860");
 
+    }};
+
+    public static Map<String, String> ECONOMIC_TIMES_SCHEME_ID_MAP_MULTI = new LinkedHashMap<String, String>() {{
+        put("HDFC"         , "hdfc-focused-30-fund-direct-plan-growth-,schemeid-16021");
+        put("L&T"          , "l%26t-focused-equity-fund-direct-growth-,schemeid-38083");
+    }};
+
+    public static final Map<String, String> NSE_SCHEME_ID_MAP = new LinkedHashMap<String, String>(){{
+
+        put("250"         , "nifty-smallcap-250");
+        put("50"          , "niftysmallcap50");
     }};
 
 

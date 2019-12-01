@@ -219,9 +219,9 @@ public class ExcelActionMF {
                     String currentCellVal = (String)currentMFInfo.getMFInfo(excelProp.getSheetName());
                     Cell previousCellVal = currentRow.getCell(2);
 
-//                    LOG.info(String.format(
-//                            "For Symbol [%s] ,  PreviousCellVal [%s] ,  CurrentCellVal [%s]",
-//                            currentRow.getCell(0), previousCellVal, currentCellVal));
+                    LOG.info(String.format(
+                            "For Symbol [%s] ,  PreviousCellVal [%s] ,  CurrentCellVal [%s]",
+                            currentRow.getCell(0), previousCellVal, currentCellVal));
 
                     if(previousCellVal != null && !previousCellVal.toString().trim().equals(currentCellVal.trim())) {
 

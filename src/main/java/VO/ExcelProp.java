@@ -64,4 +64,16 @@ public class ExcelProp {
     public void setBackFileLoc(String backFileLoc) {
         this.backFileLoc = backFileLoc;
     }
+
+    @Override
+    public String toString() {
+        return "ExcelProp{" +
+                "workBookName='" + workBookName + '\'' +
+                ", sheetName='" + sheetName + '\'' +
+                ", sheetIndex=" + sheetIndex +
+                ", columnIndex=" + columnIndex +
+                ", fileLoc='" + fileLoc + '\'' +
+                ", backFileLoc='" + backFileLoc + '\'' +
+                '}';
+    }
 }

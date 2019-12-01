@@ -99,4 +99,20 @@ public class DataAttributes {
     public void setSymbolSchemeMap(Map<String, String> symbolSchemeMap) {
         this.symbolSchemeMap = symbolSchemeMap;
     }
+
+
+    @Override
+    public String toString() {
+        return "DataAttributes{" +
+                "isNumeric=" + isNumeric +
+                ", isMF=" + isMF +
+                ", highlightChange=" + highlightChange +
+                ", dataExtraction='" + dataExtraction + '\'' +
+                ", dataExtractionList=" + dataExtractionList +
+                ", targetDataSheetIndexList=" + targetDataSheetIndexList +
+                ", baseURL='" + baseURL + '\'' +
+                ", targetDataURI='" + targetDataURI + '\'' +
+                ", symbolSchemeMap=" + symbolSchemeMap +
+                '}';
+    }
 }

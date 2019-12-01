@@ -66,6 +66,17 @@ public class DataSelection {
         this.symbol = symbol;
     }
 
+    @Override
+    public String toString() {
+        return "DataSelection{" +
+                "symbol='" + symbol + '\'' +
+                ", baseUrl='" + baseUrl + '\'' +
+                ", urlAttributes=" + urlAttributes +
+                ", targetURL='" + targetURL + '\'' +
+                ", queries=" + queries +
+                '}';
+    }
+
     public static void main(String[] args) {
 
         DataSelection ds = new DataSelection();

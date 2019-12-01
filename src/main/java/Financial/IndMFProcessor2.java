@@ -26,7 +26,7 @@ public class IndMFProcessor2 {
         setRankYear(CommonUtils.getYear());
     }
 
-    public MFInfo getMFDataFromEconomicTimes(DataSelection dataSelection) {
+    public MFInfo getMFData(DataSelection dataSelection) {
 
         Document document;
         MFInfo mfInfo = new MFInfo();

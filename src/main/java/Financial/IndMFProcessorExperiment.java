@@ -3,6 +3,7 @@ package Financial;
 import Utils.CommonUtils;
 import VO.RankInfo;
 import org.apache.log4j.Logger;
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -13,7 +14,7 @@ import java.io.IOException;
 
 public class IndMFProcessorExperiment {
 
-    private static final int    DATA_SIZE_IN_MB  = 100;
+    private static final int    DATA_SIZE_IN_MB  = 1000;
     private static final Logger LOG              = Logger.getLogger(IndMFProcessorExperiment.class);
 
     private String rankDate;
@@ -52,16 +53,23 @@ public class IndMFProcessorExperiment {
         LOG.info(url);
 
         try {
-            document = Jsoup.connect(url).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
+            //document = Jsoup.connect(url).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
 
-            //Elements stt = document.select("#overview > ul > li:nth-child(10) > label");
-            //Elements stt = document.select("#overview > ul > li:nth-child(11) > label");
+                //connect to the website
+                Connection connection = Jsoup.connect(url);
+
+                //specify user agent
+                connection.userAgent("Mozilla/5.0");
+
+                //get the HTML document
+                document = connection.get();
+
+                System.out.println(document.text());
 
             //No output
             //System.out.println(document.select("#mainPage > div.fullSec.w2 > div:nth-child(3) > div.f2 > div.progress > div.legend1").text());
 
-            System.out.println(document.select("div.fullSec:nth-child(5) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2)").text());
-
+            System.out.println(document.select("#pair_17948 > td.pid-17948-last").text());
 
 //            System.out.println(stt.size());
 //            for (Element el : stt) {
