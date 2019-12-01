@@ -1,6 +1,7 @@
 package VO;
 
 import Utils.Constants;
+import Utils.QueryMap;
 import org.apache.commons.text.StrSubstitutor;
 
 import java.util.Arrays;
@@ -14,7 +15,8 @@ public class DataSelection {
     private String baseUrl;
     private List<String> urlAttributes;
     private String targetURL;
-    private List<String> queries;
+    private List<String> mfPropertiesToExtract;
+    private boolean isSinglePageMultiQuery;
 
     public String getBaseUrl() {
         return baseUrl;
@@ -32,12 +34,12 @@ public class DataSelection {
         this.urlAttributes = urlAttributes;
     }
 
-    public List<String> getQueries() {
-        return queries;
+    public List<String> getMfPropertiesToExtract() {
+        return mfPropertiesToExtract;
     }
 
-    public void setQueries(List<String> queries) {
-        this.queries = queries;
+    public void setMfPropertiesToExtract(List<String> mfPropertiesToExtract) {
+        this.mfPropertiesToExtract = mfPropertiesToExtract;
     }
 
     public String getTargetURL() {
@@ -46,16 +48,21 @@ public class DataSelection {
 
     public void setTargetURL() {
 
-        Map<String, String> urlData = new HashMap();
+        if(urlAttributes == null) {
+            this.targetURL = baseUrl;
 
-        int count = 0;
-        for(String urlAttribute : urlAttributes) {
-            count++;
-            urlData.put("arg" + count, urlAttribute);
+        } else {
+            Map<String, String> urlData = new HashMap();
 
+            int count = 0;
+            for(String urlAttribute : urlAttributes) {
+                count++;
+                urlData.put("arg" + count, urlAttribute);
+
+            }
+
+            this.targetURL = StrSubstitutor.replace(baseUrl, urlData);
         }
-
-        this.targetURL = StrSubstitutor.replace(baseUrl, urlData);
     }
 
     public String getSymbol() {
@@ -66,6 +73,14 @@ public class DataSelection {
         this.symbol = symbol;
     }
 
+    public boolean isSinglePageMultiQuery() {
+        return isSinglePageMultiQuery;
+    }
+
+    public void setSinglePageMultiQuery(boolean singlePageMultiQuery) {
+        isSinglePageMultiQuery = singlePageMultiQuery;
+    }
+
     @Override
     public String toString() {
         return "DataSelection{" +
@@ -73,7 +88,7 @@ public class DataSelection {
                 ", baseUrl='" + baseUrl + '\'' +
                 ", urlAttributes=" + urlAttributes +
                 ", targetURL='" + targetURL + '\'' +
-                ", queries=" + queries +
+                ", queries=" + mfPropertiesToExtract +
                 '}';
     }
 

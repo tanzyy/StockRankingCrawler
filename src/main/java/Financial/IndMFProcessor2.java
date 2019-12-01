@@ -2,13 +2,18 @@ package Financial;
 
 import Utils.CommonUtils;
 import Utils.Constants;
+import VO.DataAttributes;
 import VO.DataSelection;
 import VO.MFInfo;
 import org.apache.log4j.Logger;
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 
 public class IndMFProcessor2 {
@@ -35,9 +40,11 @@ public class IndMFProcessor2 {
         LOG.info("Calling getMFDataFromEconomicTimes for :: " + dataSelection.getTargetURL());
 
         try {
-            document = Jsoup.connect(dataSelection.getTargetURL()).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000).get();
+            Connection connection = Jsoup.connect(dataSelection.getTargetURL()).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000);
+            connection.userAgent("Mozilla/5.0");
+            document = connection.get();
 
-            for(String prop : dataSelection.getQueries()) {
+            for(String prop : dataSelection.getMfPropertiesToExtract()) {
 
                 Enum   propQueryEnum =  Enum.valueOf(Constants.MF_IND_QUERY_ECONOMICTIMES.class, prop);
                 String query         = ((Constants.MF_IND_QUERY_ECONOMICTIMES) propQueryEnum).getQuery();
@@ -68,7 +75,7 @@ public class IndMFProcessor2 {
                 }
 
 
-                System.out.println(String.format("For Symbol [%s], The value for [%s] is [%s]", dataSelection.getSymbol(), property, data));
+                System.out.println(String.format("For Symbol [%s], The value for [%s] is [%s] with query [%s]", dataSelection.getSymbol(), property, data, query));
 
                 mfInfo.setMFInfo(property, data);
             }
@@ -78,6 +85,44 @@ public class IndMFProcessor2 {
         }
 
         return mfInfo;
+    }
+
+
+    public List<MFInfo> getSinglePageMultiQueryMFData(DataSelection dataSelection, DataAttributes dataAttributes) {
+
+        Document document;
+
+        List<MFInfo> mfInfoList = new ArrayList<>();
+
+        try {
+            Connection connection = Jsoup.connect(dataSelection.getTargetURL()).maxBodySize(1024 * 1024 * DATA_SIZE_IN_MB).timeout(100*1000);
+            connection.userAgent("Mozilla/5.0");
+            document = connection.get();
+
+            for(Map.Entry<String, String> symbolSchemeEntry : dataAttributes.getSymbolSchemeMap().entrySet()) {
+
+                MFInfo mfInfo = new MFInfo();
+                String query    = symbolSchemeEntry.getValue();
+                String symbol   = symbolSchemeEntry.getKey();
+
+                String data = document.select(query).text();
+
+                System.out.println(String.format("For Symbol [%s], The value is [%s] with query [%s]", symbol, data, query));
+
+                mfInfo.setSymbol(symbol);
+
+                Enum   propQueryEnum =  Enum.valueOf(Constants.MF_IND_QUERY_INVESTING.class, dataSelection.getMfPropertiesToExtract().get(0));
+                String property      = ((Constants.MF_IND_QUERY_INVESTING) propQueryEnum).getMFProperty();
+
+                mfInfo.setMFInfo(property, data);
+                mfInfoList.add(mfInfo);
+            }
+
+        } catch (IOException e) {
+            LOG.error(String.format("Error occurred for [%s] with error ", dataSelection.getSymbol()), e);
+        }
+
+        return mfInfoList;
     }
 
 

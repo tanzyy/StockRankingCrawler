@@ -373,7 +373,7 @@ public class Constants {
       }
     }
 
-    public enum MF_IND_URI_NSE {
+    public enum MF_IND_URI_INVESTING {
 
         //NAV, 52 Week
         NAV;
@@ -424,14 +424,18 @@ public class Constants {
         }
     }
 
-    public enum MF_IND_QUERY_NSE {
+    /**
+     * If second argument is null, that signifies its single page multi query
+     *
+     */
+    public enum MF_IND_QUERY_INVESTING {
 
-        nav(MFInfo.MF_PROPERTY.nav, "#indexvalue");
+        nav(MFInfo.MF_PROPERTY.nav, "");
 
         private final MFInfo.MF_PROPERTY mfInfoProperty;
         private final String             query;
 
-        MF_IND_QUERY_NSE(MFInfo.MF_PROPERTY mfInfoProperty, String query) {
+        MF_IND_QUERY_INVESTING(MFInfo.MF_PROPERTY mfInfoProperty, String query) {
             this.query          = query;
             this.mfInfoProperty = mfInfoProperty;
         }
@@ -454,7 +458,8 @@ public class Constants {
      * https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/mffactsheet/schemeid-16617.cms
      */
     public static String url_economictimes = "https://economictimes.indiatimes.com/${arg1}/${arg2}/${arg3}.cms";
-    public static String url_nse = "https://www.niftyindices.com/indices/equity/broad-based-indices/${arg1}";
+    //public static String url_investing     = "https://in.investing.com/indices/india-indices";
+    public static String url_investing     = "https://in.investing.com/indices/india-indices?&majorIndices=on&primarySectors=on&additionalIndices=on&otherIndices=on";
 
 
     public static final Map<String, String> ECONOMIC_TIMES_SCHEME_ID_MAP_SML = new LinkedHashMap<String, String>(){{
@@ -489,10 +494,23 @@ public class Constants {
         put("L&T"          , "l%26t-focused-equity-fund-direct-growth-,schemeid-38083");
     }};
 
-    public static final Map<String, String> NSE_SCHEME_ID_MAP = new LinkedHashMap<String, String>(){{
+    public static final Map<String, String> INVESTING_SCHEME_ID_MAP = new LinkedHashMap<String, String>(){{
 
-        put("250"         , "nifty-smallcap-250");
-        put("50"          , "niftysmallcap50");
+        put("Nifty Small Cap 100"        , "#pair_17948 > td.pid-17948-last");
+        put("Nifty Smallcap 250"         , "#pair_1141645 > td.pid-1141645-last");
+        put("BSE SmallCap"               , "#pair_39937 > td.pid-39937-last");
+        put("BSE 250 Smallcap"           , "#pair_1066766 > td.pid-1066766-last");
+        put("BSE 400 MidSmallCap"        , "#pair_1066767 > td.pid-1066767-last");
+        put("Nifty Midcap 50"            , "#pair_17947 > td.pid-17947-last");
+        put("NIFTY Midcap 100"           , "#pair_17946 > td.pid-17946-last");
+        put("BSE 150 Midcap"             , "#pair_1066764 > td.pid-1066764-last");
+        put("Nifty 50"                   , "#pair_17940 > td.pid-17940-last");
+        put("Nifty 500"                  , "#pair_17945 > td.pid-17945-last");
+        put("BSE Sensex"                 , "#pair_39929 > td.pid-39929-last");
+        put("BSE Sensex 50"              , "#pair_1066776 > td.pid-1066776-last");
+        put("BSE Sensex Next 50"         , "#pair_1066777 > td.pid-1066777-last");
+        put("BSE India Manufacturing"    , "#pair_1066771 > td.pid-1066771-last");
+        put("India VIX"                  , "#pair_17942 > td.pid-17942-last");
     }};
 
 

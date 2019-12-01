@@ -4286,3 +4286,494 @@ org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=https://
 2019-11-30 19:42:19 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
 2019-11-30 19:42:19 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [₹6,112.41 Cr] ,  CurrentCellVal [63.62 ## 21.78 ## 11.74 ## 2.86 ## -]
 2019-11-30 19:42:19 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 19:48:12 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/fund-factsheet/schemeid-16617.cms
+2019-11-30 19:48:13 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/l%26t-emerging-businesses-fund-direct-growth-/fund-factsheet/schemeid-26133.cms
+2019-11-30 19:48:13 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/axis-small-cap-fund-direct-growth-/fund-factsheet/schemeid-22335.cms
+2019-11-30 19:48:13 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [benchmark] existence [true]
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [NIFTY Smallcap 100 Total Retur] ,  CurrentCellVal [NIFTY Smallcap 100 Total Retur]
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [S&P BSE Small Cap Index] ,  CurrentCellVal [S&P BSE Small Cap Index]
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [NIFTY Smallcap 100 Total Retur] ,  CurrentCellVal [NIFTY Smallcap 100 Total Retur]
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [aum] existence [true]
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [₹9,137.06 Cr] ,  CurrentCellVal [₹9,137.06 Cr]
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [₹6,112.41 Cr] ,  CurrentCellVal [₹6,112.41 Cr]
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 19:48:14 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [₹1,199.83 Cr] ,  CurrentCellVal [₹1,199.83 Cr]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [expenseRatio] existence [true]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [0.88%] ,  CurrentCellVal [0.88%]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [0.7%] ,  CurrentCellVal [0.7%]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [0.63%] ,  CurrentCellVal [0.63%]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [manager] existence [true]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [Chirag Setalvad] ,  CurrentCellVal [Chirag Setalvad]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [Soumendra Nath Lahiri] ,  CurrentCellVal [Soumendra Nath Lahiri]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [Anupam Tiwari] ,  CurrentCellVal [Anupam Tiwari]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [peRatio] existence [true]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [15.64 ## 15.6] ,  CurrentCellVal [15.64 ## 15.6]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [19.63 ## 17.58] ,  CurrentCellVal [19.63 ## 17.58]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [24.50 ## 16.97] ,  CurrentCellVal [24.50 ## 16.97]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [pbRatio] existence [true]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [1.80 ## 1.97] ,  CurrentCellVal [1.80 ## 1.97]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [2.48 ## 2.34] ,  CurrentCellVal [2.48 ## 2.34]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [4.01 ## 2.5] ,  CurrentCellVal [4.01 ## 2.5]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [returns] existence [true]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [-1.95 ## 3.59 ## -11.67 ## -6.65 ## 10.91 ## 10.55] ,  CurrentCellVal [-1.95 ## 3.59 ## -11.67 ## -6.65 ## 10.91 ## 10.55]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [-0.73 ## 6.36 ## -5.97 ## -5.42 ## 9.58 ## 11.94] ,  CurrentCellVal [-0.73 ## 6.36 ## -5.97 ## -5.42 ## 9.58 ## 11.94]
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 19:48:15 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [-0.36 ## 8.85 ## 7.87 ## 21.79 ## 14.51 ## 12.80] ,  CurrentCellVal [-0.36 ## 8.85 ## 7.87 ## 21.79 ## 14.51 ## 12.80]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [holdingSectorTop5] existence [true]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [Services ## 17.91 ## Chemicals ## 13.73 ## Financial ## 10.16 ## Engineering ## 8.74 ## Technology ## 7.76] ,  CurrentCellVal [Services ## 17.91 ## Chemicals ## 13.73 ## Financial ## 10.16 ## Engineering ## 8.74 ## Technology ## 7.76]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [Construction ## 14.09 ## Engineering ## 13.8 ## Services ## 8.84 ## Chemicals ## 8.5 ## Metals ## 7.65] ,  CurrentCellVal [Construction ## 14.09 ## Engineering ## 13.8 ## Services ## 8.84 ## Chemicals ## 8.5 ## Metals ## 7.65]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [Construction ## 17.99 ## Financial ## 17.28 ## Chemicals ## 14.09 ## FMCG ## 8.41 ## Technology ## 6.04] ,  CurrentCellVal [Construction ## 17.99 ## Financial ## 17.28 ## Chemicals ## 14.09 ## FMCG ## 8.41 ## Technology ## 6.04]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [holdingMarketCap] existence [true]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [- ## 2.11 ## 23.31 ## 74.44 ## 0.14] ,  CurrentCellVal [- ## 2.11 ## 23.31 ## 74.44 ## 0.14]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [- ## - ## 32.97 ## 66.16 ## 0.86] ,  CurrentCellVal [- ## - ## 32.97 ## 66.16 ## 0.86]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [- ## - ## 35.34 ## 64.66 ## -] ,  CurrentCellVal [- ## - ## 35.34 ## 64.66 ## -]
+2019-11-30 19:48:16 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/hdfc-focused-30-fund-direct-plan-growth-/fund-factsheet/schemeid-16021.cms
+2019-11-30 19:48:16 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/l%26t-focused-equity-fund-direct-growth-/fund-factsheet/schemeid-38083.cms
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [benchmark] existence [true]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [NIFTY 500 Total Return Index] ,  CurrentCellVal [NIFTY 500 Total Return Index]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [NIFTY 500 Total Return Index] ,  CurrentCellVal [NIFTY 500 Total Return Index]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [aum] existence [true]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [₹506.79 Cr] ,  CurrentCellVal [₹506.79 Cr]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [₹709.57 Cr] ,  CurrentCellVal [₹709.57 Cr]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [expenseRatio] existence [true]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [1.86%] ,  CurrentCellVal [1.86%]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [1.38%] ,  CurrentCellVal [1.38%]
+2019-11-30 19:48:16 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [manager] existence [true]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [Vinay R Kulkarni] ,  CurrentCellVal [Vinay R Kulkarni]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [Soumendra Nath Lahiri] ,  CurrentCellVal [Soumendra Nath Lahiri]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [peRatio] existence [true]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [16.69 ## 27.69] ,  CurrentCellVal [16.69 ## 27.69]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [28.46 ## 28.65] ,  CurrentCellVal [28.46 ## 28.65]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [pbRatio] existence [true]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [2.00 ## 3.37] ,  CurrentCellVal [2.00 ## 3.37]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [3.37 ## 3.52] ,  CurrentCellVal [3.37 ## 3.52]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [returns] existence [true]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [-0.28 ## 10.18 ## -2.21 ## 8.16 ## 8.35 ## 6.16] ,  CurrentCellVal [-0.28 ## 10.18 ## -2.21 ## 8.16 ## 8.35 ## 6.16]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [-0.05 ## 10.29 ## 4.65 ## 14.07 ## - ## -] ,  CurrentCellVal [-0.05 ## 10.29 ## 4.65 ## 14.07 ## - ## -]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [holdingSectorTop5] existence [true]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [Energy ## 29.48 ## Financial ## 27.98 ## Construction ## 13.12 ## FMCG ## 7.72 ## Engineering ## 5.75] ,  CurrentCellVal [Energy ## 29.48 ## Financial ## 27.98 ## Construction ## 13.12 ## FMCG ## 7.72 ## Engineering ## 5.75]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [Financial ## 38.91 ## Construction ## 12.79 ## Technology ## 12.33 ## Energy ## 9.09 ## FMCG ## 6.1] ,  CurrentCellVal [Financial ## 38.91 ## Construction ## 12.79 ## Technology ## 12.33 ## Energy ## 9.09 ## FMCG ## 6.1]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [holdingMarketCap] existence [true]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [60.48 ## 21.19 ## 6.48 ## 10.27 ## 1.58] ,  CurrentCellVal [60.48 ## 21.19 ## 6.48 ## 10.27 ## 1.58]
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 19:48:17 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [63.62 ## 21.78 ## 11.74 ## 2.86 ## -] ,  CurrentCellVal [63.62 ## 21.78 ## 11.74 ## 2.86 ## -]
+2019-11-30 20:02:24 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/fund-factsheet/schemeid-16617.cms
+2019-11-30 20:02:26 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/l%26t-emerging-businesses-fund-direct-growth-/fund-factsheet/schemeid-26133.cms
+2019-11-30 20:02:26 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/axis-small-cap-fund-direct-growth-/fund-factsheet/schemeid-22335.cms
+2019-11-30 20:02:27 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:02:27 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [benchmark] existence [true]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [NIFTY Smallcap 100 Total Retur] ,  CurrentCellVal [NIFTY Smallcap 100 Total Retur]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [S&P BSE Small Cap Index] ,  CurrentCellVal [S&P BSE Small Cap Index]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [NIFTY Smallcap 100 Total Retur] ,  CurrentCellVal [NIFTY Smallcap 100 Total Retur]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [aum] existence [true]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [₹9,137.06 Cr] ,  CurrentCellVal [₹9,137.06 Cr]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [₹6,112.41 Cr] ,  CurrentCellVal [₹6,112.41 Cr]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [₹1,199.83 Cr] ,  CurrentCellVal [₹1,199.83 Cr]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [expenseRatio] existence [true]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [0.88%] ,  CurrentCellVal [0.88%]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [0.7%] ,  CurrentCellVal [0.7%]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [0.63%] ,  CurrentCellVal [0.63%]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [manager] existence [true]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [Chirag Setalvad] ,  CurrentCellVal [Chirag Setalvad]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [Soumendra Nath Lahiri] ,  CurrentCellVal [Soumendra Nath Lahiri]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [Anupam Tiwari] ,  CurrentCellVal [Anupam Tiwari]
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:02:28 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [peRatio] existence [true]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [15.64 ## 15.6] ,  CurrentCellVal [15.64 ## 15.6]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [19.63 ## 17.58] ,  CurrentCellVal [19.63 ## 17.58]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [24.50 ## 16.97] ,  CurrentCellVal [24.50 ## 16.97]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [pbRatio] existence [true]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [1.80 ## 1.97] ,  CurrentCellVal [1.80 ## 1.97]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [2.48 ## 2.34] ,  CurrentCellVal [2.48 ## 2.34]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [4.01 ## 2.5] ,  CurrentCellVal [4.01 ## 2.5]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [returns] existence [true]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [-1.95 ## 3.59 ## -11.67 ## -6.65 ## 10.91 ## 10.55] ,  CurrentCellVal [-1.95 ## 3.59 ## -11.67 ## -6.65 ## 10.91 ## 10.55]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [-0.73 ## 6.36 ## -5.97 ## -5.42 ## 9.58 ## 11.94] ,  CurrentCellVal [-0.73 ## 6.36 ## -5.97 ## -5.42 ## 9.58 ## 11.94]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [-0.36 ## 8.85 ## 7.87 ## 21.79 ## 14.51 ## 12.80] ,  CurrentCellVal [-0.36 ## 8.85 ## 7.87 ## 21.79 ## 14.51 ## 12.80]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [holdingSectorTop5] existence [true]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [Services ## 17.91 ## Chemicals ## 13.73 ## Financial ## 10.16 ## Engineering ## 8.74 ## Technology ## 7.76] ,  CurrentCellVal [Services ## 17.91 ## Chemicals ## 13.73 ## Financial ## 10.16 ## Engineering ## 8.74 ## Technology ## 7.76]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [Construction ## 14.09 ## Engineering ## 13.8 ## Services ## 8.84 ## Chemicals ## 8.5 ## Metals ## 7.65] ,  CurrentCellVal [Construction ## 14.09 ## Engineering ## 13.8 ## Services ## 8.84 ## Chemicals ## 8.5 ## Metals ## 7.65]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [Construction ## 17.99 ## Financial ## 17.28 ## Chemicals ## 14.09 ## FMCG ## 8.41 ## Technology ## 6.04] ,  CurrentCellVal [Construction ## 17.99 ## Financial ## 17.28 ## Chemicals ## 14.09 ## FMCG ## 8.41 ## Technology ## 6.04]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [holdingMarketCap] existence [true]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [- ## 2.11 ## 23.31 ## 74.44 ## 0.14] ,  CurrentCellVal [- ## 2.11 ## 23.31 ## 74.44 ## 0.14]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [- ## - ## 32.97 ## 66.16 ## 0.86] ,  CurrentCellVal [- ## - ## 32.97 ## 66.16 ## 0.86]
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:02:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [- ## - ## 35.34 ## 64.66 ## -] ,  CurrentCellVal [- ## - ## 35.34 ## 64.66 ## -]
+2019-11-30 20:02:29 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/hdfc-focused-30-fund-direct-plan-growth-/fund-factsheet/schemeid-16021.cms
+2019-11-30 20:02:30 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/l%26t-focused-equity-fund-direct-growth-/fund-factsheet/schemeid-38083.cms
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [benchmark] existence [true]
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [NIFTY 500 Total Return Index] ,  CurrentCellVal [NIFTY 500 Total Return Index]
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [NIFTY 500 Total Return Index] ,  CurrentCellVal [NIFTY 500 Total Return Index]
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [aum] existence [true]
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [₹506.79 Cr] ,  CurrentCellVal [₹506.79 Cr]
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [₹709.57 Cr] ,  CurrentCellVal [₹709.57 Cr]
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:02:30 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [expenseRatio] existence [true]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [1.86%] ,  CurrentCellVal [1.86%]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [1.38%] ,  CurrentCellVal [1.38%]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [manager] existence [true]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [Vinay R Kulkarni] ,  CurrentCellVal [Vinay R Kulkarni]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [Soumendra Nath Lahiri] ,  CurrentCellVal [Soumendra Nath Lahiri]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [peRatio] existence [true]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [16.69 ## 27.69] ,  CurrentCellVal [16.69 ## 27.69]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [28.46 ## 28.65] ,  CurrentCellVal [28.46 ## 28.65]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [pbRatio] existence [true]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [2.00 ## 3.37] ,  CurrentCellVal [2.00 ## 3.37]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [3.37 ## 3.52] ,  CurrentCellVal [3.37 ## 3.52]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [returns] existence [true]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [-0.28 ## 10.18 ## -2.21 ## 8.16 ## 8.35 ## 6.16] ,  CurrentCellVal [-0.28 ## 10.18 ## -2.21 ## 8.16 ## 8.35 ## 6.16]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [-0.05 ## 10.29 ## 4.65 ## 14.07 ## - ## -] ,  CurrentCellVal [-0.05 ## 10.29 ## 4.65 ## 14.07 ## - ## -]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [holdingSectorTop5] existence [true]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [Energy ## 29.48 ## Financial ## 27.98 ## Construction ## 13.12 ## FMCG ## 7.72 ## Engineering ## 5.75] ,  CurrentCellVal [Energy ## 29.48 ## Financial ## 27.98 ## Construction ## 13.12 ## FMCG ## 7.72 ## Engineering ## 5.75]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [Financial ## 38.91 ## Construction ## 12.79 ## Technology ## 12.33 ## Energy ## 9.09 ## FMCG ## 6.1] ,  CurrentCellVal [Financial ## 38.91 ## Construction ## 12.79 ## Technology ## 12.33 ## Energy ## 9.09 ## FMCG ## 6.1]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [holdingMarketCap] existence [true]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [60.48 ## 21.19 ## 6.48 ## 10.27 ## 1.58] ,  CurrentCellVal [60.48 ## 21.19 ## 6.48 ## 10.27 ## 1.58]
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:02:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [63.62 ## 21.78 ## 11.74 ## 2.86 ## -] ,  CurrentCellVal [63.62 ## 21.78 ## 11.74 ## 2.86 ## -]
+2019-11-30 20:09:06 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/hdfc-small-cap-fund--direct-plan/fund-factsheet/schemeid-16617.cms
+2019-11-30 20:09:13 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/l%26t-emerging-businesses-fund-direct-growth-/fund-factsheet/schemeid-26133.cms
+2019-11-30 20:09:22 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/axis-small-cap-fund-direct-growth-/fund-factsheet/schemeid-22335.cms
+2019-11-30 20:09:28 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:09:29 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [benchmark] existence [true]
+2019-11-30 20:09:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [NIFTY Smallcap 100 Total Retur] ,  CurrentCellVal [NIFTY Smallcap 100 Total Retur]
+2019-11-30 20:09:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [S&P BSE Small Cap Index] ,  CurrentCellVal [S&P BSE Small Cap Index]
+2019-11-30 20:09:29 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:09:29 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [NIFTY Smallcap 100 Total Retur] ,  CurrentCellVal [NIFTY Smallcap 100 Total Retur]
+2019-11-30 20:09:29 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:09:29 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [aum] existence [true]
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [₹9,137.06 Cr] ,  CurrentCellVal [₹9,137.06 Cr]
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [₹6,112.41 Cr] ,  CurrentCellVal [₹6,112.41 Cr]
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [₹1,199.83 Cr] ,  CurrentCellVal [₹1,199.83 Cr]
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [expenseRatio] existence [true]
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [0.88%] ,  CurrentCellVal [0.88%]
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [0.7%] ,  CurrentCellVal [0.7%]
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [0.63%] ,  CurrentCellVal [0.63%]
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [manager] existence [true]
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [Chirag Setalvad] ,  CurrentCellVal [Chirag Setalvad]
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [Soumendra Nath Lahiri] ,  CurrentCellVal [Soumendra Nath Lahiri]
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [Anupam Tiwari] ,  CurrentCellVal [Anupam Tiwari]
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:09:30 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [peRatio] existence [true]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [15.64 ## 15.6] ,  CurrentCellVal [15.64 ## 15.6]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [19.63 ## 17.58] ,  CurrentCellVal [19.63 ## 17.58]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [24.50 ## 16.97] ,  CurrentCellVal [24.50 ## 16.97]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [pbRatio] existence [true]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [1.80 ## 1.97] ,  CurrentCellVal [1.80 ## 1.97]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [2.48 ## 2.34] ,  CurrentCellVal [2.48 ## 2.34]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [4.01 ## 2.5] ,  CurrentCellVal [4.01 ## 2.5]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [returns] existence [true]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [-1.95 ## 3.59 ## -11.67 ## -6.65 ## 10.91 ## 10.55] ,  CurrentCellVal [-1.95 ## 3.59 ## -11.67 ## -6.65 ## 10.91 ## 10.55]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [-0.73 ## 6.36 ## -5.97 ## -5.42 ## 9.58 ## 11.94] ,  CurrentCellVal [-0.73 ## 6.36 ## -5.97 ## -5.42 ## 9.58 ## 11.94]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [-0.36 ## 8.85 ## 7.87 ## 21.79 ## 14.51 ## 12.80] ,  CurrentCellVal [-0.36 ## 8.85 ## 7.87 ## 21.79 ## 14.51 ## 12.80]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [holdingSectorTop5] existence [true]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [Services ## 17.91 ## Chemicals ## 13.73 ## Financial ## 10.16 ## Engineering ## 8.74 ## Technology ## 7.76] ,  CurrentCellVal [Services ## 17.91 ## Chemicals ## 13.73 ## Financial ## 10.16 ## Engineering ## 8.74 ## Technology ## 7.76]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [Construction ## 14.09 ## Engineering ## 13.8 ## Services ## 8.84 ## Chemicals ## 8.5 ## Metals ## 7.65] ,  CurrentCellVal [Construction ## 14.09 ## Engineering ## 13.8 ## Services ## 8.84 ## Chemicals ## 8.5 ## Metals ## 7.65]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [Construction ## 17.99 ## Financial ## 17.28 ## Chemicals ## 14.09 ## FMCG ## 8.41 ## Technology ## 6.04] ,  CurrentCellVal [Construction ## 17.99 ## Financial ## 17.28 ## Chemicals ## 14.09 ## FMCG ## 8.41 ## Technology ## 6.04]
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_SmallCap.xlsx exists.
+2019-11-30 20:09:31 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [holdingMarketCap] existence [true]
+2019-11-30 20:09:32 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:32 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [- ## 2.11 ## 23.31 ## 74.44 ## 0.14] ,  CurrentCellVal [- ## 2.11 ## 23.31 ## 74.44 ## 0.14]
+2019-11-30 20:09:32 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:32 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [- ## - ## 32.97 ## 66.16 ## 0.86] ,  CurrentCellVal [- ## - ## 32.97 ## 66.16 ## 0.86]
+2019-11-30 20:09:32 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Axis] 
+2019-11-30 20:09:32 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [AXIS] ,  PreviousCellVal [- ## - ## 35.34 ## 64.66 ## -] ,  CurrentCellVal [- ## - ## 35.34 ## 64.66 ## -]
+2019-11-30 20:09:32 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/hdfc-focused-30-fund-direct-plan-growth-/fund-factsheet/schemeid-16021.cms
+2019-11-30 20:09:37 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://economictimes.indiatimes.com/l%26t-focused-equity-fund-direct-growth-/fund-factsheet/schemeid-38083.cms
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [benchmark] existence [true]
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [NIFTY 500 Total Return Index] ,  CurrentCellVal [NIFTY 500 Total Return Index]
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [NIFTY 500 Total Return Index] ,  CurrentCellVal [NIFTY 500 Total Return Index]
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [aum] existence [true]
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [₹506.79 Cr] ,  CurrentCellVal [₹506.79 Cr]
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [₹709.57 Cr] ,  CurrentCellVal [₹709.57 Cr]
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:09:43 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [expenseRatio] existence [true]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [1.86%] ,  CurrentCellVal [1.86%]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [1.38%] ,  CurrentCellVal [1.38%]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [manager] existence [true]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [Vinay R Kulkarni] ,  CurrentCellVal [Vinay R Kulkarni]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [Soumendra Nath Lahiri] ,  CurrentCellVal [Soumendra Nath Lahiri]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [peRatio] existence [true]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [16.69 ## 27.69] ,  CurrentCellVal [16.69 ## 27.69]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [28.46 ## 28.65] ,  CurrentCellVal [28.46 ## 28.65]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [pbRatio] existence [true]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [2.00 ## 3.37] ,  CurrentCellVal [2.00 ## 3.37]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [3.37 ## 3.52] ,  CurrentCellVal [3.37 ## 3.52]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [returns] existence [true]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [-0.28 ## 10.18 ## -2.21 ## 8.16 ## 8.35 ## 6.16] ,  CurrentCellVal [-0.28 ## 10.18 ## -2.21 ## 8.16 ## 8.35 ## 6.16]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [-0.05 ## 10.29 ## 4.65 ## 14.07 ## - ## -] ,  CurrentCellVal [-0.05 ## 10.29 ## 4.65 ## 14.07 ## - ## -]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [holdingSectorTop5] existence [true]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [Energy ## 29.48 ## Financial ## 27.98 ## Construction ## 13.12 ## FMCG ## 7.72 ## Engineering ## 5.75] ,  CurrentCellVal [Energy ## 29.48 ## Financial ## 27.98 ## Construction ## 13.12 ## FMCG ## 7.72 ## Engineering ## 5.75]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [Financial ## 38.91 ## Construction ## 12.79 ## Technology ## 12.33 ## Energy ## 9.09 ## FMCG ## 6.1] ,  CurrentCellVal [Financial ## 38.91 ## Construction ## 12.79 ## Technology ## 12.33 ## Energy ## 9.09 ## FMCG ## 6.1]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_MultiCap.xlsx exists.
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [holdingMarketCap] existence [true]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [HDFC] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [HDFC] ,  PreviousCellVal [60.48 ## 21.19 ## 6.48 ## 10.27 ## 1.58] ,  CurrentCellVal [60.48 ## 21.19 ## 6.48 ## 10.27 ## 1.58]
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:170 - Processing [L&T] 
+2019-11-30 20:09:44 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [L&T] ,  PreviousCellVal [63.62 ## 21.78 ## 11.74 ## 2.86 ## -] ,  CurrentCellVal [63.62 ## 21.78 ## 11.74 ## 2.86 ## -]
+2019-11-30 20:32:41 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://in.investing.com/indices/india-indices
+2019-11-30 20:32:42 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://in.investing.com/indices/india-indices
+2019-11-30 20:32:42 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_Index.xlsx exists.
+2019-11-30 20:32:42 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [nav] existence [true]
+2019-11-30 20:32:43 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 250] 
+2019-11-30 20:32:43 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [N250] ,  PreviousCellVal [1.0] ,  CurrentCellVal []
+2019-11-30 20:32:43 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 20:32:43 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 100] 
+2019-11-30 20:32:43 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [N50] ,  PreviousCellVal [2.0] ,  CurrentCellVal []
+2019-11-30 20:32:43 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 20:36:45 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://in.investing.com/indices/india-indices
+2019-11-30 20:36:47 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://in.investing.com/indices/india-indices
+2019-11-30 20:36:47 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_Index.xlsx exists.
+2019-11-30 20:36:47 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [nav] existence [true]
+2019-11-30 20:36:48 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 250] 
+2019-11-30 20:36:48 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [N250] ,  PreviousCellVal [1.0] ,  CurrentCellVal []
+2019-11-30 20:36:48 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 20:36:48 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 100] 
+2019-11-30 20:36:48 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [N50] ,  PreviousCellVal [2.0] ,  CurrentCellVal []
+2019-11-30 20:36:48 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 20:39:35 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://in.investing.com/indices/india-indices
+2019-11-30 20:39:36 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://in.investing.com/indices/india-indices
+2019-11-30 20:39:36 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_Index.xlsx exists.
+2019-11-30 20:39:37 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [nav] existence [true]
+2019-11-30 20:39:37 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 250] 
+2019-11-30 20:39:37 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [N250] ,  PreviousCellVal [] ,  CurrentCellVal [5,814.85]
+2019-11-30 20:39:37 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 20:39:37 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 100] 
+2019-11-30 20:39:37 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [N50] ,  PreviousCellVal [] ,  CurrentCellVal [5,814.85]
+2019-11-30 20:39:37 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 21:56:34 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://in.investing.com/indices/india-indices
+2019-11-30 21:56:37 INFO  [THREAD: main] IndMFProcessor2:36 - Calling getMFDataFromEconomicTimes for :: https://in.investing.com/indices/india-indices
+2019-11-30 21:56:37 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_Index.xlsx exists.
+2019-11-30 21:56:38 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [nav] existence [true]
+2019-11-30 21:56:38 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 250] 
+2019-11-30 21:56:38 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [N250] ,  PreviousCellVal [5,814.85] ,  CurrentCellVal [5,814.85]
+2019-11-30 21:56:38 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 100] 
+2019-11-30 21:56:38 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [N50] ,  PreviousCellVal [5,814.85] ,  CurrentCellVal [5,814.85]
+2019-11-30 22:54:25 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_Index.xlsx exists.
+2019-11-30 22:54:25 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [nav] existence [true]
+2019-11-30 22:54:26 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 100] 
+2019-11-30 22:54:26 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [N250] ,  PreviousCellVal [5,814.85] ,  CurrentCellVal [5,814.85]
+2019-11-30 22:54:26 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 250] 
+2019-11-30 22:54:26 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [N50] ,  PreviousCellVal [5,814.85] ,  CurrentCellVal [4,831.05]
+2019-11-30 22:54:26 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 22:59:37 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_Index.xlsx exists.
+2019-11-30 22:59:37 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [nav] existence [true]
+2019-11-30 22:59:37 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 100] 
+2019-11-30 22:59:37 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [N250] ,  PreviousCellVal [5,814.85] ,  CurrentCellVal [5,814.85]
+2019-11-30 22:59:37 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 250] 
+2019-11-30 22:59:37 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [N50] ,  PreviousCellVal [4,831.05] ,  CurrentCellVal [4,831.05]
+2019-11-30 23:23:59 INFO  [THREAD: main] ExcelActionMF:61 - IndMF_Index.xlsx exists.
+2019-11-30 23:24:00 INFO  [THREAD: main] ExcelActionMF:71 - #####################  Sheet name [nav] existence [true]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Small Cap 100] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [NIFTY Smallcap 100] ,  PreviousCellVal [1.0] ,  CurrentCellVal [5,814.85]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Smallcap 250] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [Nifty Smallcap 250] ,  PreviousCellVal [2.0] ,  CurrentCellVal [4,831.05]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [BSE SmallCap] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [BSE SmallCap] ,  PreviousCellVal [2.0] ,  CurrentCellVal [13,560.57]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [BSE 250 Smallcap] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [BSE 250 Smallcap] ,  PreviousCellVal [2.0] ,  CurrentCellVal [2,010.97]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [BSE 400 MidSmallCap] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [BSE 400 MidSmallCap] ,  PreviousCellVal [2.0] ,  CurrentCellVal [3,574.38]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty Midcap 50] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [Nifty Midcap 50] ,  PreviousCellVal [2.0] ,  CurrentCellVal [4,722.80]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [NIFTY Midcap 100] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [NIFTY Midcap 100] ,  PreviousCellVal [2.0] ,  CurrentCellVal [17,222.15]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [BSE 150 Midcap] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [BSE 150 Midcap] ,  PreviousCellVal [2.0] ,  CurrentCellVal [4,761.78]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty 50] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [Nifty 50] ,  PreviousCellVal [2.0] ,  CurrentCellVal [12,056.05]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [Nifty 500] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [Nifty 500] ,  PreviousCellVal [2.0] ,  CurrentCellVal [9,813.65]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [BSE Sensex] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [BSE Sensex] ,  PreviousCellVal [2.0] ,  CurrentCellVal [40,793.81]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [BSE Sensex 50] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [BSE Sensex 50] ,  PreviousCellVal [2.0] ,  CurrentCellVal [12,605.82]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [BSE Sensex Next 50] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [BSE Sensex Next 50] ,  PreviousCellVal [2.0] ,  CurrentCellVal [31,825.59]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [BSE India Manufacturing] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [BSE India Manufacturing] ,  PreviousCellVal [2.0] ,  CurrentCellVal [459.30]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:170 - Processing [India VIX] 
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:222 - For Symbol [India VIX ] ,  PreviousCellVal [2.0] ,  CurrentCellVal [13.8975]
+2019-11-30 23:24:01 INFO  [THREAD: main] ExcelActionMF:228 - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
